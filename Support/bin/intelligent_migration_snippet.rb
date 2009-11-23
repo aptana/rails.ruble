@@ -93,7 +93,7 @@ module IntelligentMigration
     # insert the self.up part of the snippet
     lines[0] = up_code
 
-    # FIX: find the beginning of self.down and insert down code, this is hardly robust.
+    # find the beginning of self.down and insert down code, this is hardly robust.
     # assuming self.down is after self.up in the class
     lines.each_with_index do |line, i|
       if line =~ /^\s*def\s+self\.down\b/
