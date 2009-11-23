@@ -105,10 +105,10 @@ module IntelligentMigration
   end
 
   def process_migration(context, snippet)
+    # delete the text that triggered the snippet, then select from current line to end of document
     context.delete_word_left
-    # FIX: textmate bundle moves to BOL before going to end of file. Why?
-    context.move_to_beginning_of_line
-    context.move_to_end_of_document
+    context.selection.move_to.beginning_of_line
+    context.selection.extend_to.end_of_document
 
     # escape chars that are special in snippets
     text = context.selection.gsub('[\$\`\\]', '\\\\\1')
