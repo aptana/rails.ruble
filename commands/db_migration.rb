@@ -1,6 +1,8 @@
 require 'radrails'
 
-with_defaults { :scope => "source.ruby.rails, source.yaml" ],
+require 'rails/intelligent_migration'
+
+with_defaults { :scope => "source.ruby.rails, source.yaml",
                 :key_binding => [ :control, "|" ],
                 :output => :show_as_html }
 do |bundle|

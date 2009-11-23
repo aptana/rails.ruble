@@ -1,3 +1,16 @@
+require 'radrails'
+
+### FIX: this file has lots of calls to textmate to do things that have not yet been converted:
+#
+# TextMate::UI.request_string
+# TextMate::UI.request_confirmation
+# TextMate.open(path)
+# TextMate.open_url
+# TextMate.exit_discard: exit command invocation with error
+# TextMate.rescan_project
+# TextMate.current_line
+# TextMate.column_number
+
 class CommandGoToFile
   def self.alternate(args)
     current_file = RailsPath.new
