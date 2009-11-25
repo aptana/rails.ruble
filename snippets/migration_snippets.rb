@@ -1,7 +1,48 @@
 require 'radrails'
 
+snippet "Create Column in Table" do |snippet|
+  snippet.scope = "meta.rails.migration.create_table"
+  snippet.trigger = "mcol"
+  snippet.expansion = "t.column ${1:title}, :${2:string}\n\t$0"
+end
+
+snippet "Drop / Create Table" do |snippet|
+  snippet.scope = "meta.rails.migration - meta.rails.migration.create_table - meta.rails.migration.change_table"
+  snippet.trigger = "mtab"
+  snippet.expansion = "drop_table :${1:table}${2: [press tab twice to generate create_table]}"
+end
+
+snippet "Create Column in Table" do |snippet|
+  snippet.scope = "meta.rails.migration.create_table"
+  snippet.trigger = "mcol"
+  snippet.expansion = "t.column ${1:title}, :${2:string}\n\t$0"
+end
+
+snippet "Remove / Add Column" do |snippet|
+  snippet.scope = "meta.rails.migration - meta.rails.migration.create_table - meta.rails.migration.change_table"
+  snippet.trigger = "mcol"
+  snippet.expansion = "remove_column :${1:table}, :${2:column}${3: [press tab twice to generate add_column]}"
+end
+
+snippet "Table column(s) change" do |snippet|
+  snippet.scope = "meta.rails.migration.change_table"
+  snippet.trigger = "tch"
+  snippet.expansion = "t.change :${1:name}${2:, :${3:string}${4:, :${5:limit} =&gt; ${6:80}}}\n$0"
+end
+
+snippet "Table column(s) rename" do |snippet|
+  snippet.scope = "meta.rails.migration.change_table"
+  snippet.trigger = "tre"
+  snippet.expansion = "t.rename :${1:old_column_name}, :${2:new_column_name}\n$0"
+end
+
 with_defaults { :scope => "meta.rails.migration.create_table, meta.rails.migration.change_table" }
 do |bundle|
+
+  snippet "Table column binary" do |snippet|
+    snippet.trigger = "mcol"
+    snippet.expansion = "t.column ${1:title}, :${2:string}\n\t$0"
+  end
 
   snippet "Table column binary" do |snippet|
     snippet.trigger = [ "t.", "tcbi" ]
