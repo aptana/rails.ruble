@@ -33,6 +33,11 @@ do |bundle|
     snippet.expansion = "find_in_batches(${1::conditions => {:${2:field} => ${3:true}\}}) do |${4:${TM_CURRENT_WORD/(\w+)\./\L$1/g}}s|\n\t\t$4s.each do |$4|\n\t\t\t$0\n\t\tend\n\tend"
   end
 
+  snippet "belongs_to" do |snippet|
+    snippet.trigger = "bt"
+    snippet.expansion = "belongs_to :${1:object}${2:, :class_name => \"${3:${1/[[:alpha:]]+|(_)/(?1::\u$0)/g}}\", :foreign_key => \"${4:${1}_id}\"}"
+  end
+
   snippet "has_and_belongs_to_many" do |snippet|
     snippet.trigger = "habtm"
     snippet.expansion = "has_and_belongs_to_many :${1:object}${2:, :join_table => \"${3:table_name}\", :foreign_key => \"${4:${1}_id}\"}"
