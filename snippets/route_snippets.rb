@@ -3,6 +3,31 @@ require 'radrails'
 with_defaults { :scope => "text.html.ruby, text.haml" }
 do |bundle|
 
+  snippet "link_to (action)" do |snippet|
+    snippet.trigger = "lia"
+    snippet.expansion = "link_to \"${1:link text...}\", :action => \"${2:index}\""
+  end
+
+  snippet "link_to (action, id)" do |snippet|
+    snippet.trigger = "liai"
+    snippet.expansion = "link_to \"${1:link text...}\", :action => \"${2:index}\", :id => ${3:@item}"
+  end
+
+  snippet "link_to (controller)" do |snippet|
+    snippet.trigger = "lic"
+    snippet.expansion = "link_to \"${1:link text...}\", :controller => \"${2:items}\""
+  end
+
+  snippet "link_to (controller, action)" do |snippet|
+    snippet.trigger = "lica"
+    snippet.expansion = "link_to \"${1:link text...}\", :controller => \"${2:items}\", :action => ${3:@index}"
+  end
+
+  snippet "link_to (conroller, action, id)" do |snippet|
+    snippet.trigger = "licai"
+    snippet.expansion = "link_to \"${1:link text...}\", :controller => \"${2:items}\", :action => ${3:@index}, :id => ${4:@item}"
+  end
+
   snippet "link_to (nested path plural)" do |snippet|
     snippet.trigger = "linpp"
     snippet.expansion = "link_to ${1:\"${2:link text...}\"}, ${3:${10:parent}_${11:child}_path(${12:@}${13:${10}})}"
@@ -32,6 +57,31 @@ end
 
 with_defaults { :scope => "source.ruby.rails" }
 do |bundle|
+
+  snippet "redirect_to (action)" do |snippet|
+    snippet.trigger = "rea"
+    snippet.expansion = "redirect_to action => \"${1:index}\""
+  end
+
+  snippet "redirect_to (action, id)" do |snippet|
+    snippet.trigger = "reai"
+    snippet.expansion = "redirect_to :action => \"${1:index}\", :id => ${0:@item}"
+  end
+
+  snippet "redirect_to (controller)" do |snippet|
+    snippet.trigger = "rec"
+    snippet.expansion = "redirect_to :controller => \"${1:items}\""
+  end
+
+  snippet "redirect_to (controller, action)" do |snippet|
+    snippet.trigger = "reca"
+    snippet.expansion = "redirect_to :controller => \"${1:items}\", :action => ${2:list}"
+  end
+
+  snippet "redirect_to (controller, action, id)" do |snippet|
+    snippet.trigger = "recai"
+    snippet.expansion = "redirect_to :controller => \"${1:items}\", :action => ${2:show}, :id => ${0:@item}"
+  end
 
   snippet "redirect_to (nested path plural)" do |snippet|
     snippet.trigger = "renpp"
