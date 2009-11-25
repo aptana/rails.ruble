@@ -27,7 +27,7 @@ end
 snippet "Table column(s) change" do |snippet|
   snippet.scope = "meta.rails.migration.change_table"
   snippet.trigger = "tch"
-  snippet.expansion = "t.change :${1:name}${2:, :${3:string}${4:, :${5:limit} =&gt; ${6:80}}}\n$0"
+  snippet.expansion = "t.change :${1:name}${2:, :${3:string}${4:, :${5:limit} => ${6:80}}}\n$0"
 end
 
 snippet "Table column(s) rename" do |snippet|
@@ -46,7 +46,7 @@ do |bundle|
 
   snippet "Table column binary" do |snippet|
     snippet.trigger = [ "t.", "tcbi" ]
-    snippet.expansion = "t.binary :${1:title}${2:, :limit =&gt; ${3:2}.megabytes}\n$0"
+    snippet.expansion = "t.binary :${1:title}${2:, :limit => ${3:2}.megabytes}\n$0"
   end
 
   snippet "Table column boolean" do |snippet|
@@ -66,7 +66,7 @@ do |bundle|
 
   snippet "Table column decimal" do |snippet|
     snippet.trigger = [ "t.", "tcd" ]
-    snippet.expansion = "t.decimal :${1:title}${2:${3:, :precision =&gt; ${4:10}}${5:, :scale =&gt; ${6:2}}}\n$0"
+    snippet.expansion = "t.decimal :${1:title}${2:${3:, :precision => ${4:10}}${5:, :scale => ${6:2}}}\n$0"
   end
 
   snippet "Table column float" do |snippet|
@@ -81,12 +81,12 @@ do |bundle|
 
   snippet "Table column lock_version" do |snippet|
     snippet.trigger = [ "t.", "tcl" ]
-    snippet.expansion = "t.binary integer :lock_version, :null =&gt; false, :default =&gt; 0\n$0"
+    snippet.expansion = "t.binary integer :lock_version, :null => false, :default => 0\n$0"
   end
 
   snippet "Table column(s) references" do |snippet|
     snippet.trigger = [ "t.", "tcr" ]
-    snippet.expansion = "t.references :${1:taggable}${2:, :polymorphic =&gt; ${3:{ :default =&gt; '${4:Photo}' \}}}\n$0"
+    snippet.expansion = "t.references :${1:taggable}${2:, :polymorphic => ${3:{ :default => '${4:Photo}' \}}}\n$0"
   end
 
   snippet "Table column string" do |snippet|
@@ -117,7 +117,7 @@ do |bundle|
   snippet "t.change (tch)" do |snippet|
     snippet.scope = "meta.rails.migration.change_table"
     snippet.trigger = "t."
-    snippet.expansion = "t.change :${1:name}${2:, :${3:string}${4:, :${5:limit} =&gt; ${6:80}}}\nt.$0"
+    snippet.expansion = "t.change :${1:name}${2:, :${3:string}${4:, :${5:limit} => ${6:80}}}\nt.$0"
   end
 
   snippet "t.rename (tre)" do |snippet|

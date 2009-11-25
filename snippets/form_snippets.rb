@@ -40,7 +40,7 @@ do |bundle|
 
   snippet "form_for submit" do |snippet|
     snippet.trigger = [ "f.", "ffs" ]
-    snippet.expansion = "f.submit \"${1:Submit}\"${2:, :disable_with =&gt; '${3:$1ing...}'}"
+    snippet.expansion = "f.submit \"${1:Submit}\"${2:, :disable_with => '${3:$1ing...}'}"
   end
 
   snippet "form_for text_area" do |snippet|

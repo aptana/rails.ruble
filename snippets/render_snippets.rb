@@ -68,7 +68,7 @@ do |bundle|
   snippet "render (partial, locals) (rpl)" do |snippet|
     snippet.scope = "source.ruby.rails, text.html.ruby, text.haml"
     snippet.trigger = "rpl"
-    snippet.expansion = "render :partial => '${1:item}', :locals =&gt; { :${2:$1} => ${3:@$1}$0 }"
+    snippet.expansion = "render :partial => '${1:item}', :locals => { :${2:$1} => ${3:@$1}$0 }"
   end
 
   snippet "render (partial, object) (rpo)" do |snippet|

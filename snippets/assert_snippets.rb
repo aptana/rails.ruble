@@ -45,7 +45,7 @@ do |bundle|
 
   snippet "assert_select" do |snippet|
     snippet.trigger = "ass"
-    snippet.expansion = "assert_select '${1:path}'${2:, :${3:text} =&gt; ${4:'${5:inner_html}'}}${6: do\n$0\nend"
+    snippet.expansion = "assert_select '${1:path}'${2:, :${3:text} => ${4:'${5:inner_html}'}}${6: do\n$0\nend"
   end
 
 end

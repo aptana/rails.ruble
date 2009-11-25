@@ -5,17 +5,17 @@ do |bundle|
 
   snippet "find(:all)" do |snippet|
     snippet.trigger = "fina"
-    snippet.expansion = "find(:all${1:, :conditions =&gt; ['${2:${3:field} = ?}', ${5:true}]})"
+    snippet.expansion = "find(:all${1:, :conditions => ['${2:${3:field} = ?}', ${5:true}]})"
   end
 
   snippet "find(:first)" do |snippet|
     snippet.trigger = "finf"
-    snippet.expansion = "find(:first${1:, :conditions =&gt; ['${2:${3:field} = ?}', ${5:true}]})"
+    snippet.expansion = "find(:first${1:, :conditions => ['${2:${3:field} = ?}', ${5:true}]})"
   end
 
   snippet "find(:last)" do |snippet|
     snippet.trigger = "finl"
-    snippet.expansion = "find(:last${1:, :conditions =&gt; ['${2:${3:field} = ?}', ${5:true}]})"
+    snippet.expansion = "find(:last${1:, :conditions => ['${2:${3:field} = ?}', ${5:true}]})"
   end
 
   snippet "find(id)" do |snippet|
@@ -25,12 +25,12 @@ do |bundle|
 
   snippet "find_each" do |snippet|
     snippet.trigger = "fine"
-    snippet.expansion = "find_each(${1::conditions =&gt; {:${2:field} =&gt; ${3:true}\}}) do |${4:${TM_CURRENT_WORD/(\w+)\./\L$1/g}}|\n\t\t$0\n\tend"
+    snippet.expansion = "find_each(${1::conditions => {:${2:field} => ${3:true}\}}) do |${4:${TM_CURRENT_WORD/(\w+)\./\L$1/g}}|\n\t\t$0\n\tend"
   end
 
   snippet "find_in_batches" do |snippet|
     snippet.trigger = "finb"
-    snippet.expansion = "find_in_batches(${1::conditions =&gt; {:${2:field} =&gt; ${3:true}\}}) do |${4:${TM_CURRENT_WORD/(\w+)\./\L$1/g}}s|\n\t\t$4s.each do |$4|\n\t\t\t$0\n\t\tend\n\tend"
+    snippet.expansion = "find_in_batches(${1::conditions => {:${2:field} => ${3:true}\}}) do |${4:${TM_CURRENT_WORD/(\w+)\./\L$1/g}}s|\n\t\t$4s.each do |$4|\n\t\t\t$0\n\t\tend\n\tend"
   end
 
   snippet "has_and_belongs_to_many" do |snippet|

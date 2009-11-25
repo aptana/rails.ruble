@@ -115,7 +115,7 @@ do |bundle|
 
   snippet "map.catch_all" do |snippet|
     snippet.trigger = "mapca"
-    snippet.expansion = "${1:map}.catch_all \"*${2:anything}\", :controller =&gt; \"${3:default}\", :action =&gt; \"${4:error}\"\n"
+    snippet.expansion = "${1:map}.catch_all \"*${2:anything}\", :controller => \"${3:default}\", :action => \"${4:error}\"\n"
   end
 
   snippet "map.named_route" do |snippet|
@@ -135,7 +135,7 @@ do |bundle|
 
   snippet "map.with_options" do |snippet|
     snippet.trigger = "mapwo"
-    snippet.expansion = "${1:map}.with_options :${2:controller} =&gt; '${3:thing}' do |${4:$3}|\n\t\t$0\n\tend\n"
+    snippet.expansion = "${1:map}.with_options :${2:controller} => '${3:thing}' do |${4:$3}|\n\t\t$0\n\tend\n"
   end
 
 end
