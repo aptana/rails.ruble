@@ -1,0 +1,359 @@
+# more than menu can be defined in this file. I haven't broken this menu up into pieces yet, but I should
+# menus are defined by indentation, comments begin with '#', blank lines ignored.
+
+Rails
+  scopes = source.ruby.rails, source.html.erb, project.rails
+
+  Go To
+    # command/snippet names must be unique within bundle and are case insensitive
+    Alternate File
+    File on current line
+    ---   # 2 or more dashes to begin a line means a menu separator
+    Go to Model
+    Go to View
+    Go to Controller
+    Go to Functional Test
+    Go to Helper
+    Go to Javascript
+    Go to Stylesheet
+    Go to Unit Test
+    Go to Fixture
+
+  Run Tests
+    Test All
+    Test Functionals
+    Test Integration
+    Test Plugins
+    Test Recent
+    Test Uncommitted
+    Test Units
+
+  ---
+
+  Call Generate Script
+  Install Plugin
+
+  Database
+    Migrate to Current
+    Migrate to Version...
+    Migrate to Previous Version
+    Redo Last Migration
+    ---
+    Load Fixtures (Development DB)
+    Load Fixtures (Test DB)
+    ---
+    Load schema.rb to DB
+    Dump DB to schema.rb
+    Clone Development DB to Test DB
+
+  ---
+
+  params[...]
+  sessions[...]
+
+  Logger
+    logger.debug
+    logger.info
+    logger.warn
+    logger.error
+    logger.fatal
+    RAILS_DEFAULT_LOGGER.debug
+
+  ---
+
+  Models
+    Show DB Schema for Current Class
+    ---
+    alias_attribute
+    ---
+    Callbacks
+      before_validation
+      before_validation_on_create
+      before_validation_on_update
+      after_validation
+      after_validation_on_create
+      after_validation_on_update
+      before_save
+      after_save
+      before_create
+      after_create
+      before_update
+      after_update
+      before_destroy
+      after_destroy
+    Associations
+      belongs_to
+      has_and_belongs_to_many
+      has_one
+      has_many
+      has_many :dependent => :destroy
+      has_many (through)
+      ---
+      accepts_nested_attributes_for
+    Scopes
+      named_scope
+      named_scope lambda
+      default_scope
+    Finders
+      find(id)
+      find(:all)
+      find(:first)
+      find(:last)
+      find_in_batches
+      ---
+      scoped_by
+    Validations
+      validates_acceptance_of
+      validates_acceptance_of if
+      validates_associated
+      validates_associated if
+      validates_confirmation_of
+      validates_confirmation_of if
+      validates_exclusion_of
+      validates_exclusion_of if
+      validates_inclusion_of
+      validates_inclusion_of if
+      validates_format_of
+      validates_format_of if
+      validates_length_of
+      validates_length_of if
+      validates_numericality_of
+      validates_numericality_of if
+      validates_presence_of
+      validates_presence_of if
+      validates_uniqueness_of
+      validates_uniqueness_of if
+
+  Controllers
+    Create controller class
+    Create resources controller class
+    layout
+    before_filter
+    flash[...]
+    respond_to
+      respond_to (html)
+      respond_to
+      wants.format
+    redirect_to
+      redirect_to (path)
+      redirect_to (path plural)
+      redirect_to (nested path)
+      redirect_to (nested path plural)
+      redirect_to (action)
+      redirect_to (action, id)
+      redirect_to (controller)
+      redirect_to (controller, action)
+      redirect_to (controller, action, id)
+      redirect_to :back
+    render
+      render (action)
+      render (action, layout)
+      render (file)
+      render (file, use_full_path)
+      render (inline)
+      render (inline, locals)
+      render (inline, type)
+      render (layout)
+      render (nothing)
+      render (nothing, status)
+      render (partial)
+      render (partial, collection)
+      render (partial, locals)
+      render (partial, object)
+      render (partial, status)
+      render (text)
+      render (text, layout)
+      render (text, layout => true)
+      render (text, status)
+      render (update)
+    REST methods
+      def create - resource
+    ---
+    verify render
+    verify redirect
+
+  View Templates
+    Create Partial from Selection
+    ---
+    form_for
+    form_for with errors
+    form_for f.drop-down list
+      f.label (ffl)
+      f.text_field (fftf)
+      f.text_area (ffta)
+      f.check_box (ffcb)
+      f.radio_button (ffrb)
+      f.password_field (ffpf)
+      f.hidden_field (ffhf)
+      f.file_field (ffff)
+      f.submit (ffs)
+      f.fields_for (nff)
+    form_for helpers
+      form_for label
+      form_for text_field
+      form_for text_area
+      form_for check_box
+      form_for radio_button
+      form_for password_field
+      form_for hidden_field
+      form_for file_field
+      form_for submit
+      form_for fields_for
+    fields_for
+    ---
+    form_tag
+    submit_tag
+    image_submit_tag
+    link_to
+      link_to (path)
+      link_to (path plural)
+      link_to (nested path)
+      link_to (nested path plural)
+      link_to (action)
+      link_to (action, id)
+      link_to (controller)
+      link_to (controller, action)
+      link_to (controller, action, id)
+      link_to model
+    end (ERB)
+    ---
+    map(&:sym_proc)
+    ---
+    content_for
+    for loop in rhtml
+
+  Layouts
+    javascript_include_tag
+    stylesheet_link_tag
+
+  RJS
+    page.replace (id, partial)
+    page.hide (*ids)
+    page.replace_html (id, partial)
+    page.insert_html (position, id, partial)
+    page.visual_effect (effect, id)
+    page.show (*ids)
+    page.toggle (*ids)
+
+  Migrations
+    Columns
+      Add / Remove Column
+      Add / Remove Several Columns
+      Add / Remove Several Columns (marcc)
+      Add / Remove Timestamps
+      Change Column
+      Change Column Default
+      Rename Column
+      Rename Several Columns
+      Rename Several Columns (mncc)
+      Remove / Add Column
+      Remove / Add Timestamps
+
+    Tables
+      Create / Drop Table
+      Rename Table
+      Drop / Create Table
+      Change Table
+
+      Create columns t. drop-down list
+        t.string (tcs)
+        t.text (tct)
+        t.integer (tci)
+        t.float (tcf)
+        t.decimal (tcd)
+        t.datetime (tcdt)
+        t.timestamp (tcts)
+        t.time (tcti)
+        t.date (tcda)
+        t.boolean (tcb)
+        t.binary (tcbi)
+        t.timestamps (tctss)
+        t.lock_version (tcl)
+        t.references (tcr)
+      Create columns helpers
+        Table column string
+        Table column text
+        Table column integer
+        Table column float
+        Table column decimal
+        Table column datetime
+        Table column timestamp
+        Table column time
+        Table column date
+        Table column boolean
+        Table column binary
+        Table column timestamps
+        Table column lock_version
+        Table column(s) references
+      Create Column in Table
+      Create Several Columns in Table
+      Change columns t. drop-down list
+        t.change (tch)
+        t.rename (tre)
+      Change columns t. helpers
+        Table column(s) change
+        Table column(s) rename
+
+    Indices
+      Add / Remove Index
+      Add / Remove Named Index
+      Add / Remove Unique Index
+
+  Environment
+    config.gem
+
+  Routes
+    map.named_route
+    map.resources
+    map.resource
+    map.with_options
+    map.catch_all
+
+  ActiveSupport
+    cattr_accessor
+    mattr_accessor
+    returning do |variable| ... end
+
+  ---
+
+  Fixtures
+    $LABEL
+    <%= Fixtures.identify(:symbol) %>
+    ---
+    Autocomplete Foreign Key Fixture Reference
+    Autocomplete Foreign Key Fixture Reference (habtm)
+
+  test do..end
+
+  Unit Tests
+    assert_difference
+    assert_no_difference
+
+  Functional Tests
+    Create functional test class
+    def test_should_get_action
+    def test_should_post_action
+    ---
+    assert_response
+    assert_redirected_to
+    assert_redirected_to (path)
+    assert_redirected_to (path plural)
+    assert_redirected_to (nested path)
+    assert_redirected_to (nested path plural)
+    ---
+    assert_select
+    ---
+    assert_rjs
+    ---
+    assert(var= assigns(:var))
+
+  Ajax Tests
+    xhr post
+    xhr get
+    xhr delete
+    xhr put
+
+  ---
+
+  Documentation for Word
+  find_each
