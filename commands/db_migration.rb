@@ -50,8 +50,7 @@ end
 # FIX: textmate macro has scopeType=local. what is our equivalent?
 with_defaults { :scope => "meta.rails.migration - meta.rails.migration.create_table - meta.rails.migration.change_table",
                 :input = :selection,
-                :output = :insert_as_snippet,
-                :output => :show_as_html }
+                :output = :insert_as_snippet }
 do |bundle|
   command "Add / Remove Column" do |cmd|
     # since a Command is a class definition, we can extend it using a module
@@ -215,5 +214,3 @@ do |bundle|
   end
 
 end
-
-# FIX: missing from textmate's plugin "Drop / Create Table" & "Remove / Add Column" macros
