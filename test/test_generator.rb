@@ -1,5 +1,5 @@
 require File.dirname(__FILE__) + '/test_helper'
-require "rails/generate"
+require "rails/generator"
 
 class TestBinGenerate < Test::Unit::TestCase
   def test_known_generators
