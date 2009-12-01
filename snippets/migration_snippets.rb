@@ -12,12 +12,6 @@ snippet "Drop / Create Table" do |snippet|
   snippet.expansion = "drop_table :${1:table}${2: [press tab twice to generate create_table]}"
 end
 
-snippet "Create Column in Table" do |snippet|
-  snippet.scope = "meta.rails.migration.create_table"
-  snippet.trigger = "mcol"
-  snippet.expansion = "t.column ${1:title}, :${2:string}\n\t$0"
-end
-
 snippet "Remove / Add Column" do |snippet|
   snippet.scope = "meta.rails.migration - meta.rails.migration.create_table - meta.rails.migration.change_table"
   snippet.trigger = "mcol"
@@ -39,7 +33,7 @@ end
 with_defaults { :scope => "meta.rails.migration.create_table, meta.rails.migration.change_table" }
 do |bundle|
 
-  snippet "Table column binary" do |snippet|
+  snippet "Table column" do |snippet|
     snippet.trigger = "mcol"
     snippet.expansion = "t.column ${1:title}, :${2:string}\n\t$0"
   end

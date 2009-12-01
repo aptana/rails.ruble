@@ -28,4 +28,10 @@ do |bundle|
     snippet.expansion = "verify :only => [:$1], :session => :user, :params => :id, :redirect_to => {:action => '${2:index}'}\n"
   end
 
+  snippet "<%= Fixtures.identify(:symbol) %>" do |snippet|
+    snippet.trigger = "fi"
+    snippet.expansion = "${TM_RAILS_TEMPLATE_START_RUBY_EXPR}Fixtures.identify(:${1:name})${TM_RAILS_TEMPLATE_END_RUBY_EXPR}$0"
+    snippet.scope = :source_yaml
+  end
+
 end
