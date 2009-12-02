@@ -130,7 +130,7 @@ END
         scopes_menu.command "find(:first)"
         scopes_menu.command "find(:last)"
         scopes_menu.command "find_in_batches"
-        scopes_menu.command.separator
+        scopes_menu.separator
         scopes_menu.command "scoped_by"
       end
       models_menu.menu "Finders" do |finders_menu|
@@ -139,7 +139,7 @@ END
         finders_menu.command "find(:first)"
         finders_menu.command "find(:last)"
         finders_menu.command "find_in_batches"
-        finders_menu.command.separator
+        finders_menu.separator
         finders_menu.command "scoped_by"
       end
       models_menu.menu "Validations" do |validations_menu|
