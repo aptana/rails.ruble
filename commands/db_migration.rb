@@ -2,10 +2,9 @@ require 'radrails'
 
 require 'rails/intelligent_migration'
 
-with_defaults { :scope => "source.ruby.rails, source.yaml",
-                :key_binding => [ :control, "|" ],
-                :output => :show_as_html }
-do |bundle|
+with_defaults(:scope => "source.ruby.rails, source.yaml",
+              :key_binding => [ :control, "|" ],
+              :output => :show_as_html ) do |bundle|
   command "Clone Development DB to Test DB" do |cmd|
     cmd.invoke = "rake db:test:clone"
   end
@@ -48,10 +47,9 @@ do |bundle|
 end
 
 # FIX: textmate macro has scopeType=local. what is our equivalent?
-with_defaults { :scope => "meta.rails.migration - meta.rails.migration.create_table - meta.rails.migration.change_table",
-                :input = :selection,
-                :output = :insert_as_snippet }
-do |bundle|
+with_defaults(:scope => "meta.rails.migration - meta.rails.migration.create_table - meta.rails.migration.change_table",
+              :input => :selection,
+              :output => :insert_as_snippet ) do |bundle|
   command "Add / Remove Column" do |cmd|
     # since a Command is a class definition, we can extend it using a module
     extend IntelligentMigration
