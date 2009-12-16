@@ -1,7 +1,6 @@
 require 'radrails'
 
-with_defaults { :scope => "source.ruby" }
-do |bundle|
+with_defaults { :scope => "source.ruby" } do |bundle|
 
   snippet "assert(var = assigns(:var))" do |snippet|
     snippet.trigger = "asg"
