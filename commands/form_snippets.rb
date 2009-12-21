@@ -1,7 +1,6 @@
 require 'radrails'
 
-with_defaults { :scope => "text.html.ruby, text.haml" }
-do |bundle|
+with_defaults :scope => "text.html.ruby, text.haml" do |bundle|
 
   snippet "form_for check_box" do |snippet|
     snippet.trigger = [ "f.", "ffcb" ]

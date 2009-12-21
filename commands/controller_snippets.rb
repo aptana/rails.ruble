@@ -1,7 +1,6 @@
 require 'radrails'
 
-with_defaults { :scope => "meta.rails.controller" }
-do |bundle|
+with_defaults :scope => "meta.rails.controller" do |bundle|
 
   snippet "respond_to" do |snippet|
     snippet.trigger = "rest"
@@ -11,7 +10,8 @@ do |bundle|
   command "respond_to (html)" do |cmd|
     cmd.key_binding = [ :command, :shift, "H"]
     # FIXME: how do we substitute $TM_SELECTED_TEXT into the template on the fly?
-    cmd.expand_as_trigger "respond_to do |wants|\n\t\twants.html do\n\t\t\t$TM_SELECTED_TEXT\n\t\tend\n\t\twants.${1:js} { $0 }\n\tend"
+    # FICME: need to implement expand_as_trigger!
+    # cmd.expand_as_trigger "respond_to do |wants|\n\t\twants.html do\n\t\t\t$TM_SELECTED_TEXT\n\t\tend\n\t\twants.${1:js} { $0 }\n\tend"
   end
 
   snippet "wants.format" do |snippet|

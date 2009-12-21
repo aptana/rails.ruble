@@ -2,8 +2,8 @@ require 'radrails'
 
 require 'rails/command_go_to_file'
 
-with_defaults { :key_binding => [ :option, :shift, :command, :down_arrow ], :output => :show_as_tooltip }
-do |bundle|
+with_defaults :key_binding => [ :option, :shift, :command, :down_arrow ],
+              :output => :show_as_tooltip do |bundle|
 
   command "Go to Controller" do |cmd|
     cmd.scope = "text.html.ruby, source.ruby.rails.embedded.html, meta.rails.helper, meta.rails.functional_test, source.js, source.css, source.yaml, meta.rails.model, meta.rails.unit_test, text.haml"

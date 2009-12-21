@@ -1,7 +1,6 @@
 require 'radrails'
 
-with_defaults { :scope => "source.ruby.rails.rjs" }
-do |bundle|
+with_defaults :scope => "source.ruby.rails.rjs" do |bundle|
 
   snippet "page.hide (*ids)" do |snippet|
     snippet.trigger = "hide"

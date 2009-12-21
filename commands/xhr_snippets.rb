@@ -1,7 +1,6 @@
 require 'radrails'
 
-with_defaults { :scope => "source.ruby.rails" }
-do |bundle|
+with_defaults :scope => "source.ruby.rails" do |bundle|
 
   snippet "xhr put" do |snippet|
     snippet.trigger = "xput"

@@ -1,20 +1,20 @@
 require 'radrails'
 
-with_defaults { :scope => "source.ruby" } do |bundle|
+with_defaults :scope => "source.ruby" do |bundle|
 
   snippet "assert(var = assigns(:var))" do |snippet|
     snippet.trigger = "asg"
-    snippet.expansion = "assert(${1:var} = assigns(:${1}), "Cannot find @${1}")\n$0"
+    snippet.expansion = "assert(${1:var} = assigns(:${1}), \"Cannot find @${1}\")\n$0"
   end
 
   snippet "assert_difference" do |snippet|
     snippet.trigger = "asd"
-    snippet.expansion = "assert_difference "${1:Model}.${2:count}", ${3:1} do\n$0\nend"
+    snippet.expansion = "assert_difference \"${1:Model}.${2:count}\", ${3:1} do\n$0\nend"
   end
 
   snippet "assert_no_difference" do |snippet|
     snippet.trigger = "asnd"
-    snippet.expansion = "assert_no_difference "${1:Model}.${2:count}", ${3:1} do\n$0\nend"
+    snippet.expansion = "assert_no_difference \"${1:Model}.${2:count}\", ${3:1} do\n$0\nend"
   end
 
   snippet "assert_redirected_to (nested path plural)" do |snippet|
@@ -39,7 +39,7 @@ with_defaults { :scope => "source.ruby" } do |bundle|
 
   snippet "assert_rjs" do |snippet|
     snippet.trigger = "asrj"
-    snippet.expansion = "assert_rjs :${1:replace}, ${2:"${3:dom id}"}"
+    snippet.expansion = "assert_rjs :${1:replace}, ${2:\"${3:dom id}\"}"
   end
 
   snippet "assert_select" do |snippet|

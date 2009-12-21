@@ -1,7 +1,6 @@
 require 'radrails'
 
-with_defaults { :scope => "source.ruby.rails" }
-do |bundle|
+with_defaults :scope => "source.ruby.rails" do |bundle|
 
   snippet "find(:all)" do |snippet|
     snippet.trigger = "fina"
