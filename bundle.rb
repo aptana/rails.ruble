@@ -27,8 +27,8 @@ END
     
     rails_menu.menu "Go To" do |goto_menu|
       # command/snippet names must be unique within bundle and are case insensitive
-      goto_menu.command "Alternate File"
-      goto_menu.command "File on current line"
+      goto_menu.command "Go to Alternate File"
+      goto_menu.command "Go to File on Current Line"
 
       goto_menu.separator
       

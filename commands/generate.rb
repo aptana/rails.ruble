@@ -4,6 +4,8 @@ require File.dirname(__FILE__) + "/../lib/rails/generator"
 
 require 'radrails'
 
+# FIXME: this file is rife with textmate-isms!!!
+
 command "Call Generate Script" do |cmd|
   cmd.scope = "source.ruby.rails, source.yaml"
   cmd.output = :discard

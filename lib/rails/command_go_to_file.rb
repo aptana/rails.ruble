@@ -1,4 +1,5 @@
 require 'radrails'
+require 'rails_path'
 
 ### FIX: this file has lots of calls to textmate to do things that have not yet been converted:
 #

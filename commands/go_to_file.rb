@@ -6,16 +6,16 @@ with_defaults :key_binding => [ :option, :shift, :command, :down_arrow ],
               :output => :show_as_tooltip do |bundle|
 
   command "Go to Controller" do |cmd|
-    cmd.scope = "text.html.ruby, source.ruby.rails.embedded.html, meta.rails.helper, meta.rails.functional_test, source.js, source.css, source.yaml, meta.rails.model, meta.rails.unit_test, text.haml"
+    cmd.scope = "source.ruby, text.html.ruby, source.ruby.rails.embedded.html, meta.rails.helper, meta.rails.functional_test, source.js, source.css, source.yaml, meta.rails.model, meta.rails.unit_test, text.haml"
     cmd.invoke { CommandGoToFile.alternate(:controller) }
   end
 
-  command "Go to File" do |cmd|
+  command "Go to Alternate File" do |cmd|
     cmd.scope = "source.ruby.rails, text.html.ruby, source.ruby.rails.embedded.html, source.yaml, text.haml, source.css, source.js, source.sass"
     cmd.invoke { CommandGoToFile.alternate(nil) }
   end
 
-  command "Go to File on This Line" do |cmd|
+  command "Go to File on Current Line" do |cmd|
     cmd.scope = "source.ruby.rails, text.html.ruby, source.ruby.rails.embedded.html, text.haml"
     cmd.invoke { CommandGoToFile.on_current_line }
   end
