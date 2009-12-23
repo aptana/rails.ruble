@@ -54,8 +54,7 @@ with_defaults :scope => "text.html.ruby, text.haml" do |bundle|
 
 end
 
-with_defaults { :scope => "source.ruby.rails" }
-do |bundle|
+with_defaults :scope => "source.ruby.rails" do |bundle|
 
   snippet "redirect_to (action)" do |snippet|
     snippet.trigger = "rea"
@@ -109,8 +108,7 @@ do |bundle|
 
 end
 
-with_defaults { :scope => "meta.rails.routes" }
-do |bundle|
+with_defaults :scope => "meta.rails.routes" do |bundle|
 
   snippet "map.catch_all" do |snippet|
     snippet.trigger = "mapca"
