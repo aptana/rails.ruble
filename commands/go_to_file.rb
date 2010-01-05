@@ -2,7 +2,7 @@ require 'radrails'
 
 require 'rails/command_go_to_file'
 
-with_defaults :key_binding => [ :option, :shift, :command, :down_arrow ],
+with_defaults :key_binding => "M1+M2+M3+ARROW_DOWN",
               :output => :show_as_tooltip do |bundle|
 
   command "Go to Controller" do |cmd|

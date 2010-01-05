@@ -1,8 +1,7 @@
 require 'radrails'
 
 command "Documentation for Word" do |cmd|
-  # cmd.key_binding[:mac] =  [ :command, "h" ]
-  cmd.key_binding = [ :control, "h" ]
+  cmd.key_binding = "M1+H" ]
   # if selection isn't empty, use it, otherwise use the word containing the current selection
   cmd.input = [ :selection, :word ]
   cmd.output = :show_as_html

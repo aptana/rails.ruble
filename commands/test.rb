@@ -1,7 +1,7 @@
 require 'radrails'
 
 with_defaults :scope => "source.ruby.rails, source.yaml",
-              :key_binding => [ :control, "\\" ],
+              :key_binding => "CONTROL+\\" ],
               :output => :show_as_html do |bundle|
   command "Test All" do |cmd|
     cmd.invoke = "rake test"

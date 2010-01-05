@@ -8,7 +8,7 @@ with_defaults :scope => "source.ruby, meta.rails.controller" do |bundle|
   end
 
   command "respond_to (html)" do |cmd|
-    cmd.key_binding = [ :command, :shift, "H"]
+    cmd.key_binding = "M1+SHIFT+H"
 
     # if selection isn't empty, use it, otherwise use the word containing the current selection
     cmd.input = [ :selection, :word ]
