@@ -17,7 +17,7 @@ Rails bundle for RadRails 3, based heavily on Dr. Nic's tmbundle
 based heavily on the original SyncPeople bundle.
 END
 
-  bundle.git_repo = "git://github.com/aptana/rrbundle_rails.git"
+  bundle.repository = "git@github.com:aptana/rails-rrbundle.git"
 
   # most commands install into a dedicated rails menu
   # See also the alternative, HAML-style syntax in menu.rrmenu
