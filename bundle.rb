@@ -6,9 +6,9 @@ RadRails.current_bundle do |bundle|
   bundle.name = "Ruby on Rails"
   bundle.author = "Many"
   bundle.copyright = <<END
-© Copyright 2009 Aptana Inc. Distributed under GPLv3 and Aptana Source license.
+(C) Copyright 2010 Aptana Inc. Distributed under GPLv3 and Aptana Source license.
 
-Portions © Copyright 2006 syncPEOPLE, LLC, distributed under the terms of the MIT License.
+Portions (C) Copyright 2006 syncPEOPLE, LLC, distributed under the terms of the MIT License.
 END
 
   bundle.description = <<END
@@ -387,7 +387,7 @@ END
       fixtures_menu.command "Autocomplete Foreign Key Fixture Reference"
       fixtures_menu.command "Autocomplete Foreign Key Fixture Reference (habtm)"
     end
-    rails_menu.command "test do..end"
+    rails_menu.command "test do...end"
     rails_menu.menu "Unit Tests" do |unit_tests_menu|
       unit_tests_menu.command "assert_difference"
       unit_tests_menu.command "assert_no_difference"
