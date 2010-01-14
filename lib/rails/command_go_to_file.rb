@@ -201,6 +201,7 @@ class #{rails_path.controller_name.camelize}ControllerTest < ActionController::T
 
 end", 3, 0]
     end
+    # TODO Add fxixture, stylesheet to case with default content?
 
     rails_path.touch
     rails_path.append generated_code if generated_code
