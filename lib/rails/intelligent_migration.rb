@@ -30,7 +30,7 @@ module IntelligentMigration
     'change_column' =>
       { :up   => 'change_column :${1:table_name}, :${2:column_name}, :${4:string}$5',
         :down => 'change_column :$1, :$2, :${6:string}$7' },
-  
+  # FIXME We don't support nested tab stops yet
     'change_column_default' =>
       { :up   => 'change_column_default :${1:table_name}, :${2:column_name}, ${4:"${5:new default}"}',
         :down => 'change_column_default :$1, :$2, ${6:"${7:old default}"}' },
@@ -69,11 +69,11 @@ module IntelligentMigration
     'add_remove_index' =>
       { :up   => 'add_index :${1:table_name}, :${2:column_name}$0',
         :down => 'remove_index :$1, :$2' },
-
+# FIXME We don't support nested tab stops yet
     'add_remove_unique_index' =>
       { :up   => 'add_index :${1:table_name}, ${2:[:${3:column_name}${4:, :${5:column_name}}]}, :unique => true$0',
         :down => 'remove_index :$1, :column => $2' },
-
+# FIXME We don't support nested tab stops yet
     'add_remove_named_index' =>
       { :up   => 'add_index :${1:table_name}, [:${2:column_name}${3:, :${4:column_name}}], :name => "${5:index_name}"${6:, :unique => true}$0',
         :down => 'remove_index :$1, :name => :$5' }
@@ -105,6 +105,7 @@ module IntelligentMigration
   end
 
   def process_migration(context, snippet)
+    # FIXME There is no way this code will work
     # delete the text that triggered the snippet, then select from current line to end of document
     context.delete_word_left
     context.selection.move_to.beginning_of_line
@@ -119,7 +120,7 @@ module IntelligentMigration
       # return the unmodified text
       output = text
     end
-    print output
+    output
   end
 
 end
