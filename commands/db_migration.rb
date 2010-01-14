@@ -1,49 +1,50 @@
 require 'radrails'
+require 'radrails/terminal'
 
 require 'rails/intelligent_migration'
 
 # FIXME: key_binding should be "M1+|"
 with_defaults :scope => "source.ruby.rails, source.yaml",
               :key_binding => "M1+SHIFT+\\",
-              :output => :show_as_html do |bundle|
+              :output => :discard do |bundle|
   command "Clone Development DB to Test DB" do |cmd|
-    cmd.invoke = "rake db:test:clone"
+    cmd.invoke {|context|  RadRails::Terminal.open("rake db:test:clone", context.project.to_dir.path) }
   end
 
   command "Dump DB to schema.rb" do |cmd|
-    cmd.invoke = "rake db:schema:dump"
+    cmd.invoke {|context|  RadRails::Terminal.open("rake db:schema:dump", context.project.to_dir.path) }
   end
 
   command "Load schema.rb to DB" do |cmd|
-    cmd.invoke = "rake db:schema:load"
+    cmd.invoke {|context|  RadRails::Terminal.open("rake db:schema:load", context.project.to_dir.path) }
   end
 
   # FIXME: generate quick migration?
 
   command "Load Fixtures to Test DB" do |cmd|
-    cmd.invoke = "rake db:fixtures:load RAILS_ENV=test"
+    cmd.invoke {|context|  RadRails::Terminal.open("rake db:fixtures:load RAILS_ENV=test", context.project.to_dir.path) }
   end
 
   command "Load Fixtures to Development DB" do |cmd|
-    cmd.invoke = "rake db:fixtures:load"
+    cmd.invoke {|context|  RadRails::Terminal.open("rake db:fixtures:load", context.project.to_dir.path) }
   end
 
   command "Migrate to Previous Version" do |cmd|
     cmd.invoke do |context|
       # FIXME: need to do this in RUBY directly
       current_schema_version="0" #`grep 'Schema\.define' "$TM_PROJECT_DIRECTORY/db/schema.rb" | ruby -e 'print $stdin.read.scan(/\d+/).first'`
-      exec_cmd "rake db:migrate:down VERSION=#{current_schema_version}"
+      RadRails::Terminal.open("rake db:migrate:down VERSION=#{current_schema_version}", context.project.to_dir.path)
     end
   end
 
   # Migrate to version is in textmate, but sucks. we can do better with a gui...
 
   command "Migrate to Current" do |cmd|
-    cmd.invoke = "rake db:migrate"
+    cmd.invoke {|context|  RadRails::Terminal.open("rake db:migrate", context.project.to_dir.path) }
   end
 
   command "Redo Last Migration" do |cmd|
-    cmd.invoke = "rake db:migrate:redo"
+    cmd.invoke {|context|  RadRails::Terminal.open("rake db:migrate:redo", context.project.to_dir.path) }
   end
 end
 
@@ -235,6 +236,7 @@ end
 snippet "Table column(s) change" do |snippet|
   snippet.scope = "meta.rails.migration.change_table"
   snippet.trigger = "tch"
+  # FIXME We don't support nested tab stops yet
   snippet.expansion = "t.change :${1:name}${2:, :${3:string}${4:, :${5:limit} => ${6:80}}}\n$0"
 end
 
@@ -273,6 +275,7 @@ with_defaults :scope => "meta.rails.migration.create_table, meta.rails.migration
 
   snippet "Table column decimal" do |snippet|
     snippet.trigger = [ "t.", "tcd" ]
+    # FIXME We don't support nested tab stops yet
     snippet.expansion = "t.decimal :${1:title}${2:${3:, :precision => ${4:10}}${5:, :scale => ${6:2}}}\n$0"
   end
 
@@ -293,6 +296,7 @@ with_defaults :scope => "meta.rails.migration.create_table, meta.rails.migration
 
   snippet "Table column(s) references" do |snippet|
     snippet.trigger = [ "t.", "tcr" ]
+    # FIXME We don't support nested tab stops yet
     snippet.expansion = "t.references :${1:taggable}${2:, :polymorphic => ${3:{ :default => '${4:Photo}' \}}}\n$0"
   end
 
@@ -324,6 +328,7 @@ with_defaults :scope => "meta.rails.migration.create_table, meta.rails.migration
   snippet "t.change (tch)" do |snippet|
     snippet.scope = "meta.rails.migration.change_table"
     snippet.trigger = "t."
+    # FIXME We don't support nested tab stops yet
     snippet.expansion = "t.change :${1:name}${2:, :${3:string}${4:, :${5:limit} => ${6:80}}}\nt.$0"
   end
 
