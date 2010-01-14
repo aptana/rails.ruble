@@ -53,4 +53,10 @@ class Generator
       Generator["plugin",     "Name the new plugin:",           "ActsAsPlugin"]
     ]
   end
+  
+  # Look for (created) files and return an array of them
+  def self.files_from_generator_output(output, type = 'create')
+    output.to_a.map { |line| line.scan(/#{type}\s+([^\s]+)$/).flatten.first }.compact.select { |f| File.exist?(f) and !File.directory?(f) }
+  end
 end
+

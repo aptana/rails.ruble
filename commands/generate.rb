@@ -1,23 +1,19 @@
-require 'rails_bundle_tools'
-require 'fileutils'
-require File.dirname(__FILE__) + "/../lib/rails/generator"
-
 require 'radrails'
 
-# FIXME: this file is rife with textmate-isms!!!
+require 'rails_bundle_tools'
+require 'fileutils'
+require "rails/generator"
 
+# FIXME: this file is rife with textmate-isms!!!
+  
 command "Call Generate Script" do |cmd|
+  cmd.key_binding = 'CONTROL+SHIFT+\\'
   cmd.scope = "source.ruby.rails, source.yaml"
   cmd.output = :discard
-
-  # Look for (created) files and return an array of them
-  def files_from_generator_output(output, type = 'create')
-    output.to_a.map { |line| line.scan(/#{type}\s+([^\s]+)$/).flatten.first }.compact.select { |f| File.exist?(f) and !File.directory?(f) }
-  end
-
+  cmd.input = :none
   cmd.invoke do |context|
     Generator.setup
-
+    
     if choice = RadRails.choose("Generate:", Generator.names.map { |name| Inflector.humanize name }, :title => "Rails Generator")
       arguments = RadRails::UI.request_string(
         :title => "#{Inflector.humanize Generator.generators[choice].name} Generator", 
@@ -47,7 +43,7 @@ command "Call Generate Script" do |cmd|
         end
 
         # add the --svn option, if needed
-        proj_dir = RadRails.current_project.root_dir
+        proj_dir = RadRails.project_directory
         if proj_dir and File.exist?(File.join(proj_dir, ".svn"))
           options << " --svn"
         end
@@ -57,12 +53,12 @@ command "Call Generate Script" do |cmd|
 
         FileUtils.cd proj_dir
         command = "script/generate #{Generator.generators[choice].name} #{arguments} #{options}"
-        $logger.debug "Command: #{command}"
+        RadRails::Logger.trace "Command: #{command}"
 
         output = ruby(command)
-        $logger.debug "Output: #{output}"
+        RadRails::Logger.trace "Output: #{output}"
         RadRails.rescan_project
-        files = files_from_generator_output(output)
+        files = Generator.files_from_generator_output(output)
         files.each { |f| RadRails.open(File.join(proj_dir, f)) }
 
         RadRails::UI.simple_notification(
