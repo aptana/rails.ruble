@@ -6,7 +6,9 @@
 #   Helper module for accesing RadRails facilities such as environment variables.
 
 require 'uri'
+require 'radrails/ui'
 require 'radrails/editor'
+require 'radrails/project'
 
 module RadRails
   class <<self
@@ -52,6 +54,16 @@ module RadRails
       else
         super(method, *args)
       end
+    end
+    
+    def choose(text, choices = ["none"], options = {})
+      options = {:title => "Choose", :prompt => text, :items => choices, :button1 => 'Ok', :button2 => 'Cancel'}.update(options)
+      choice = RadRails::UI.request_item(options)
+      choices.each_with_index {|item, index| return index if item == choice}
+    end
+    
+    def rescan_project
+      RadRails::Project.current.to_dir.refresh
     end
   end
 end
