@@ -17,7 +17,6 @@ require 'radrails/ui'
 
 require 'rails/text_mate'
 require 'rails/rails_path'
-require 'rails/unobtrusive_logger'
 require 'rails/misc'
 require 'rails/inflector'
 
