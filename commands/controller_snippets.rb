@@ -4,26 +4,30 @@ with_defaults :scope => "source.ruby, meta.rails.controller" do |bundle|
 
   snippet "respond_to" do |snippet|
     snippet.trigger = "rest"
-    snippet.expansion = "respond_to do |wants|\n\t\twants.${1:html}${2: { $0 \}}\n\tend"
+    # FIXME This snippet syntax will break us
+    snippet.expansion = "respond_to do |wants|
+  wants.${1:html}${2: { $0 \}}
+end"
   end
 
   command "respond_to (html)" do |cmd|
     cmd.key_binding = "M1+SHIFT+H"
-
     # if selection isn't empty, use it, otherwise use the word containing the current selection
     cmd.input = [ :selection, :word ]
-
     cmd.output = :insert_as_snippet
-
     cmd.invoke do |context|
-      puts "respond_to do |wants|\n\t\twants.html do\n\t\t\t" +
-            context.input +
-            "\n\t\tend\n\t\twants.${1:js} { $0 }\n\tend"
+"respond_to do |wants|
+  wants.html do
+    #{context.in.read}
+  end
+  wants.${1:js} { $0 }
+end"
     end
   end
 
   snippet "wants.format" do |snippet|
     snippet.trigger = "wants"
+    # FIXME This snippet syntax will break us
     snippet.expansion = "wants.${1:js|xml|html}${2: { $0 \}}"
   end
 
