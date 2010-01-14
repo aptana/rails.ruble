@@ -1,37 +1,36 @@
 require 'radrails'
-require 'rails_path'
+require 'radrails/ui'
+require 'radrails/editor'
+require 'rails/rails_path'
+require 'rails/text_mate'
 
 ### FIX: this file has lots of calls to textmate to do things that have not yet been converted:
 #
-# TextMate::UI.request_string
-# TextMate::UI.request_confirmation
-# TextMate.open(path)
 # TextMate.open_url
 # TextMate.exit_discard: exit command invocation with error
 # TextMate.rescan_project
-# TextMate.current_line
-# TextMate.column_number
 
 class CommandGoToFile
-  def self.alternate(args)
+  def self.alternate(args = nil)
     current_file = RailsPath.new
 
-    choice = args.empty? ? current_file.best_match : args.shift
+    choice = args.nil? ? current_file.best_match : args
 
     if choice.nil?
-      puts "This file is not associated with any other files"
+      "This file is not associated with any other files"
     elsif rails_path = current_file.rails_path_for(choice.to_sym)    
       if !rails_path.exists?
         rails_path, openatline, openatcol = create_file(rails_path, choice.to_sym)
         if rails_path.nil?
-          TextMate.exit_discard
+          RadRails.exit_discard
         end
-        TextMate.rescan_project
+        RadRails.rescan_project
       end
 
-      TextMate.open rails_path, openatline, openatcol
+      RadRails.open rails_path, openatline, openatcol
+      nil # Don't show a tooltip
     else
-      puts "#{current_file.basename} does not have a #{choice}"
+      "#{current_file.basename} does not have a #{choice}"
     end
   end  
   
@@ -39,7 +38,7 @@ class CommandGoToFile
     current_file = RailsPath.new
 
     # If the current line contains "render :partial", then open the partial.
-    case TextMate.current_line
+    case RadRails.current_line
 
       # Example: render :partial => 'account/login'
       when /render[\s\(].*:partial\s*=>\s*['"](.+?)['"]/
@@ -55,7 +54,7 @@ class CommandGoToFile
 
         ext = current_file.default_extension_for(:view)
         partial = File.join(current_file.rails_root, 'app', 'views', modules, "_#{partial_name}#{ext}")
-        TextMate.open(partial)
+        RadRails.open(partial)
 
       # Example: render :action => 'login'
       when /render[\s\(].*:action\s*=>\s*['"](.+?)['"]/
@@ -63,22 +62,20 @@ class CommandGoToFile
         if current_file.file_type == :controller
           current_file.buffer.line_number = 0
           if search = current_file.buffer.find { /def\s+#{action}\b/ }
-            TextMate.open(current_file, search[0])
+            RadRails.open(current_file, search[0])
           end
         else
-          puts "Don't know where to go when rendering an action from outside a controller"
-          exit
+          return "Don't know where to go when rendering an action from outside a controller"
         end
 
       # Example: redirect_to :action => 'login'
       when /(redirect_to|redirect_back_or_default)[\s\(]/
         controller = action = nil
-        controller = $1 if TextMate.current_line =~ /.*:controller\s*=>\s*['"](.+?)['"]/
-        action = $1 if TextMate.current_line =~ /.*:action\s*=>\s*['"](.+?)['"]/
+        controller = $1 if RadRails.current_line =~ /.*:controller\s*=>\s*['"](.+?)['"]/
+        action = $1 if RadRails.current_line =~ /.*:action\s*=>\s*['"](.+?)['"]/
 
         unless current_file.file_type == :controller
-          puts "Don't know where to go when redirecting from outside a controller"
-          exit
+          return "Don't know where to go when redirecting from outside a controller"
         end
 
         if controller.nil?
@@ -95,33 +92,32 @@ class CommandGoToFile
         end
 
         if search = controller_file.buffer.find(:direction => :backward) { /def\s+#{action}\b/ }
-          TextMate.open(controller_file, search[0])
+          RadRails.open(controller_file, search[0])
         else
-          puts "Couldn't find the #{action} action inside '#{controller_file.basename}'"
-          exit
+          return "Couldn't find the #{action} action inside '#{controller_file.basename}'"
         end
 
       # Example: <script src="/javascripts/controls.js">
       when /\<script.+src=['"](.+\.js)['"]/
         javascript = $1
         if javascript =~ %r{^https?://}
-          TextMate.open_url javascript
+          RadRails::Editor.open javascript
         else
           full_path = File.join(current_file.rails_root, 'public', javascript)
-          TextMate.open full_path
+          RadRails.open full_path
         end
 
       # Example: <%= javascript_include_tag 'general' %>
       # require_javascript is used by bundled_resource plugin
       when /(require_javascript|javascript_include_tag)\b/
-        if match = TextMate.current_line.unstringify_hash_arguments.find_nearest_string_or_symbol(TextMate.column_number)
+        if match = RadRails::Editor.current_line.unstringify_hash_arguments.find_nearest_string_or_symbol(RadRails::Editor.column_number)
           javascript = match[0]
           javascript += '.js' if not javascript =~ /\.js$/
           # If there is no leading slash, assume it's a js from the public/javascripts dir
           public_file = javascript[0..0] == "/" ? javascript[1..-1] : "javascripts/#{javascript}"
-          TextMate.open File.join(current_file.rails_root, 'public', public_file)
+          RadRails.open File.join(current_file.rails_root, 'public', public_file)
         else
-          puts "No javascript identified"
+          "No javascript identified"
         end
 
       # Example: <link href="/stylesheets/application.css">
@@ -129,26 +125,26 @@ class CommandGoToFile
       when /\<link.+href=['"](.+\.css)['"]/, /\@import.+url\((.+\.css)\)/
         stylesheet = $1
         if stylesheet =~ %r{^https?://}
-          TextMate.open_url stylesheet
+          RadRails::Editor.open stylesheet
         else
           full_path = File.join(current_file.rails_root, 'public', stylesheet[1..-1])
-          TextMate.open full_path
+          RadRails.open full_path
         end
 
       # Example: <%= stylesheet_link_tag 'application' %>
       when /(require_stylesheet|stylesheet_link_tag)\b/
-        if match = TextMate.current_line.unstringify_hash_arguments.find_nearest_string_or_symbol(TextMate.column_number)
+        if match = RadRails::Editor.current_line.unstringify_hash_arguments.find_nearest_string_or_symbol(RadRails.column_number)
           stylesheet = match[0]
           stylesheet += '.css' if not stylesheet =~ /\.css$/
           # If there is no leading slash, assume it's a js from the public/javascripts dir
           public_file = stylesheet[0..0] == "/" ? stylesheet[1..-1] : "stylesheets/#{stylesheet}"
-          TextMate.open File.join(current_file.rails_root, 'public', public_file)
+          RadRails.open File.join(current_file.rails_root, 'public', public_file)
         else
-          puts "No stylesheet identified"
+          return "No stylesheet identified"
         end
 
       else
-        puts "No 'go to file' directives found on this line."
+        "No 'go to file' directives found on this line."
         # Do nothing -- beep?
     end    
   end
@@ -161,7 +157,7 @@ class CommandGoToFile
   def self.create_file(rails_path, choice)       
     return nil if rails_path.exists?
     if choice == :view
-      filename = TextMate::UI.request_string(
+      filename = RadRails::UI.request_string(
         :title => "View File Not Found", 
         :default => rails_path.basename,
         :prompt => "Enter the name of the new view file:",
@@ -173,7 +169,7 @@ class CommandGoToFile
       return [rails_path, 0, 0]
     end
     
-    unless TextMate::UI.request_confirmation(
+    unless RadRails::UI.request_confirmation(
       :button1 => "Create",
       :button2 => "Cancel",
       :title => "Missing #{rails_path.basename}",
