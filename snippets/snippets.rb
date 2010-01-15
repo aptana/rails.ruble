@@ -238,20 +238,6 @@ snippet 'for loop in rhtml' do |s|
 '
 end
 
-snippet 'image_submit_tag' do |s|
-  s.trigger = 'ist'
-  s.scope = 'text.html.ruby, text.haml'
-  # FIXME We don't support nested tab stops or ENV Vars
-  s.expansion = '${TM_RAILS_TEMPLATE_START_RUBY_EXPR}image_submit_tag("${1:agree.png}"${2:${3:, :id => "${4:${1/^(\w+)(\.\w*)?$/$1/}}"}${5:, :name => "${6:${1/^(\w+)(\.\w*)?$/$1/}}"}${7:, :class => "${8:${1/^(\w+)(\.\w*)?$/$1/}-button}"}${9:, :disabled => ${10:false}}})${TM_RAILS_TEMPLATE_END_RUBY_EXPR}'
-end
-
-snippet 'javascript_include_tag' do |s|
-  s.trigger = 'jit'
-  s.scope = 'text.html.ruby, text.haml'
-  # FIXME We don't support nested tab stops or ENV Vars
-  s.expansion = '${TM_RAILS_TEMPLATE_START_RUBY_EXPR}javascript_include_tag ${1::all}${2:, :cache => ${3:true}}${TM_RAILS_TEMPLATE_END_RUBY_EXPR}'
-end
-
 snippet 'layout' do |s|
   s.trigger = 'layout'
   # FIXME We don't support nested tab stops
@@ -297,7 +283,7 @@ snippet 'session[...]' do |s|
   s.expansion = 'session[:${1:user}]'
 end
 
-snippet 'returning do |variable| É end' do |s|
+snippet 'returning do |variable| ... end' do |s|
   s.trigger = 'returning'
   # FIXME We don't support transformations
   s.expansion = 'returning ${1:variable} do${2/(^(?<var>\s*[a-z_][a-zA-Z0-9_]*\s*)(,\g<var>)*,?\s*$)|.*/(?1: |)/}${2:v}${2/(^(?<var>\s*[a-z_][a-zA-Z0-9_]*\s*)(,\g<var>)*,?\s*$)|.*/(?1:|)/}
@@ -310,18 +296,44 @@ snippet 'scoped_by' do |s|
   s.expansion = 'scoped_by_${1:attribute}(${2:id})'
 end
 
-snippet 'stylesheet_link_tag' do |s|
+command 'stylesheet_link_tag' do |s|
   s.trigger = 'slt'
   s.scope = 'text.html.ruby, text.haml'
-  # FIXME We don't support nested tab stops or ENV Vars
-  s.expansion = '${TM_RAILS_TEMPLATE_START_RUBY_EXPR}stylesheet_link_tag ${1::all}${2:, :cache => ${3:true}}${TM_RAILS_TEMPLATE_END_RUBY_EXPR}'
+  s.output = :insert_as_snippet
+  # FIXME We don't support nested tab stops
+  s.invoke do |context|
+    "#{ENV['TM_RAILS_TEMPLATE_START_RUBY_EXPR']}stylesheet_link_tag ${1::all}${2:, :cache => ${3:true}}#{ENV['TM_RAILS_TEMPLATE_END_RUBY_EXPR']}"
+  end
 end
 
-snippet 'submit_tag' do |s|
+command 'submit_tag' do |s|
   s.trigger = 'st'
   s.scope = 'text.html.ruby, text.haml'
-  # FIXME We don't support nested tab stops or ENV Vars
-  s.expansion = '${TM_RAILS_TEMPLATE_START_RUBY_EXPR}submit_tag "${1:Save changes}"${2:, :id => "${3:submit}"}${4:, :name => "${5:$3}"}${6:, :class => "${7:form_$3}"}${8:, :disabled => ${9:false}}${10:, :disable_with => "${11:Please wait...}"}${TM_RAILS_TEMPLATE_END_RUBY_EXPR}'
+  s.output = :insert_as_snippet
+  # FIXME We don't support nested tab stops
+  s.invoke do |context|
+    "#{ENV['TM_RAILS_TEMPLATE_START_RUBY_EXPR']}submit_tag \"${1:Save changes}\"${2:, :id => \"${3:submit}\"}${4:, :name => \"${5:$3}\"}${6:, :class => \"${7:form_$3}\"}${8:, :disabled => ${9:false}}${10:, :disable_with => \"${11:Please wait...}\"}#{ENV['TM_RAILS_TEMPLATE_END_RUBY_EXPR']}"
+  end
+end
+
+command 'image_submit_tag' do |s|
+  s.trigger = 'ist'
+  s.scope = 'text.html.ruby, text.haml'
+  s.output = :insert_as_snippet
+  # FIXME We don't support nested tab stops or transformations!
+  s.invoke do |context|
+    "#{ENV['TM_RAILS_TEMPLATE_START_RUBY_EXPR']}image_submit_tag(\"${1:agree.png}\"${2:${3:, :id => \"${4:${1/^(\w+)(\.\w*)?$/$1/}}\"}${5:, :name => \"${6:${1/^(\w+)(\.\w*)?$/$1/}}\"}${7:, :class => \"${8:${1/^(\w+)(\.\w*)?$/$1/}-button}\"}${9:, :disabled => ${10:false}}})#{ENV['TM_RAILS_TEMPLATE_END_RUBY_EXPR']}"
+  end
+end
+
+command 'javascript_include_tag' do |s|
+  s.trigger = 'jit'
+  s.scope = 'text.html.ruby, text.haml'
+  s.output = :insert_as_snippet
+  # FIXME We don't support nested tab stops
+  s.invoke do |context|
+    "#{ENV['TM_RAILS_TEMPLATE_START_RUBY_EXPR']}javascript_include_tag ${1::all}${2:, :cache => ${3:true}}#{ENV['TM_RAILS_TEMPLATE_END_RUBY_EXPR']}"
+  end
 end
 
 end
