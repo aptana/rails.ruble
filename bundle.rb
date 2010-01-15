@@ -423,3 +423,28 @@ END
     rails_menu.command "find_each"
   end
 end
+
+# Extend RadRails::Editor to add special ENV vars
+module RadRails
+  class Editor
+    alias :old_env :to_env
+    def to_env
+      env_hash = old_env
+      scopes = current_scope.split(' ')
+      if scopes.include? "text.html.ruby"
+        env_hash['TM_RAILS_TEMPLATE_START_RUBY_EXPR'] = "<%= "
+        env_hash['TM_RAILS_TEMPLATE_END_RUBY_EXPR'] = " %>"
+        env_hash['TM_RAILS_TEMPLATE_START_RUBY_INLINE'] = "<% "
+        env_hash['TM_RAILS_TEMPLATE_END_RUBY_INLINE'] = " -%>"
+        env_hash['TM_RAILS_TEMPLATE_END_RUBY_BLOCK'] = "<% end -%>"
+      elsif scopes.includes? "text.haml"
+        env_hash['TM_RAILS_TEMPLATE_START_RUBY_EXPR'] = "= "
+        env_hash['TM_RAILS_TEMPLATE_END_RUBY_EXPR'] = ""
+        env_hash['TM_RAILS_TEMPLATE_START_RUBY_INLINE'] = "- "
+        env_hash['TM_RAILS_TEMPLATE_END_RUBY_INLINE'] = ""
+        env_hash['TM_RAILS_TEMPLATE_END_RUBY_BLOCK'] = ""
+      end
+      env_hash
+    end
+  end
+end
