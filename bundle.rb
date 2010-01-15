@@ -437,7 +437,7 @@ module RadRails
         env_hash['TM_RAILS_TEMPLATE_START_RUBY_INLINE'] = "<% "
         env_hash['TM_RAILS_TEMPLATE_END_RUBY_INLINE'] = " -%>"
         env_hash['TM_RAILS_TEMPLATE_END_RUBY_BLOCK'] = "<% end -%>"
-      elsif scopes.includes? "text.haml"
+      elsif scopes.include? "text.haml"
         env_hash['TM_RAILS_TEMPLATE_START_RUBY_EXPR'] = "= "
         env_hash['TM_RAILS_TEMPLATE_END_RUBY_EXPR'] = ""
         env_hash['TM_RAILS_TEMPLATE_START_RUBY_INLINE'] = "- "
