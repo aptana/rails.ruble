@@ -18,7 +18,7 @@ end"
     cmd.invoke do |context|
 "respond_to do |wants|
   wants.html do
-    #{context.in.read}
+    #{STDIN.read}
   end
   wants.${1:js} { $0 }
 end"
