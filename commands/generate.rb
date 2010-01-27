@@ -1,4 +1,4 @@
-require 'radrails'
+require 'ruble'
 
 require 'rails_bundle_tools'
 require 'fileutils'
@@ -14,8 +14,8 @@ command "Call Generate Script" do |cmd|
   cmd.invoke do |context|
     Generator.setup
     
-    if choice = RadRails.choose("Generate:", Generator.names.map { |name| Inflector.humanize name }, :title => "Rails Generator")
-      arguments = RadRails::UI.request_string(
+    if choice = Ruble.choose("Generate:", Generator.names.map { |name| Inflector.humanize name }, :title => "Rails Generator")
+      arguments = Ruble::UI.request_string(
         :title => "#{Inflector.humanize Generator.generators[choice].name} Generator", 
         :default => Generator.generators[choice].default_answer,
         :prompt => Generator.generators[choice].question,
@@ -27,14 +27,14 @@ command "Call Generate Script" do |cmd|
 
         case choice
         when 0
-          options = RadRails::UI.request_string(
+          options = Ruble::UI.request_string(
             :title => "Scaffold Controller Name", 
             :prompt => "Name the new controller for the scaffold:",
             :button1 => 'Continue'
           )
           options = "'#{options}'"
         when 1
-          options = RadRails::UI.request_string(
+          options = Ruble::UI.request_string(
             :title => "Controller Actions", 
             :default => "index new create edit update destroy",
             :prompt => "List any actions you would like created for the controller:",
@@ -43,7 +43,7 @@ command "Call Generate Script" do |cmd|
         end
 
         # add the --svn option, if needed
-        proj_dir = RadRails.project_directory
+        proj_dir = Ruble.project_directory
         if proj_dir and File.exist?(File.join(proj_dir, ".svn"))
           options << " --svn"
         end
@@ -53,15 +53,15 @@ command "Call Generate Script" do |cmd|
 
         FileUtils.cd proj_dir
         command = "script/generate #{Generator.generators[choice].name} #{arguments} #{options}"
-        RadRails::Logger.trace "Command: #{command}"
+        Ruble::Logger.trace "Command: #{command}"
 
         output = ruby(command)
-        RadRails::Logger.trace "Output: #{output}"
-        RadRails.rescan_project
+        Ruble::Logger.trace "Output: #{output}"
+        Ruble.rescan_project
         files = Generator.files_from_generator_output(output)
-        files.each { |f| RadRails.open(File.join(proj_dir, f)) }
+        files.each { |f| Ruble.open(File.join(proj_dir, f)) }
 
-        RadRails::UI.simple_notification(
+        Ruble::UI.simple_notification(
           :title => 'Generator Complete',
           :summary => "Done generating #{Generator.generators[choice].name}",
           :log => output

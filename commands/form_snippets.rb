@@ -1,4 +1,4 @@
-require 'radrails'
+require 'ruble'
 
 with_defaults :scope => "text.html.ruby, text.haml" do |bundle|
 

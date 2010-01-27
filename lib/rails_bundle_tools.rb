@@ -12,8 +12,8 @@ if ENV['TM_BUNDLE_SUPPORT']
 end
 
 # FIXME We haven't ported over the equivalent of exit_codes lib/support file yet!
-#require 'radrails/exit_codes'
-require 'radrails/ui'
+#require 'ruble/exit_codes'
+require 'ruble/ui'
 
 require 'rails/text_mate'
 require 'rails/rails_path'

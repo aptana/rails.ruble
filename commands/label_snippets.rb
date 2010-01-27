@@ -1,4 +1,4 @@
-require 'radrails'
+require 'ruble'
 
 snippet "$LABEL" do |snippet|
   snippet.trigger = "$L"

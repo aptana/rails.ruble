@@ -1,4 +1,4 @@
-require 'radrails'
+require 'ruble'
 
 require 'rails/command_go_to_file'
 

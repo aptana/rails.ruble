@@ -51,7 +51,7 @@ class RailsPath
 
   include AssociationMessages
 
-  def initialize(filepath = RadRails.filepath)
+  def initialize(filepath = Ruble.filepath)
     if filepath[0..0] == '/'
       # Absolute file, treat as is
       @filepath = filepath
@@ -130,7 +130,7 @@ class RailsPath
   end
 
   def rails_root
-    return RadRails.project_directory
+    return Ruble.project_directory
     # TODO: Look for the root_indicators inside TM_PROJECT_DIRECTORY and return nil if not found
 
     #self.class.root_indicators.each do |i|
@@ -244,7 +244,7 @@ class RailsPath
   def rails_path_for(type)    
     return nil if file_type.nil?
     return rails_path_for_view if type == :view
-    if RadRails.project_directory
+    if Ruble.project_directory
       base_path = File.join(rails_root, stubs[type], modules)
       extn      = default_extension_for(type)
       file_name = select_controller_name(type, base_path, extn)

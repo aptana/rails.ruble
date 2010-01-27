@@ -1,5 +1,5 @@
-require 'radrails'
-require "radrails/progress"
+require 'ruble'
+require "Ruble/progress"
 
 command "Show DB Schema for Current Class" do |cmd|
   cmd.key_binding = "CONTROL+SHIFT+COMMAND+S"
@@ -10,7 +10,7 @@ command "Show DB Schema for Current Class" do |cmd|
     result = ""
     # FIXME check for ruby exes in path
     ruby_exe = ENV['TM_RUBY'] || '/usr/local/bin/ruby' || '/usr/bin/ruby'
-    RadRails.call_with_progress(:title => "Contacting database", :message => "Fetching database schema...") do
+    Ruble.call_with_progress(:title => "Contacting database", :message => "Fetching database schema...") do
       cmd_line = "#{ruby_exe} \"#{ENV['TM_BUNDLE_SUPPORT']}/../assets/bin/schema.rb\" \"#{ENV['TM_PROJECT_DIRECTORY']}\" \"#{ENV['TM_CURRENT_WORD']}\""
       result = IO.popen(cmd_line, 'r') {|io| io.read }
     end

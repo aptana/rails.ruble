@@ -3,24 +3,24 @@
 #   Visit us at http://syncpeople.com/
 # Author: Duane Johnson (duane.johnson@gmail.com)
 # Description:
-#   Helper module for accesing RadRails facilities such as environment variables.
+#   Helper module for accesing ruble facilities such as environment variables.
 
 require 'uri'
-require 'radrails/ui'
-require 'radrails/editor'
-require 'radrails/project'
+require 'ruble/ui'
+require 'ruble/editor'
+require 'ruble/project'
 
-module RadRails
+module Ruble
   class <<self
 
-    # Open a file in RadRails.  Uses 0-based line and column indices.
+    # Open a file in ruble.  Uses 0-based line and column indices.
     def open(filename, line_number = nil, column_number = nil)
       filename = filename.filepath if filename.is_a? RailsPath
       options = {}
       options[:file] = URI.escape(filename)
       options[:line] = line_number + 1 if line_number
       options[:column] = column_number + 1 if column_number
-      RadRails::Editor.go_to options
+      Ruble::Editor.go_to options
     end
 
     # Always return something, or nil, for selected_text
@@ -58,12 +58,12 @@ module RadRails
     
     def choose(text, choices = ["none"], options = {})
       options = {:title => "Choose", :prompt => text, :items => choices, :button1 => 'Ok', :button2 => 'Cancel'}.update(options)
-      choice = RadRails::UI.request_item(options)
+      choice = Ruble::UI.request_item(options)
       choices.each_with_index {|item, index| return index if item == choice}
     end
     
     def rescan_project
-      RadRails::Project.current.to_dir.refresh
+      Ruble::Project.current.to_dir.refresh
     end
   end
 end

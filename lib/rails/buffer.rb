@@ -20,8 +20,8 @@ class Buffer
   # Init from a String or Buffer object
   def initialize(buffer, line_number = nil, column_number = nil)
     self.text = buffer
-    @line_number   = line_number   || RadRails.line_number
-    @column_number = column_number || RadRails.column_number
+    @line_number   = line_number   || Ruble.line_number
+    @column_number = column_number || Ruble.column_number
     @stack = []
   end
 

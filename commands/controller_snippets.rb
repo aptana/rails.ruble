@@ -1,4 +1,4 @@
-require 'radrails'
+require 'ruble'
 
 with_defaults :scope => "source.ruby, meta.rails.controller" do |bundle|
 

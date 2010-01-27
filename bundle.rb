@@ -1,4 +1,4 @@
-require 'radrails'
+require 'ruble'
 
 # its ruby, so this just addscommands/snippets in bundle (or replaces those with same name)
 # many ruby files could add to a single bundle
@@ -11,7 +11,7 @@ Portions (C) Copyright 2006 syncPEOPLE, LLC, distributed under the terms of the 
 END
 
   bundle.description = <<END
-Rails bundle for RadRails 3, based heavily on Dr. Nic's tmbundle
+Rails bundle for RadRails, based heavily on Dr. Nic's tmbundle
 (http://github.com/drnic/ruby-on-rails-tmbundle), which in turn was
 based heavily on the original SyncPeople bundle.
 END
@@ -423,8 +423,8 @@ END
   end
 end
 
-# Extend RadRails::Editor to add special ENV vars
-module RadRails
+# Extend Ruble::Editor to add special ENV vars
+module Ruble
   class Editor
     alias :old_env :to_env
     def to_env

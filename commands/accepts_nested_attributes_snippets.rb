@@ -1,4 +1,4 @@
-require 'radrails'
+require 'ruble'
 
 snippet "accepts_nested_attributes_for" do |snippet|
   snippet.trigger = "anaf"

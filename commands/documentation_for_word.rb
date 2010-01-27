@@ -1,4 +1,4 @@
-require 'radrails'
+require 'ruble'
 
 command "Documentation for Word" do |cmd|
   cmd.key_binding = "CONTROL+H"

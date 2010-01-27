@@ -1,4 +1,4 @@
-require 'radrails'
+require 'ruble'
 
 snippet "form_tag" do |snippet|
   snippet.trigger = "ft"

@@ -1,6 +1,7 @@
-require 'radrails'
-require 'radrails/ui'
-require 'radrails/editor'
+require 'ruble'
+require 'ruble/ui'
+require 'ruble/editor'
+
 require 'rails/rails_path'
 require 'rails/text_mate'
 
@@ -22,12 +23,12 @@ class CommandGoToFile
       if !rails_path.exists?
         rails_path, openatline, openatcol = create_file(rails_path, choice.to_sym)
         if rails_path.nil?
-          RadRails.exit_discard
+          Ruble.exit_discard
         end
-        RadRails.rescan_project
+        Ruble.rescan_project
       end
 
-      RadRails.open rails_path, openatline, openatcol
+      Ruble.open rails_path, openatline, openatcol
       nil # Don't show a tooltip
     else
       "#{current_file.basename} does not have a #{choice}"
@@ -38,7 +39,7 @@ class CommandGoToFile
     current_file = RailsPath.new
 
     # If the current line contains "render :partial", then open the partial.
-    case RadRails.current_line
+    case Ruble.current_line
 
       # Example: render :partial => 'account/login'
       when /render[\s\(].*:partial\s*=>\s*['"](.+?)['"]/
@@ -54,7 +55,7 @@ class CommandGoToFile
 
         ext = current_file.default_extension_for(:view)
         partial = File.join(current_file.rails_root, 'app', 'views', modules, "_#{partial_name}#{ext}")
-        RadRails.open(partial)
+        Ruble.open(partial)
 
       # Example: render :action => 'login'
       when /render[\s\(].*:action\s*=>\s*['"](.+?)['"]/
@@ -62,7 +63,7 @@ class CommandGoToFile
         if current_file.file_type == :controller
           current_file.buffer.line_number = 0
           if search = current_file.buffer.find { /def\s+#{action}\b/ }
-            RadRails.open(current_file, search[0])
+            Ruble.open(current_file, search[0])
           end
         else
           return "Don't know where to go when rendering an action from outside a controller"
@@ -71,8 +72,8 @@ class CommandGoToFile
       # Example: redirect_to :action => 'login'
       when /(redirect_to|redirect_back_or_default)[\s\(]/
         controller = action = nil
-        controller = $1 if RadRails.current_line =~ /.*:controller\s*=>\s*['"](.+?)['"]/
-        action = $1 if RadRails.current_line =~ /.*:action\s*=>\s*['"](.+?)['"]/
+        controller = $1 if Ruble.current_line =~ /.*:controller\s*=>\s*['"](.+?)['"]/
+        action = $1 if Ruble.current_line =~ /.*:action\s*=>\s*['"](.+?)['"]/
 
         unless current_file.file_type == :controller
           return "Don't know where to go when redirecting from outside a controller"
@@ -92,7 +93,7 @@ class CommandGoToFile
         end
 
         if search = controller_file.buffer.find(:direction => :backward) { /def\s+#{action}\b/ }
-          RadRails.open(controller_file, search[0])
+          Ruble.open(controller_file, search[0])
         else
           return "Couldn't find the #{action} action inside '#{controller_file.basename}'"
         end
@@ -101,21 +102,21 @@ class CommandGoToFile
       when /\<script.+src=['"](.+\.js)['"]/
         javascript = $1
         if javascript =~ %r{^https?://}
-          RadRails::Editor.open javascript
+          Ruble::Editor.open javascript
         else
           full_path = File.join(current_file.rails_root, 'public', javascript)
-          RadRails.open full_path
+          Ruble.open full_path
         end
 
       # Example: <%= javascript_include_tag 'general' %>
       # require_javascript is used by bundled_resource plugin
       when /(require_javascript|javascript_include_tag)\b/
-        if match = RadRails::Editor.current_line.unstringify_hash_arguments.find_nearest_string_or_symbol(RadRails::Editor.column_number)
+        if match = Ruble::Editor.current_line.unstringify_hash_arguments.find_nearest_string_or_symbol(Ruble::Editor.column_number)
           javascript = match[0]
           javascript += '.js' if not javascript =~ /\.js$/
           # If there is no leading slash, assume it's a js from the public/javascripts dir
           public_file = javascript[0..0] == "/" ? javascript[1..-1] : "javascripts/#{javascript}"
-          RadRails.open File.join(current_file.rails_root, 'public', public_file)
+          Ruble.open File.join(current_file.rails_root, 'public', public_file)
         else
           "No javascript identified"
         end
@@ -125,20 +126,20 @@ class CommandGoToFile
       when /\<link.+href=['"](.+\.css)['"]/, /\@import.+url\((.+\.css)\)/
         stylesheet = $1
         if stylesheet =~ %r{^https?://}
-          RadRails::Editor.open stylesheet
+          Ruble::Editor.open stylesheet
         else
           full_path = File.join(current_file.rails_root, 'public', stylesheet[1..-1])
-          RadRails.open full_path
+          Ruble.open full_path
         end
 
       # Example: <%= stylesheet_link_tag 'application' %>
       when /(require_stylesheet|stylesheet_link_tag)\b/
-        if match = RadRails::Editor.current_line.unstringify_hash_arguments.find_nearest_string_or_symbol(RadRails.column_number)
+        if match = Ruble::Editor.current_line.unstringify_hash_arguments.find_nearest_string_or_symbol(Ruble.column_number)
           stylesheet = match[0]
           stylesheet += '.css' if not stylesheet =~ /\.css$/
           # If there is no leading slash, assume it's a js from the public/javascripts dir
           public_file = stylesheet[0..0] == "/" ? stylesheet[1..-1] : "stylesheets/#{stylesheet}"
-          RadRails.open File.join(current_file.rails_root, 'public', public_file)
+          Ruble.open File.join(current_file.rails_root, 'public', public_file)
         else
           return "No stylesheet identified"
         end
@@ -157,7 +158,7 @@ class CommandGoToFile
   def self.create_file(rails_path, choice)       
     return nil if rails_path.exists?
     if choice == :view
-      filename = RadRails::UI.request_string(
+      filename = Ruble::UI.request_string(
         :title => "View File Not Found", 
         :default => rails_path.basename,
         :prompt => "Enter the name of the new view file:",
@@ -169,7 +170,7 @@ class CommandGoToFile
       return [rails_path, 0, 0]
     end
     
-    unless RadRails::UI.request_confirmation(
+    unless Ruble::UI.request_confirmation(
       :button1 => "Create",
       :button2 => "Cancel",
       :title => "Missing #{rails_path.basename}",
