@@ -7,7 +7,7 @@ command "Documentation for Word" do |cmd|
   cmd.output = :show_as_html
   cmd.scope = "source.ruby.rails, text.html.ruby, text.haml"
   cmd.invoke do |context|
-    word = context.input.read
+    word = STDIN.read
     # context.input will figure out what to pass in correctly based on command settings
     url = "http://apidock.com/rails/search/quick?query=" + word
     # this is a hack - relies on embedded html view fetching page for you.
