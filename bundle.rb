@@ -17,6 +17,7 @@ based heavily on the original SyncPeople bundle.
 END
 
   bundle.repository = "git@github.com:aptana/rails-ruble.git"
+  bundle.register_file_type("*.rb", "source.ruby.rails")
 
   # most commands install into a dedicated rails menu
   # See also the alternative, HAML-style syntax in menu.rrmenu
