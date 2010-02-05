@@ -427,24 +427,26 @@ end
 # Extend Ruble::Editor to add special ENV vars
 module Ruble
   class Editor
-    alias :to_env_pre_rails_bundle :to_env unless method_defined?(:to_env_pre_rails_bundle)
-    def to_env
-      env_hash = to_env_pre_rails_bundle
-      scopes = current_scope.split(' ')
-      if scopes.include? "text.html.ruby"
-        env_hash['TM_RAILS_TEMPLATE_START_RUBY_EXPR'] = "<%= "
-        env_hash['TM_RAILS_TEMPLATE_END_RUBY_EXPR'] = " %>"
-        env_hash['TM_RAILS_TEMPLATE_START_RUBY_INLINE'] = "<% "
-        env_hash['TM_RAILS_TEMPLATE_END_RUBY_INLINE'] = " -%>"
-        env_hash['TM_RAILS_TEMPLATE_END_RUBY_BLOCK'] = "<% end -%>"
-      elsif scopes.include? "text.haml"
-        env_hash['TM_RAILS_TEMPLATE_START_RUBY_EXPR'] = "= "
-        env_hash['TM_RAILS_TEMPLATE_END_RUBY_EXPR'] = ""
-        env_hash['TM_RAILS_TEMPLATE_START_RUBY_INLINE'] = "- "
-        env_hash['TM_RAILS_TEMPLATE_END_RUBY_INLINE'] = ""
-        env_hash['TM_RAILS_TEMPLATE_END_RUBY_BLOCK'] = ""
+    unless method_defined?(:to_env_pre_rails_bundle)
+      alias :to_env_pre_rails_bundle :to_env
+      def to_env
+        env_hash = to_env_pre_rails_bundle
+        scopes = current_scope.split(' ')
+        if scopes.include? "text.html.ruby"
+          env_hash['TM_RAILS_TEMPLATE_START_RUBY_EXPR'] = "<%= "
+          env_hash['TM_RAILS_TEMPLATE_END_RUBY_EXPR'] = " %>"
+          env_hash['TM_RAILS_TEMPLATE_START_RUBY_INLINE'] = "<% "
+          env_hash['TM_RAILS_TEMPLATE_END_RUBY_INLINE'] = " -%>"
+          env_hash['TM_RAILS_TEMPLATE_END_RUBY_BLOCK'] = "<% end -%>"
+        elsif scopes.include? "text.haml"
+          env_hash['TM_RAILS_TEMPLATE_START_RUBY_EXPR'] = "= "
+          env_hash['TM_RAILS_TEMPLATE_END_RUBY_EXPR'] = ""
+          env_hash['TM_RAILS_TEMPLATE_START_RUBY_INLINE'] = "- "
+          env_hash['TM_RAILS_TEMPLATE_END_RUBY_INLINE'] = ""
+          env_hash['TM_RAILS_TEMPLATE_END_RUBY_BLOCK'] = ""
+        end
+        env_hash
       end
-      env_hash
     end
   end
 end
