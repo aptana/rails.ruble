@@ -427,9 +427,9 @@ end
 # Extend Ruble::Editor to add special ENV vars
 module Ruble
   class Editor
-    alias :old_env :to_env
+    alias :to_env_pre_rails_bundle :to_env unless method_defined?(:to_env_pre_rails_bundle)
     def to_env
-      env_hash = old_env
+      env_hash = to_env_pre_rails_bundle
       scopes = current_scope.split(' ')
       if scopes.include? "text.html.ruby"
         env_hash['TM_RAILS_TEMPLATE_START_RUBY_EXPR'] = "<%= "
