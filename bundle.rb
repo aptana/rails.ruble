@@ -1,7 +1,5 @@
 require 'ruble'
 
-# its ruby, so this just addscommands/snippets in bundle (or replaces those with same name)
-# many ruby files could add to a single bundle
 bundle "Ruby on Rails" do |bundle|
   bundle.author = "Many"
   bundle.copyright = <<END
@@ -16,7 +14,7 @@ Rails bundle for RadRails, based heavily on Dr. Nic's tmbundle
 based heavily on the original SyncPeople bundle.
 END
 
-  bundle.repository = "git@github.com:aptana/rails.ruble.git"
+  bundle.repository = "git://github.com/aptana/rails.ruble.git"
   bundle.register_file_type("*.rb", "source.ruby.rails")
 
   # most commands install into a dedicated rails menu
@@ -447,6 +445,35 @@ module Ruble
         end
         env_hash
       end
+    end
+  end
+end
+
+module Ruble
+  class Project
+    # Add a method allowing commands to get root URL of server for project...
+    def root_url
+      port = 3000
+      host = "localhost"
+      # Only scan processes on non-windows platforms
+      if !Ruble.platforms.include? :windows
+        out = IO.popen('ps wwax -o args | grep "rails server"', 'r') {|io| io.read }
+        out.each_line do |line|
+          words = line.split(' ')
+          next if words.first == 'grep'
+          next unless words[1].start_with? to_dir.path # looks like it's this project
+          # Ok we need to search the words starting at index 2, look for --port or -p
+          words = words[2..-1]
+          words.each_with_index do |word, i|
+            puts word
+            port = words[i + 1] if word == "-p" || word == "--port"
+            # TODO What if they used --switch=value format?
+            host = words[i + 1] if word == "-b" || word == "--binding"
+          end
+        end
+      end
+      # TODO if host is 0.0.0.0 or 127.0.0.1, change to localhost or something?
+      "http://#{host}:#{port}/"
     end
   end
 end
