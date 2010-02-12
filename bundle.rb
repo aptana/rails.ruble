@@ -3,9 +3,9 @@ require 'ruble'
 bundle "Ruby on Rails" do |bundle|
   bundle.author = "Many"
   bundle.copyright = <<END
-(C) Copyright 2010 Aptana Inc. Distributed under GPLv3 and Aptana Source license.
+© Copyright 2010 Aptana Inc. Distributed under the MIT license.
 
-Portions (C) Copyright 2006 syncPEOPLE, LLC, distributed under the terms of the MIT License.
+Portions © Copyright 2006 syncPEOPLE, LLC, distributed under the terms of the MIT License.
 END
 
   bundle.description = <<END
