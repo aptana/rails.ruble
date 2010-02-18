@@ -1,5 +1,5 @@
 require 'ruble'
-require "Ruble/progress"
+require "ruble/progress"
 
 command "Show DB Schema for Current Class" do |cmd|
   cmd.key_binding = "CONTROL+SHIFT+COMMAND+S"
