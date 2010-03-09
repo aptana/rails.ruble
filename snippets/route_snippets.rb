@@ -1,5 +1,5 @@
 require 'ruble'
-
+# TODO Convert these snippets as best we can given no transforms or nesting!
 with_defaults :scope => "text.html.ruby, text.haml" do |bundle|
 
   snippet "link_to (action)" do |snippet|
@@ -116,7 +116,7 @@ with_defaults :scope => "source.ruby.rails" do |bundle|
   end
 
 end
-
+# FIXME We don't support meta scopes!
 with_defaults :scope => "meta.rails.routes" do |bundle|
 
   snippet "map.catch_all" do |snippet|

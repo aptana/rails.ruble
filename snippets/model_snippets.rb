@@ -1,5 +1,5 @@
 require 'ruble'
-
+# TODO Convert these snippets as best we can given no transforms or nesting!
 with_defaults :scope => "source.ruby.rails" do |bundle|
 
   snippet "find(:all)" do |snippet|
