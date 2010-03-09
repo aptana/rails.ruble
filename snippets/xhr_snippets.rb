@@ -15,7 +15,8 @@ with_defaults :scope => "source.ruby.rails" do |bundle|
   snippet "xhr get" do |snippet|
     snippet.trigger = "xget"
     # FIXME We don't support nested tab stops like this
-    snippet.expansion = "xhr :get, :${1:show}${2:, :id => ${3:1}}$0"
+    #snippet.expansion = "xhr :get, :${1:show}${2:, :id => ${3:1}}$0"
+    snippet.expansion = "xhr :get, :${1:show}, :id => ${3:1}$0"
   end
 
   snippet "xhr post" do |snippet|

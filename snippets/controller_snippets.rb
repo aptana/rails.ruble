@@ -4,9 +4,8 @@ with_defaults :scope => "source.ruby, meta.rails.controller" do |bundle|
 
   snippet "respond_to" do |snippet|
     snippet.trigger = "rest"
-    # FIXME This snippet syntax will break us
     snippet.expansion = "respond_to do |wants|
-  wants.${1:html}${2: { $0 \}}
+  wants.${1:html} { $0 \}
 end"
   end
 
@@ -27,8 +26,7 @@ end"
 
   snippet "wants.format" do |snippet|
     snippet.trigger = "wants"
-    # FIXME This snippet syntax will break us
-    snippet.expansion = "wants.${1:js|xml|html}${2: { $0 \}}"
+    snippet.expansion = "wants.${1:js/xml/html} { $0 \}"
   end
 
 end

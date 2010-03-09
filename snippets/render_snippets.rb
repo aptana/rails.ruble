@@ -24,17 +24,17 @@ with_defaults :scope => "source.ruby.rails" do |bundle|
 
   snippet "render (inline)" do |snippet|
     snippet.trigger = "ri"
-    snippet.expansion = "render :inline => '${1:<%= 'hello' %>}'"
+    snippet.expansion = "render :inline => '${1:<%= \"hello\" %>}'"
   end
 
   snippet "render (inline, locals) (ril)" do |snippet|
     snippet.trigger = "ril"
-    snippet.expansion = "render :inline => '${1:<%= 'hello' %>}', :locals => { ${2::name} => '${3:value}'$4 }"
+    snippet.expansion = "render :inline => '${1:<%= \"hello\" %>}', :locals => { ${2::name} => '${3:value}'$4 }"
   end
 
   snippet "render (inline, type) (rit)" do |snippet|
     snippet.trigger = "rit"
-    snippet.expansion = "render :inline => '${1:<%= 'hello' %>}', :type => ${2::rxml}"
+    snippet.expansion = "render :inline => '${1:<%= \"hello\" %>}', :type => ${2::rxml}"
   end
 
   snippet "render (layout)" do |snippet|
@@ -62,21 +62,22 @@ with_defaults :scope => "source.ruby.rails" do |bundle|
     snippet.scope = "source.ruby.rails, text.html.ruby, text.haml"
     snippet.trigger = "rpc"
     # FIXME We don't support tab stop defaulting to value entered in earlier one
-    snippet.expansion = "render :partial => '${1:item}', :collection => ${2:@$1s}"
+    #snippet.expansion = "render :partial => '${1:item}', :collection => ${2:@$1s}"
+    snippet.expansion = "render :partial => '${1:item}', :collection => @$1s"
   end
 
   snippet "render (partial, locals) (rpl)" do |snippet|
     snippet.scope = "source.ruby.rails, text.html.ruby, text.haml"
     snippet.trigger = "rpl"
     # FIXME We don't support tab stop defaulting to value entered in earlier one
-    snippet.expansion = "render :partial => '${1:item}', :locals => { :${2:$1} => ${3:@$1}$0 }"
+    #snippet.expansion = "render :partial => '${1:item}', :locals => { :${2:$1} => ${3:@$1}$0 }"
+    snippet.expansion = "render :partial => '${1:item}', :locals => { :$1 => @${1}$0 }"
   end
 
   snippet "render (partial, object) (rpo)" do |snippet|
     snippet.scope = "source.ruby.rails, text.html.ruby, text.haml"
     snippet.trigger = "rpo"
-    # FIXME We don't support tab stop defaulting to value entered in earlier one
-    snippet.expansion = "render :partial => '${1:item}', :object => ${2:@$1}"
+    snippet.expansion = "render :partial => '${1:item}', :object => @$1"
   end
 
   snippet "render (partial, status) (rps)" do |snippet|
@@ -107,8 +108,7 @@ with_defaults :scope => "source.ruby.rails" do |bundle|
 
   snippet "render (update)" do |snippet|
     snippet.trigger = "ru"
-    # FIXME We don't support same tab stop having default value in one place, but not another
-    snippet.expansion = "render :update do |${2:page}|\n\t$2.$0\n\tend"
+    snippet.expansion = "render :update do |${2:page}|\n  $2.$0\nend"
   end
 
 end

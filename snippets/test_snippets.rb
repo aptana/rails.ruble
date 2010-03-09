@@ -5,7 +5,8 @@ with_defaults :scope => "source.ruby.rails" do |bundle|
   snippet "assert_redirected_to" do |snippet|
     snippet.trigger = "art"
     # FIXME We don't support nested tab stops like this
-    snippet.expansion = "assert_redirected_to ${2::action => \"${1:index}\"}"
+    #snippet.expansion = "assert_redirected_to ${2::action => \"${1:index}\"}"
+    snippet.expansion = "assert_redirected_to :action => \"${1:index}\""
   end
 
   snippet "assert_response" do |snippet|
@@ -15,7 +16,7 @@ with_defaults :scope => "source.ruby.rails" do |bundle|
 
   snippet "test do...end" do |snippet|
     snippet.trigger = "test"
-    snippet.expansion = "test \"${1:something interesting}\" do\n\t\t$0\n\tend"
+    snippet.expansion = "test \"${1:something interesting}\" do\n  $0\nend"
   end
 
   snippet "verify - render" do |snippet|
@@ -30,7 +31,6 @@ with_defaults :scope => "source.ruby.rails" do |bundle|
 
   snippet "<%= Fixtures.identify(:symbol) %>" do |snippet|
     snippet.trigger = "fi"
-    # FIXME We don't support inserting ENV vars into snippets like this
     snippet.expansion = "${TM_RAILS_TEMPLATE_START_RUBY_EXPR}Fixtures.identify(:${1:name})${TM_RAILS_TEMPLATE_END_RUBY_EXPR}$0"
     snippet.scope = :source_yaml
   end
