@@ -75,7 +75,7 @@ END
     rails_menu.separator
 
     rails_menu.command "params[...]"
-    rails_menu.command "sessions[...]"
+    rails_menu.command "session[...]"
     rails_menu.menu "Logger" do |logger_menu|
       logger_menu.command "logger.debug"
       logger_menu.command "logger.info"
