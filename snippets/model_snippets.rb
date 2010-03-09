@@ -193,7 +193,7 @@ with_defaults :scope => "source.ruby.rails" do |bundle|
     snippet.trigger = "vp"
     # FIXME We can't handle nested snippets!
     # snippet.expansion = "validates_presence_of :${1:attribute}${2:, :on => :${3:create}, :message => '${4:can't be blank}'}"
-    snippet.expansion = "validates_presence_of :${1:attribute}, :on => :${3:create}, :message => '${4:can't be blank}'"
+    snippet.expansion = "validates_presence_of :${1:attribute}, :on => :${3:create}, :message => \"${4:can't be blank}\""
   end
 
   snippet "validates_presence_of if" do |snippet|
