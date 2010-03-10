@@ -1,4 +1,4 @@
-equire 'ruble'
+require 'ruble'
 
 with_defaults :scope => "source.ruby.rails.rjs" do |bundle|
 
