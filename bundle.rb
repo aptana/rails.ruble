@@ -23,6 +23,9 @@ END
     # this menu should be shown when any of the following scopes is active:
     rails_menu.scope = [ "source.ruby", "project.rails" ]
     
+    rails_menu.command "Preview"
+    rails_menu.separator
+    
     rails_menu.menu "Go To" do |goto_menu|
       # command/snippet names must be unique within bundle and are case insensitive
       goto_menu.command "Go to Alternate File"
