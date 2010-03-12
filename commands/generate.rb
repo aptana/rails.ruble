@@ -13,7 +13,7 @@ command "Call Generate Script" do |cmd|
   cmd.input = :none
   cmd.invoke do |context|
     Generator.setup
-    
+    # FIXME This doesn't work with Rails 3!
     if choice = Ruble.choose("Generate:", Generator.names.map { |name| Inflector.humanize name }, :title => "Rails Generator")
       arguments = Ruble::UI.request_string(
         :title => "#{Inflector.humanize Generator.generators[choice].name} Generator", 
@@ -52,6 +52,7 @@ command "Call Generate Script" do |cmd|
         end
 
         FileUtils.cd proj_dir
+        # TODO query if project is rails 3.0+ and if so, then run "rails generate ..."
         command = "script/generate #{Generator.generators[choice].name} #{arguments} #{options}"
         Ruble::Logger.trace "Command: #{command}"
 

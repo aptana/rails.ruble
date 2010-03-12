@@ -59,7 +59,9 @@ module Ruble
     def choose(text, choices = ["none"], options = {})
       options = {:title => "Choose", :prompt => text, :items => choices, :button1 => 'Ok', :button2 => 'Cancel'}.update(options)
       choice = Ruble::UI.request_item(options)
+      return nil if choice.nil?
       choices.each_with_index {|item, index| return index if item == choice}
+      nil
     end
     
     def rescan_project
