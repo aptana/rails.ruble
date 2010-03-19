@@ -1,6 +1,6 @@
 require 'ruble'
 
-bundle "Ruby on Rails" do |bundle|
+bundle do |bundle|
   bundle.author = "Many"
   bundle.copyright = <<END
 © Copyright 2010 Aptana Inc. Distributed under the MIT license.
@@ -8,6 +8,7 @@ bundle "Ruby on Rails" do |bundle|
 Portions © Copyright 2006 syncPEOPLE, LLC, distributed under the terms of the MIT License.
 END
 
+  bundle.display_name = "Ruby on Rails"
   bundle.description = <<END
 Rails bundle for RadRails, based heavily on Dr. Nic's tmbundle
 (http://github.com/drnic/ruby-on-rails-tmbundle), which in turn was
