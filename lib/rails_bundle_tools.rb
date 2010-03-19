@@ -19,7 +19,12 @@ require 'rails/text_mate'
 require 'rails/rails_path'
 require 'rails/misc'
 require 'rails/inflector'
+require 'rbconfig'
 
 def ruby(command)
-  `/usr/bin/env ruby #{command}`
+  if RbConfig::CONFIG['target_os'] =~ /(win|w)32$/
+    `#{ENV['COMSPEC']} /c ruby #{command}`
+  else  
+    `/usr/bin/env ruby #{command}`
+  end
 end

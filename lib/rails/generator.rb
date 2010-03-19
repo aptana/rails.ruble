@@ -37,7 +37,9 @@ class Generator
   def self.find_generator_names
     list = nil
     FileUtils.chdir(RailsPath.new.rails_root) do
-      output = ruby 'script/generate | grep "^  [A-Z]" | sed -e "s/  //"'
+      output = ruby 'script/generate'
+      output = output.grep(/^  [A-Z]/).to_s.gsub!("  ","")
+      output = "" if output.nil?
       list = output.split(/[,\s]+/).reject {|f| f =~ /:/}
     end
     list
