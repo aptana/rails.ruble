@@ -463,12 +463,13 @@ module Ruble
       if !Ruble.platforms.include? :windows
         # Rails 2.x
         # FIXME This doesn't have the project location in the args!
-        out = IO.popen('ps wwax -o args | grep "script/server"', 'r') {|io| io.read }
+        out = IO.popen('ps wwax -o args | grep "script/server"', 'r') {|io| io.read } || ''
         out.each_line do |line|
           words = line.split(' ')
           next if words.first == 'grep'
           # Ok we need to search the words starting at index 2, look for --port or -p
           words = words[2..-1]
+          next if words.nil?
           words.each_with_index do |word, i|
             puts word
             port = words[i + 1] if word == "-p" || word == "--port"
@@ -477,13 +478,14 @@ module Ruble
           end
         end
         # Rails 3.x
-        out = IO.popen('ps wwax -o args | grep "rails server"', 'r') {|io| io.read }
+        out = IO.popen('ps wwax -o args | grep "rails server"', 'r') {|io| io.read } || ''
         out.each_line do |line|
           words = line.split(' ')
           next if words.first == 'grep'
           next unless words[1].start_with? to_dir.path # looks like it's this project
           # Ok we need to search the words starting at index 2, look for --port or -p
           words = words[2..-1]
+          next if words.nil?
           words.each_with_index do |word, i|
             puts word
             port = words[i + 1] if word == "-p" || word == "--port"
