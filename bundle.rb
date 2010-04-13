@@ -92,9 +92,9 @@ END
     rails_menu.separator
 
     rails_menu.menu "Models" do |models_menu|
-      # models_menu.command "Show DB Schema for Current Class"
+      models_menu.command "Show DB Schema for Current Class"
 
-      # models_menu.separator
+      models_menu.separator
 
       models_menu.command "alias_attribute"
 

@@ -3,7 +3,7 @@ word = ARGV.shift
 require "#{project}/config/boot"
 require "#{project}/config/environment"
 
-if word.blank?
+if word.nil? or word.strip.length == 0
   STDOUT << "Place cursor on class name (or variation) to show its schema"
   exit
 end
