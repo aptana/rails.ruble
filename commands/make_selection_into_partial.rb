@@ -1,26 +1,102 @@
-#<?xml version="1.0" encoding="UTF-8"?>
-#<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-#<plist version="1.0">
-#<dict>
-#	<key>beforeRunningCommand</key>
-#	<string>saveModifiedFiles</string>
-#	<key>command</key>
-#	<string>RUBYLIB="$TM_BUNDLE_SUPPORT/lib:$RUBYLIB"
-#"${TM_RUBY:=ruby}" -- "${TM_BUNDLE_SUPPORT}/bin/create_partial_from_selection.rb"
-#</string>
-#	<key>fallbackInput</key>
-#	<string>line</string>
-#	<key>input</key>
-#	<string>selection</string>
-#	<key>keyEquivalent</key>
-#	<string>^H</string>
-#	<key>name</key>
-#	<string>Create Partial From Selection</string>
-#	<key>output</key>
-#	<string>replaceSelectedText</string>
-#	<key>scope</key>
-#	<string>source.ruby.rails, text.html.ruby, text.haml</string>
-#	<key>uuid</key>
-#	<string>1DD8A214-1C97-45BA-ADEE-8F888DDE8570</string>
-#</dict>
-#</plist>
+# Copyright:
+#   (c) 2006 syncPEOPLE, LLC.
+#   Visit us at http://syncpeople.com/
+# Author: Duane Johnson (duane.johnson@gmail.com)
+# Description:
+#   Creates a partial from the selected text (asks for the partial name)
+#   and replaces the text with a "render :partial => [partial_name]" erb fragment.
+require 'ruble'
+require 'ruble/ui'
+
+command "Create Partial From Selection" do |cmd|
+  cmd.scope = "source.ruby.rails, text.html.ruby, text.haml"
+  cmd.output = :replace_selection
+  cmd.input = :selection, :line
+  cmd.key_binding = "CONTROL+H"
+  cmd.invoke do |context|
+    require 'rails_bundle_tools'
+    
+    current_file = RailsPath.new
+    
+    # Make sure we're in a view file
+    unless current_file.file_type == :view
+      context.exit_show_tool_tip("The \"create partial from selection\" action works within view files only.")
+    end
+    
+    # If text is selected, create a partial out of it
+    if Ruble.selected_text
+      partial_name = Ruble::UI.request_string(
+        :title => "Create a partial from the selected text", 
+        :default => "partial",
+        :prompt => "Name of the new partial: (omit the _ and .html.erb)",
+        :button1 => 'Create'
+      )
+    
+      if partial_name
+        path = current_file.dirname
+        partial = File.join(path, "_#{partial_name}.html.erb")
+    
+        # Create the partial file
+        if File.exist?(partial)
+          unless Ruble::UI.request_confirmation(
+            :button1 => "Overwrite",
+            :button2 => "Cancel",
+            :title => "The partial file already exists.",
+            :prompt => "Do you want to overwrite it?"
+          )
+            context.exit_discard
+          end
+        end
+    
+        file = File.open(partial, "w") { |f| f.write(Ruble.selected_text) }
+        Ruble.rescan_project
+    
+        # Return the new render :partial line
+        print "<%= render :partial => '#{partial_name}' %>\n"
+      else
+        context.exit_discard
+      end
+    else
+      # Otherwise, toggle inline partials if they exist
+    
+      text = ""
+      partial_block_re =
+        /<!--\s*\[\[\s*Partial\s'(.+?)'\sBegin\s*\]\]\s*-->\n(.+)<!--\s*\[\[\s*Partial\s'\1'\sEnd\s*\]\]\s*-->\n/m
+    
+      # Inline partials exist?
+      if current_file.buffer =~ partial_block_re
+        text = current_file.buffer.text
+        while text =~ partial_block_re
+          partial_name, partial_text = $1, $2
+          File.open(partial_name, "w") { |f| f.write $2 }
+          text.sub! partial_block_re, ''
+        end
+      else
+      # See if there are any render :partial statements to expand
+        current_file.buffer.lines.each_with_index do |line, i|
+          text << line
+          if line =~ /render[\s\(].*:partial\s*=>\s*['"](.+?)['"]/
+            partial_name = $1
+            modules = current_file.modules + [current_file.controller_name]
+    
+            # Check for absolute path to partial file
+            if partial_name.include?('/')
+              pieces = partial_name.split('/')
+              partial_name = pieces.pop
+              modules = pieces
+            end
+    
+            partial = File.join(current_file.rails_root, 'app', 'views', modules, "_#{partial_name}.html.erb")
+    
+            text << "<!-- [[ Partial '#{partial}' Begin ]] -->\n"
+            text << IO.read(partial).gsub("\r\n", "\n")
+            text << "<!-- [[ Partial '#{partial}' End ]] -->\n"
+          end
+        end
+      end
+      print text
+      context.exit_replace_document
+    end
+    nil
+  end    
+end

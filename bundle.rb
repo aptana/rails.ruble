@@ -222,9 +222,9 @@ END
       controllers_menu.command "verify - redirect"
     end
     rails_menu.menu "View Templates" do |view_templates_menu|
-      # view_templates_menu.command "Create Partial from Selection"
+      view_templates_menu.command "Create Partial From Selection"
       
-      # view_templates_menu.separator
+      view_templates_menu.separator
       
       view_templates_menu.command "form_for"
       view_templates_menu.command "form_for with errors"
