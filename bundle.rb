@@ -22,7 +22,7 @@ END
   # See also the alternative, HAML-style syntax in menu.rrmenu
   bundle.menu "Rails" do |rails_menu|
     # this menu should be shown when any of the following scopes is active:
-    rails_menu.scope = [ "source.ruby", "project.rails" ]
+    rails_menu.scope = [ "source.ruby", "project.rails", 'source.yaml', 'text.haml', 'text.html.ruby' ]
     
     rails_menu.command "Preview"
     rails_menu.separator
@@ -385,9 +385,9 @@ END
     rails_menu.menu "Fixtures" do |fixtures_menu|
       fixtures_menu.command "$LABEL"
       fixtures_menu.command "<%= Fixtures.identify(:symbol) %>"
-      # fixtures_menu.separator
-      # fixtures_menu.command "Autocomplete Foreign Key Fixture Reference"
-      # fixtures_menu.command "Autocomplete Foreign Key Fixture Reference (habtm)"
+      fixtures_menu.separator
+      fixtures_menu.command "Autocomplete Foreign Key Fixture Reference"
+      fixtures_menu.command "Autocomplete Foreign Key Fixture Reference (habtm)"
     end
     rails_menu.command "test do...end"
     rails_menu.menu "Unit Tests" do |unit_tests_menu|
