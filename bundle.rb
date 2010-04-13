@@ -268,7 +268,7 @@ END
         link_to_menu.command "link_to (action, id)"
         link_to_menu.command "link_to (controller)"
         link_to_menu.command "link_to (controller, action)"
-        # link_to_menu.command "link_to (controller, action, id)"
+        link_to_menu.command "link_to (controller, action, id)"
         link_to_menu.command "link_to model"
       end
       view_templates_menu.command "end (ERB)"

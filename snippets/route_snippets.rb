@@ -22,7 +22,7 @@ with_defaults :scope => "text.html.ruby, text.haml" do |bundle|
     snippet.expansion = "link_to \"${1:link text...}\", :controller => \"${2:items}\", :action => ${3:@index}"
   end
 
-  snippet "link_to (conroller, action, id)" do |snippet|
+  snippet "link_to (controller, action, id)" do |snippet|
     snippet.trigger = "licai"
     snippet.expansion = "link_to \"${1:link text...}\", :controller => \"${2:items}\", :action => ${3:@index}, :id => ${4:@item}"
   end
