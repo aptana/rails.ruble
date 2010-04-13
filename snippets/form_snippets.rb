@@ -67,5 +67,12 @@ ${TM_RAILS_TEMPLATE_END_RUBY_BLOCK}"
     snippet.trigger = "ff"
     snippet.expansion = "${TM_RAILS_TEMPLATE_START_RUBY_INLINE}form_for @${1:model} do |f|${TM_RAILS_TEMPLATE_END_RUBY_INLINE}\n  $0\n${TM_RAILS_TEMPLATE_END_RUBY_BLOCK}"
   end
+  
+  snippet "fields_for" do |cmd|
+    cmd.trigger = "fields"
+    cmd.expansion = "${TM_RAILS_TEMPLATE_START_RUBY_INLINE}fields_for :${1:model}, @$1 do |$1|${TM_RAILS_TEMPLATE_END_RUBY_INLINE}
+  $0
+${TM_RAILS_TEMPLATE_END_RUBY_BLOCK}"
+  end
 
 end

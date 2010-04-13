@@ -252,7 +252,7 @@ END
         form_for_helpers_menu.command "form_for submit"
         form_for_helpers_menu.command "form_for fields_for"
       end
-      # view_templates_menu.command "fields_for"
+      view_templates_menu.command "fields_for"
       
       view_templates_menu.separator
       
