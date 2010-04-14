@@ -294,75 +294,75 @@ END
       rjs_menu.command "page.show (*ids)"
       rjs_menu.command "page.toggle (*ids)"
     end
-    # rails_menu.menu "Migrations" do |migrations_menu|
-    #   migrations_menu.menu "Columns" do |columns_menu|
-    #     columns_menu.command "Add / Remove Column"
-    #     columns_menu.command "Add / Remove Several Columns"
-    #     columns_menu.command "Add / Remove Several Columns (marcc)"
-    #     columns_menu.command "Add / Remove Timestamps"
-    #     columns_menu.command "Change Column"
-    #     columns_menu.command "Change Column Default"
-    #     columns_menu.command "Rename Column"
-    #     columns_menu.command "Rename Several Columns"
-    #     columns_menu.command "Rename Several Columns (mncc)"
-    #     columns_menu.command "Remove / Add Column"
-    #     columns_menu.command "Remove / Add Timestamps"
-    #   end
-    #   migrations_menu.menu "Tables" do |tables_menu|
-    #     tables_menu.command "Create / Drop Table"
-    #     tables_menu.command "Rename Table"
-    #     tables_menu.command "Drop / Create Table"
-    #     tables_menu.command "Change Table"
-    # 
-    #     tables_menu.menu "Create columns t. drop-down list" do |create_columns_list_menu|
-    #       create_columns_list_menu.command "t.string (tcs)"
-    #       create_columns_list_menu.command "t.text (tct)"
-    #       create_columns_list_menu.command "t.integer (tci)"
-    #       create_columns_list_menu.command "t.float (tcf)"
-    #       create_columns_list_menu.command "t.decimal (tcd)"
-    #       create_columns_list_menu.command "t.datetime (tcdt)"
-    #       create_columns_list_menu.command "t.timestamp (tcts)"
-    #       create_columns_list_menu.command "t.time (tcti)"
-    #       create_columns_list_menu.command "t.date (tcda)"
-    #       create_columns_list_menu.command "t.boolean (tcb)"
-    #       create_columns_list_menu.command "t.binary (tcbi)"
-    #       create_columns_list_menu.command "t.timestamps (tctss)"
-    #       create_columns_list_menu.command "t.lock_version (tcl)"
-    #       create_columns_list_menu.command "t.references (tcr)"
-    #     end
-    #     tables_menu.menu "Create columns helpers" do |create_columns_helpers_menu|
-    #       create_columns_helpers_menu.command "Table column string"
-    #       create_columns_helpers_menu.command "Table column text"
-    #       create_columns_helpers_menu.command "Table column integer"
-    #       create_columns_helpers_menu.command "Table column float"
-    #       create_columns_helpers_menu.command "Table column decimal"
-    #       create_columns_helpers_menu.command "Table column datetime"
-    #       create_columns_helpers_menu.command "Table column timestamp"
-    #       create_columns_helpers_menu.command "Table column time"
-    #       create_columns_helpers_menu.command "Table column date"
-    #       create_columns_helpers_menu.command "Table column boolean"
-    #       create_columns_helpers_menu.command "Table column binary"
-    #       create_columns_helpers_menu.command "Table column timestamps"
-    #       create_columns_helpers_menu.command "Table column lock_version"
-    #       create_columns_helpers_menu.command "Table column(s) references"
-    #     end
-    #     tables_menu.command "Create Column in Table"
-    #     tables_menu.command "Create Several Columns in Table"
-    #     tables_menu.menu "Change columns t. drop-down list" do |change_columns_list_menu|
-    #       change_columns_list_menu.command "t.change (tch)"
-    #       change_columns_list_menu.command "t.rename (tre)"
-    #     end
-    #     tables_menu.menu "Change columns t. helpers" do |change_columns_helper_menu|
-    #       change_columns_helper_menu.command "Table column(s) change"
-    #       change_columns_helper_menu.command "Table column(s) rename"
-    #     end
-    #   end
-    #   migrations_menu.menu "Indices" do |indices_menu|
-    #     indices_menu.command "Add / Remove Index"
-    #     indices_menu.command "Add / Remove Named Index"
-    #     indices_menu.command "Add / Remove Unique Index"
-    #   end
-    # end
+    rails_menu.menu "Migrations" do |migrations_menu|
+      migrations_menu.menu "Columns" do |columns_menu|
+        columns_menu.command "Add / Remove Column"
+        columns_menu.command "Add / Remove Several Columns"
+        columns_menu.command "Add / Remove Several Columns (marcc)"
+        columns_menu.command "Add / Remove Timestamps"
+        columns_menu.command "Change Column"
+        columns_menu.command "Change Column Default"
+        columns_menu.command "Rename Column"
+        columns_menu.command "Rename Several Columns"
+        columns_menu.command "Rename Several Columns (mncc)"
+        columns_menu.command "Remove / Add Column"
+        columns_menu.command "Remove / Add Timestamps"
+      end
+      migrations_menu.menu "Tables" do |tables_menu|
+        tables_menu.command "Create / Drop Table"
+        tables_menu.command "Rename Table"
+        tables_menu.command "Drop / Create Table"
+        tables_menu.command "Change Table"
+    
+        tables_menu.menu "Create columns t. drop-down list" do |create_columns_list_menu|
+          create_columns_list_menu.command "t.string (tcs)"
+          create_columns_list_menu.command "t.text (tct)"
+          create_columns_list_menu.command "t.integer (tci)"
+          create_columns_list_menu.command "t.float (tcf)"
+          create_columns_list_menu.command "t.decimal (tcd)"
+          create_columns_list_menu.command "t.datetime (tcdt)"
+          create_columns_list_menu.command "t.timestamp (tcts)"
+          create_columns_list_menu.command "t.time (tcti)"
+          create_columns_list_menu.command "t.date (tcda)"
+          create_columns_list_menu.command "t.boolean (tcb)"
+          create_columns_list_menu.command "t.binary (tcbi)"
+          create_columns_list_menu.command "t.timestamps (tctss)"
+          create_columns_list_menu.command "t.lock_version (tcl)"
+          create_columns_list_menu.command "t.references (tcr)"
+        end
+        tables_menu.menu "Create columns helpers" do |create_columns_helpers_menu|
+          create_columns_helpers_menu.command "Table column string"
+          create_columns_helpers_menu.command "Table column text"
+          create_columns_helpers_menu.command "Table column integer"
+          create_columns_helpers_menu.command "Table column float"
+          create_columns_helpers_menu.command "Table column decimal"
+          create_columns_helpers_menu.command "Table column datetime"
+          create_columns_helpers_menu.command "Table column timestamp"
+          create_columns_helpers_menu.command "Table column time"
+          create_columns_helpers_menu.command "Table column date"
+          create_columns_helpers_menu.command "Table column boolean"
+          create_columns_helpers_menu.command "Table column binary"
+          create_columns_helpers_menu.command "Table column timestamps"
+          create_columns_helpers_menu.command "Table column lock_version"
+          create_columns_helpers_menu.command "Table column(s) references"
+        end
+        tables_menu.command "Create Column in Table"
+        tables_menu.command "Create Several Columns in Table"
+        tables_menu.menu "Change columns t. drop-down list" do |change_columns_list_menu|
+          change_columns_list_menu.command "t.change (tch)"
+          change_columns_list_menu.command "t.rename (tre)"
+        end
+        tables_menu.menu "Change columns t. helpers" do |change_columns_helper_menu|
+          change_columns_helper_menu.command "Table column(s) change"
+          change_columns_helper_menu.command "Table column(s) rename"
+        end
+      end
+      migrations_menu.menu "Indices" do |indices_menu|
+        indices_menu.command "Add / Remove Index"
+        indices_menu.command "Add / Remove Named Index"
+        indices_menu.command "Add / Remove Unique Index"
+      end
+    end
     rails_menu.menu "Environment" do |environment_menu|
       environment_menu.command "config.gem"
     end

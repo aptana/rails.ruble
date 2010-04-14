@@ -1,12 +1,10 @@
 require 'ruble'
-require 'ruble/terminal'
 
-require 'rails/intelligent_migration'
-
-# FIXME: key_binding should be "M1+|"
 with_defaults :scope => "source.ruby.rails, source.yaml",
-              :key_binding => "M1+SHIFT+\\",
+              :key_binding => "M1+M2+\\",
               :output => :discard do |bundle|
+  require 'ruble/terminal'
+  
   command "Clone Development DB to Test DB" do |cmd|
     cmd.invoke {|context|  Ruble::Terminal.open("rake db:test:clone", context.project.to_dir.path) }
   end
@@ -32,13 +30,12 @@ with_defaults :scope => "source.ruby.rails, source.yaml",
   command "Migrate to Previous Version" do |cmd|
     cmd.invoke do |context|
       # FIXME: need to do this in RUBY directly
-      current_schema_version="0" #`grep 'Schema\.define' "$TM_PROJECT_DIRECTORY/db/schema.rb" | ruby -e 'print $stdin.read.scan(/\d+/).first'`
+      current_schema_version = "0" #`grep 'Schema\.define' "$TM_PROJECT_DIRECTORY/db/schema.rb" | ruby -e 'print $stdin.read.scan(/\d+/).first'`
       Ruble::Terminal.open("rake db:migrate:down VERSION=#{current_schema_version}", context.project.to_dir.path)
     end
   end
 
   # Migrate to version is in textmate, but sucks. we can do better with a gui...
-
   command "Migrate to Current" do |cmd|
     cmd.invoke {|context|  Ruble::Terminal.open("rake db:migrate", context.project.to_dir.path) }
   end
@@ -48,294 +45,92 @@ with_defaults :scope => "source.ruby.rails, source.yaml",
   end
 end
 
-# FIX: textmate macro has scopeType=local. what is our equivalent?
-with_defaults :scope => "meta.rails.migration - meta.rails.migration.create_table - meta.rails.migration.change_table",
+# FIXME textmate macro has scopeType=local. what is our equivalent?
+with_defaults :scope => "source.ruby.rails",
+#:scope => "meta.rails.migration - meta.rails.migration.create_table - meta.rails.migration.change_table",
               :input => :selection,
               :output => :insert_as_snippet do |bundle|
+  require 'rails/intelligent_migration'
+  
   command "Add / Remove Column" do |cmd|
-    # since a Command is a class definition, we can extend it using a module
-    extend IntelligentMigration
-
+    # cmd.extend IntelligentMigration
     cmd.trigger = "mcol"
-    
-    cmd.invoke do |context|
-      process_migration(context, :add_remove_column)
-    end
+    cmd.invoke {|context| IntelligentMigration.process_migration(context, :add_remove_column) }
   end
 
   command "Add / Remove Index" do |cmd|
-    extend IntelligentMigration
-
-    cmd.trigger = "mind"
-    
-    cmd.invoke do |context|
-      process_migration(context, :add_remove_index)
-    end
+    cmd.trigger = "mind"  
+    cmd.invoke {|context| IntelligentMigration.process_migration(context, :add_remove_index) }
   end
 
   command "Add / Remove Named Index" do |cmd|
-    extend IntelligentMigration
-
     cmd.trigger = "mind"
-    
-    cmd.invoke do |context|
-      process_migration(context, :add_remove_named_index)
-    end
+    cmd.invoke {|context| IntelligentMigration.process_migration(context, :add_remove_named_index) }
   end
 
   command "Add / Remove Several Columns (marcc)" do |cmd|
-    extend IntelligentMigration
-
     cmd.trigger = "marcc"
-    
-    cmd.invoke do |context|
-      process_migration(context, :add_remove_column_continue)
-    end
+    cmd.invoke {|context| IntelligentMigration.process_migration(context, :add_remove_column_continue) }
   end
 
   command "Add / Remove Several Columns" do |cmd|
-    extend IntelligentMigration
-
     cmd.trigger = "mcol"
-    
-    cmd.invoke do |context|
-      process_migration(context, :add_remove_column_continue)
-    end
+    cmd.invoke {|context| IntelligentMigration.process_migration(context, :add_remove_column_continue) }
   end
 
   command "Add / Remove Timestamps" do |cmd|
-    extend IntelligentMigration
-
     cmd.trigger = "mcol"
-    
-    cmd.invoke do |context|
-      process_migration(context, :add_remove_timestamps)
-    end
+    cmd.invoke {|context| IntelligentMigration.process_migration(context, :add_remove_timestamps) }
   end
 
   command "Add / Remove Unique Index" do |cmd|
-    extend IntelligentMigration
-
     cmd.trigger = "mind"
-    
-    cmd.invoke do |context|
-      process_migration(context, :add_remove_unique_index)
-    end
+    cmd.invoke {|context| IntelligentMigration.process_migration(context, :add_remove_unique_index) }
   end
 
   command "Change / Change Table" do |cmd|
-    extend IntelligentMigration
-
-    cmd.trigger = "mtab"
-    
-    cmd.invoke do |context|
-      process_migration(context, :change_change_table)
-    end
+    cmd.trigger = "mtab"    
+    cmd.invoke {|context| IntelligentMigration.process_migration(context, :change_change_table) }
   end
 
   command "Change Column Default" do |cmd|
-    extend IntelligentMigration
-
     cmd.trigger = "mcol"
-    
-    cmd.invoke do |context|
-      process_migration(context, :change_column_default)
-    end
+    cmd.invoke {|context| IntelligentMigration.process_migration(context, :change_column_default) }
   end
 
   command "Change Column" do |cmd|
-    extend IntelligentMigration
-
     cmd.trigger = "mcol"
-    
-    cmd.invoke do |context|
-      process_migration(context, :change_column)
-    end
+    cmd.invoke {|context| IntelligentMigration.process_migration(context, :change_column) }
   end
 
   command "Create / Drop Table" do |cmd|
-    extend IntelligentMigration
-
     cmd.trigger = "mtab"
-    
-    cmd.invoke do |context|
-      process_migration(context, :create_drop_table)
-    end
+    cmd.invoke {|context| IntelligentMigration.process_migration(context, :create_drop_table) }
   end
 
   command "Remove / Add Timestamps" do |cmd|
-    extend IntelligentMigration
-
     cmd.trigger = "mcol"
-    
-    cmd.invoke do |context|
-      process_migration(context, :remove_add_timestamps)
-    end
+    cmd.invoke {|context| IntelligentMigration.process_migration(context, :remove_add_timestamps) }
   end
 
-  command "Rename / Rename Several Columns (mncc)" do |cmd|
-    extend IntelligentMigration
-
+  command "Rename Several Columns (mncc)" do |cmd|
     cmd.trigger = "mncc"
-    
-    cmd.invoke do |context|
-      process_migration(context, :rename_column_continue)
-    end
+    cmd.invoke {|context| IntelligentMigration.process_migration(context, :rename_column_continue) }
   end
 
-  command "Rename / Rename Several Columns" do |cmd|
-    extend IntelligentMigration
-
+  command "Rename Several Columns" do |cmd|
     cmd.trigger = "mcol"
-    
-    cmd.invoke do |context|
-      process_migration(context, :rename_column_continue)
-    end
+    cmd.invoke {|context| IntelligentMigration.process_migration(context, :rename_column_continue) }
   end
 
-  command "Rename / Rename Column" do |cmd|
-    extend IntelligentMigration
-
+  command "Rename Column" do |cmd|
     cmd.trigger = "mcol"
-    
-    cmd.invoke do |context|
-      process_migration(context, :rename_column)
-    end
+    cmd.invoke {|context| IntelligentMigration.process_migration(context, :rename_column) }
   end
 
-  command "Rename / Rename Table" do |cmd|
-    extend IntelligentMigration
-
+  command "Rename Table" do |cmd|
     cmd.trigger = "mtab"
-    
-    cmd.invoke do |context|
-      process_migration(context, :rename_table)
-    end
-  end
-
-end
-
-snippet "Create Column in Table" do |snippet|
-  snippet.scope = "meta.rails.migration.create_table"
-  snippet.trigger = "mcol"
-  snippet.expansion = "t.column ${1:title}, :${2:string}\n\t$0"
-end
-
-snippet "Drop / Create Table" do |snippet|
-  snippet.scope = "meta.rails.migration - meta.rails.migration.create_table - meta.rails.migration.change_table"
-  snippet.trigger = "mtab"
-  snippet.expansion = "drop_table :${1:table}${2: [press tab twice to generate create_table]}"
-end
-
-snippet "Remove / Add Column" do |snippet|
-  snippet.scope = "meta.rails.migration - meta.rails.migration.create_table - meta.rails.migration.change_table"
-  snippet.trigger = "mcol"
-  snippet.expansion = "remove_column :${1:table}, :${2:column}${3: [press tab twice to generate add_column]}"
-end
-
-snippet "Table column(s) change" do |snippet|
-  snippet.scope = "meta.rails.migration.change_table"
-  snippet.trigger = "tch"
-  # FIXME We don't support nested tab stops yet
-  snippet.expansion = "t.change :${1:name}${2:, :${3:string}${4:, :${5:limit} => ${6:80}}}\n$0"
-end
-
-snippet "Table column(s) rename" do |snippet|
-  snippet.scope = "meta.rails.migration.change_table"
-  snippet.trigger = "tre"
-  snippet.expansion = "t.rename :${1:old_column_name}, :${2:new_column_name}\n$0"
-end
-
-with_defaults :scope => "meta.rails.migration.create_table, meta.rails.migration.change_table" do |bundle|
-
-  snippet "Table column" do |snippet|
-    snippet.trigger = "mcol"
-    snippet.expansion = "t.column ${1:title}, :${2:string}\n\t$0"
-  end
-
-  snippet "Table column binary" do |snippet|
-    snippet.trigger = [ "t.", "tcbi" ]
-    snippet.expansion = "t.binary :${1:title}${2:, :limit => ${3:2}.megabytes}\n$0"
-  end
-
-  snippet "Table column boolean" do |snippet|
-    snippet.trigger = [ "t.", "tcb" ]
-    snippet.expansion = "t.boolean :${1:title}\n$0"
-  end
-
-  snippet "Table column date" do |snippet|
-    snippet.trigger = [ "t.", "tcda" ]
-    snippet.expansion = "t.date :${1:title}\n$0"
-  end
-
-  snippet "Table column datetime" do |snippet|
-    snippet.trigger = [ "t.", "tcdt" ]
-    snippet.expansion = "t.datetime :${1:title}\n$0"
-  end
-
-  snippet "Table column decimal" do |snippet|
-    snippet.trigger = [ "t.", "tcd" ]
-    # FIXME We don't support nested tab stops yet
-    snippet.expansion = "t.decimal :${1:title}${2:${3:, :precision => ${4:10}}${5:, :scale => ${6:2}}}\n$0"
-  end
-
-  snippet "Table column float" do |snippet|
-    snippet.trigger = [ "t.", "tcf" ]
-    snippet.expansion = "t.float :${1:title}\n$0"
-  end
-
-  snippet "Table column integer" do |snippet|
-    snippet.trigger = [ "t.", "tci" ]
-    snippet.expansion = "t.integer :${1:title}\n$0"
-  end
-
-  snippet "Table column lock_version" do |snippet|
-    snippet.trigger = [ "t.", "tcl" ]
-    snippet.expansion = "t.binary integer :lock_version, :null => false, :default => 0\n$0"
-  end
-
-  snippet "Table column(s) references" do |snippet|
-    snippet.trigger = [ "t.", "tcr" ]
-    # FIXME We don't support nested tab stops yet
-    snippet.expansion = "t.references :${1:taggable}${2:, :polymorphic => ${3:{ :default => '${4:Photo}' \}}}\n$0"
-  end
-
-  snippet "Table column string" do |snippet|
-    snippet.trigger = [ "t.", "tcs" ]
-    snippet.expansion = "t.string :${1:title}\n$0"
-  end
-
-  snippet "Table column text" do |snippet|
-    snippet.trigger = [ "t.", "tct" ]
-    snippet.expansion = "t.text :${1:title}\n$0"
-  end
-
-  snippet "Table column time" do |snippet|
-    snippet.trigger = [ "t.", "tcti" ]
-    snippet.expansion = "t.time :${1:title}\n$0"
-  end
-
-  snippet "Table column timestamp" do |snippet|
-    snippet.trigger = [ "t.", "tcts" ]
-    snippet.expansion = "t.timestamp :${1:title}\n$0"
-  end
-
-  snippet "Table column timestamps" do |snippet|
-    snippet.trigger = [ "t.", "tctss" ]
-    snippet.expansion = "t.timestamps\n$0"
-  end
-
-  snippet "t.change (tch)" do |snippet|
-    snippet.scope = "meta.rails.migration.change_table"
-    snippet.trigger = "t."
-    # FIXME We don't support nested tab stops yet
-    snippet.expansion = "t.change :${1:name}${2:, :${3:string}${4:, :${5:limit} => ${6:80}}}\nt.$0"
-  end
-
-  snippet "t.rename (tre)" do |snippet|
-    snippet.scope = "meta.rails.migration.change_table"
-    snippet.trigger = "t."
-    snippet.expansion = "t.rename :${1:old_column_name}, :${2:new_column_name}\nt.$0"
+    cmd.invoke {|context| IntelligentMigration.process_migration(context, :rename_table) }
   end
 
 end
