@@ -1,3 +1,5 @@
+require 'ruble'
+
 with_defaults :scope =>  'source.ruby.rails' do |bundle|
 
 snippet 'alias_attribute' do |s|
