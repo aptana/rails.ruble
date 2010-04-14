@@ -57,7 +57,6 @@ END
     rails_menu.separator
     
     rails_menu.command "Call Generate Script"
-    # rails_menu.command "Install Plugin"
     rails_menu.menu "Database" do |db_menu|
       db_menu.command "Migrate to Current"
       db_menu.command "Migrate to Version..."
