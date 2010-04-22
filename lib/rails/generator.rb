@@ -36,14 +36,26 @@ class Generator
   # Runs the script/generate command and extracts generator names from output
   def self.find_generator_names
     list = nil
+
     FileUtils.chdir(RailsPath.new.rails_root) do
-      output = ruby 'script/generate'
-      output = output.grep(/^  [A-Z]/).to_s.gsub!("  ","")
-      output = "" if output.nil?
-      list = output.split(/[,\s]+/).reject {|f| f =~ /:/}
+      if File.exists?("script/rails")
+        output = ruby 'script/rails generate'
+        output = output.grep(/^  [A-Za-z]/).to_s.gsub!("  ", "")
+        output = "" if output.nil?
+        list = output.split(/\n/)
+        list.each do |name|
+          name.strip!
+        end
+      else
+        output = ruby 'script/generate'
+        output = output.grep(/^  [A-Z]/).to_s.gsub!("  ", "")
+        output = "" if output.nil?
+        list = output.split(/[,\s]+/).reject {|f| f =~ /:/}
+      end
     end
     list
   end
+
 
   def self.known_generators
     [

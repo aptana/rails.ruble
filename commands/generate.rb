@@ -13,7 +13,6 @@ command "Call Generate Script" do |cmd|
   cmd.input = :none
   cmd.invoke do |context|
     Generator.setup
-    # FIXME This doesn't work with Rails 3!
     if choice = Ruble.choose("Generate:", Generator.names.map { |name| Inflector.humanize name }, :title => "Rails Generator")
       arguments = Ruble::UI.request_string(
         :title => "#{Inflector.humanize Generator.generators[choice].name} Generator", 
@@ -24,15 +23,26 @@ command "Call Generate Script" do |cmd|
 
       if arguments
         options = ""
-
+        rails_version = %x{rails -v}.chomp.scan(/[0-9][0-9\.]+/).first.to_i
+        
         case choice
         when 0
-          options = Ruble::UI.request_string(
-            :title => "Scaffold Controller Name", 
-            :prompt => "Name the new controller for the scaffold:",
-            :button1 => 'Continue'
-          )
-          options = "'#{options}'"
+          if rails_version < 2
+            options = Ruble::UI.request_string(
+             :title => "Scaffold Controller Name", 
+             :prompt => "Name the new controller for the scaffold:",
+             :button1 => 'Continue'
+            )
+            options = "'#{options}'"
+          else
+            options = Ruble::UI.request_string(
+             :title => "Scaffold Model Attributes", 
+             :default => "username:string",
+             :prompt => "Name the attribute pairs for the model in the format 'name:type':",
+             :button1 => 'Continue'
+            )
+            options = "#{options}"
+          end
         when 1
           options = Ruble::UI.request_string(
             :title => "Controller Actions", 
@@ -52,8 +62,14 @@ command "Call Generate Script" do |cmd|
         end
 
         FileUtils.cd proj_dir
-        # TODO query if project is rails 3.0+ and if so, then run "rails generate ..."
-        command = "script/generate #{Generator.generators[choice].name} #{arguments} #{options}"
+        
+        if File.exists?("script/rails")
+          generate_cmd = "script/rails generate"
+        else
+          generate_cmd = "script/generate"
+        end
+        
+        command = "#{generate_cmd} #{Generator.generators[choice].name} #{arguments} #{options}"
         Ruble::Logger.trace "Command: #{command}"
 
         output = ruby(command)
