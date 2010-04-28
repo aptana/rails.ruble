@@ -469,8 +469,8 @@ module Ruble
           # Ok we need to search the words starting at index 2, look for --port or -p
           words = words[2..-1]
           next if words.nil?
+          words = words[(words.index("--") + 1)..-1] while words.include?("--")
           words.each_with_index do |word, i|
-            puts word
             port = words[i + 1] if word == "-p" || word == "--port"
             # TODO What if they used --switch=value format?
             host = words[i + 1] if word == "-b" || word == "--binding"
@@ -485,8 +485,8 @@ module Ruble
           # Ok we need to search the words starting at index 2, look for --port or -p
           words = words[2..-1]
           next if words.nil?
+          words = words[(words.index("--") + 1)..-1] while words.include?("--")
           words.each_with_index do |word, i|
-            puts word
             port = words[i + 1] if word == "-p" || word == "--port"
             # TODO What if they used --switch=value format?
             host = words[i + 1] if word == "-b" || word == "--binding"
