@@ -8,7 +8,7 @@ require "rails/generator"
   
 command "Call Generate Script" do |cmd|
   cmd.key_binding = 'CONTROL+SHIFT+\\'
-  cmd.scope = "source.ruby.rails, source.yaml"
+  cmd.scope = "source.ruby.rails, source.yaml, project.rails"
   cmd.output = :discard
   cmd.input = :none
   cmd.invoke do |context|
