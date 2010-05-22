@@ -422,6 +422,7 @@ END
 
     rails_menu.command "Documentation for Word"
     rails_menu.command "find_each"
+    rails_menu.command "List Columns of a Model"
   end
 end
 
