@@ -23,7 +23,7 @@ class CommandGoToFile
       if !rails_path.exists?
         rails_path, openatline, openatcol = create_file(rails_path, choice.to_sym)
         if rails_path.nil?
-          Ruble.exit_discard
+          return nil
         end
         Ruble.rescan_project
       end
