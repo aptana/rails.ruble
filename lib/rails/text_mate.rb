@@ -41,6 +41,20 @@ module Ruble
     def project_directory
       env(:project_directory)
     end
+    
+    # Uses the TM_FILEPATh variable value. If not defined (no editor open),
+    # then grab first selected file in App Explorer
+    def filepath
+      value = env(:filepath)
+      return value if value
+      value = env(:selected_files)
+      return nil unless value
+      # Grab the first value out of the string
+      value = value[1..-2] # Strip leading and trailing single quotes
+      index = value.index("' ")
+      value = value[0..(index - 1)] if index
+      value
+    end
 
     def env(var)
       ENV['TM_' + var.to_s.upcase]
