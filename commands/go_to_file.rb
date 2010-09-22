@@ -35,7 +35,7 @@ with_defaults :key_binding => "M1+M2+M3+ARROW_DOWN",
     cmd.invoke { CommandGoToFile.alternate(:helper) }
   end
 
-  command "Go to JavaScript" do |cmd|
+  command "Go to Javascript" do |cmd|
     cmd.scope = "text.html.ruby, source.ruby.rails.embedded.html, meta.rails.controller, meta.rails.helper, text.haml"
     cmd.invoke { CommandGoToFile.alternate(:javascript) }
   end
