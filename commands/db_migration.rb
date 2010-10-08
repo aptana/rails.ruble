@@ -50,87 +50,86 @@ with_defaults :scope => "source.ruby.rails",
 #:scope => "meta.rails.migration - meta.rails.migration.create_table - meta.rails.migration.change_table",
               :input => :selection,
               :output => :insert_as_snippet do |bundle|
-  require 'rails/intelligent_migration'
   
   command "Add / Remove Column" do |cmd|
     # cmd.extend IntelligentMigration
     cmd.trigger = "mcol"
-    cmd.invoke {|context| IntelligentMigration.process_migration(context, :add_remove_column) }
+    cmd.invoke {|context| require 'rails/intelligent_migration'; IntelligentMigration.process_migration(context, :add_remove_column) }
   end
 
   command "Add / Remove Index" do |cmd|
     cmd.trigger = "mind"  
-    cmd.invoke {|context| IntelligentMigration.process_migration(context, :add_remove_index) }
+    cmd.invoke {|context| require 'rails/intelligent_migration'; IntelligentMigration.process_migration(context, :add_remove_index) }
   end
 
   command "Add / Remove Named Index" do |cmd|
     cmd.trigger = "mind"
-    cmd.invoke {|context| IntelligentMigration.process_migration(context, :add_remove_named_index) }
+    cmd.invoke {|context| require 'rails/intelligent_migration'; IntelligentMigration.process_migration(context, :add_remove_named_index) }
   end
 
   command "Add / Remove Several Columns (marcc)" do |cmd|
     cmd.trigger = "marcc"
-    cmd.invoke {|context| IntelligentMigration.process_migration(context, :add_remove_column_continue) }
+    cmd.invoke {|context| require 'rails/intelligent_migration'; IntelligentMigration.process_migration(context, :add_remove_column_continue) }
   end
 
   command "Add / Remove Several Columns" do |cmd|
     cmd.trigger = "mcol"
-    cmd.invoke {|context| IntelligentMigration.process_migration(context, :add_remove_column_continue) }
+    cmd.invoke {|context| require 'rails/intelligent_migration'; IntelligentMigration.process_migration(context, :add_remove_column_continue) }
   end
 
   command "Add / Remove Timestamps" do |cmd|
     cmd.trigger = "mcol"
-    cmd.invoke {|context| IntelligentMigration.process_migration(context, :add_remove_timestamps) }
+    cmd.invoke {|context| require 'rails/intelligent_migration'; IntelligentMigration.process_migration(context, :add_remove_timestamps) }
   end
 
   command "Add / Remove Unique Index" do |cmd|
     cmd.trigger = "mind"
-    cmd.invoke {|context| IntelligentMigration.process_migration(context, :add_remove_unique_index) }
+    cmd.invoke {|context| require 'rails/intelligent_migration'; IntelligentMigration.process_migration(context, :add_remove_unique_index) }
   end
 
   command "Change / Change Table" do |cmd|
     cmd.trigger = "mtab"    
-    cmd.invoke {|context| IntelligentMigration.process_migration(context, :change_change_table) }
+    cmd.invoke {|context| require 'rails/intelligent_migration'; IntelligentMigration.process_migration(context, :change_change_table) }
   end
 
   command "Change Column Default" do |cmd|
     cmd.trigger = "mcol"
-    cmd.invoke {|context| IntelligentMigration.process_migration(context, :change_column_default) }
+    cmd.invoke {|context| require 'rails/intelligent_migration'; IntelligentMigration.process_migration(context, :change_column_default) }
   end
 
   command "Change Column" do |cmd|
     cmd.trigger = "mcol"
-    cmd.invoke {|context| IntelligentMigration.process_migration(context, :change_column) }
+    cmd.invoke {|context| require 'rails/intelligent_migration'; IntelligentMigration.process_migration(context, :change_column) }
   end
 
   command "Create / Drop Table" do |cmd|
     cmd.trigger = "mtab"
-    cmd.invoke {|context| IntelligentMigration.process_migration(context, :create_drop_table) }
+    cmd.invoke {|context| require 'rails/intelligent_migration'; IntelligentMigration.process_migration(context, :create_drop_table) }
   end
 
   command "Remove / Add Timestamps" do |cmd|
     cmd.trigger = "mcol"
-    cmd.invoke {|context| IntelligentMigration.process_migration(context, :remove_add_timestamps) }
+    cmd.invoke {|context| require 'rails/intelligent_migration'; IntelligentMigration.process_migration(context, :remove_add_timestamps) }
   end
 
   command "Rename Several Columns (mncc)" do |cmd|
     cmd.trigger = "mncc"
-    cmd.invoke {|context| IntelligentMigration.process_migration(context, :rename_column_continue) }
+    cmd.invoke {|context| require 'rails/intelligent_migration'; IntelligentMigration.process_migration(context, :rename_column_continue) }
   end
 
   command "Rename Several Columns" do |cmd|
     cmd.trigger = "mcol"
-    cmd.invoke {|context| IntelligentMigration.process_migration(context, :rename_column_continue) }
+    cmd.invoke {|context| require 'rails/intelligent_migration'; IntelligentMigration.process_migration(context, :rename_column_continue) }
   end
 
   command "Rename Column" do |cmd|
     cmd.trigger = "mcol"
-    cmd.invoke {|context| IntelligentMigration.process_migration(context, :rename_column) }
+    cmd.invoke {|context| require 'rails/intelligent_migration'; IntelligentMigration.process_migration(context, :rename_column) }
   end
 
   command "Rename Table" do |cmd|
     cmd.trigger = "mtab"
-    cmd.invoke {|context| IntelligentMigration.process_migration(context, :rename_table) }
+    cmd.invoke {|context| require 'rails/intelligent_migration'; IntelligentMigration.process_migration(context, :rename_table) }
   end
 
 end

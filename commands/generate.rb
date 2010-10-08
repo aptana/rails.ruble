@@ -1,9 +1,5 @@
 require 'ruble'
 
-require 'rails_bundle_tools'
-require 'fileutils'
-require "rails/generator"
-
 # FIXME: this file is rife with textmate-isms!!!
   
 command "Call Generate Script" do |cmd|
@@ -12,6 +8,9 @@ command "Call Generate Script" do |cmd|
   cmd.output = :discard
   cmd.input = :none
   cmd.invoke do |context|
+    require 'rails_bundle_tools'
+    require "rails/generator"
+    
     Generator.setup
     if choice = Ruble.choose("Generate:", Generator.names.map { |name| Inflector.humanize name }, :title => "Rails Generator")
       arguments = Ruble::UI.request_string(
@@ -61,6 +60,7 @@ command "Call Generate Script" do |cmd|
           options << " --git"
         end
 
+        require 'fileutils'
         FileUtils.cd proj_dir
         
         if File.exists?("script/rails")
