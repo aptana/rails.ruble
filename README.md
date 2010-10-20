@@ -1,28 +1,16 @@
-# TextMate bundle for Ruby on Rails development
+# Rails bundle for Aptana Studio
 
-To install with Git:
+A bundle to enable related commands in Aptana Studio. Ported from a TextMate bundle.
 
-    mkdir -p ~/Library/Application\ Support/TextMate/Bundles
-    cd ~/Library/Application\ Support/TextMate/Bundles
-    git clone git://github.com/drnic/ruby-on-rails-tmbundle.git "Ruby on Rails.tmbundle"
-    osascript -e 'tell app "TextMate" to reload bundles'
+## Authors
 
+* Modifications by Aptana
 
-To install without Git:
-
-    mkdir -p ~/Library/Application\ Support/TextMate/Bundles
-    cd ~/Library/Application\ Support/TextMate/Bundles
-    wget http://github.com/drnic/ruby-on-rails-tmbundle/tarball/master
-    tar zxf drnic-ruby-on-rails-tmbundle*.tar.gz
-    rm drnic-ruby-on-rails-tmbundle*.tar.gz
-    mv drnic-ruby-on-rails-tmbundle* "Ruby on Rails.tmbundle"
-    osascript -e 'tell app "TextMate" to reload bundles'
-
-## Rails 3.0 contributors
+### Rails 3.0 contributors
 
 * Kamil Kukura (rake migrate timestamp patch)
 
-## Rails 2.0 features/contributors (copied from CHANGELOG)
+### Rails 2.0 features/contributors (copied from CHANGELOG)
 
 * Snippets/Commands for:
   * Tests
@@ -55,3 +43,15 @@ To install without Git:
 * Plugins
   * Footnote
     * footnote-edge uses .erb for templates [thx Stephen Bannasch]
+
+## License
+
+This bundle is licensed under the Textmate license, available here:
+
+* [Textmate license](http://svn.textmate.org/trunk/LICENSE)
+
+## Other Stuff
+
+* You can [report a bug or request a feature here](http://github.com/aptana/rails.ruble/issues)
+
+# TextMate bundle for Ruby on Rails development
