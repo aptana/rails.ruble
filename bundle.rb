@@ -488,3 +488,5 @@ module Ruble
     end
   end
 end
+
+smart_typing_pairs["text.html.ruby"] = ['%', '%', '"', '"', '(', ')', '{', '}', '[', ']', 'Ò', 'Ó', '<', '>']
