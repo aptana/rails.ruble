@@ -442,6 +442,10 @@ env "text.haml" do |e|
   e['TM_RAILS_TEMPLATE_END_RUBY_BLOCK'] = ""
 end
 
+smart_typing_pairs["text.html.ruby"] = ['%', '%', '"', '"', '(', ')', '{', '}', '[', ']', 'Ò', 'Ó', '<', '>']
+smart_typing_pairs["text.html.ruby meta.tag"] = ['%', '%', '"', '"', '(', ')', '{', '}', '[', ']', 'Ò', 'Ó', '<', '>', "'", "'"]
+smart_typing_pairs["text.html.ruby meta.tag string"] = ['"', '"', '(', ')', '{', '}', '[', ']', 'Ò', 'Ó', 'Ô', 'Õ', '%', '%', '<', '>']
+
 module Ruble
   class Project
     # Add a method allowing commands to get root URL of server for project...
@@ -488,5 +492,3 @@ module Ruble
     end
   end
 end
-
-smart_typing_pairs["text.html.ruby"] = ['%', '%', '"', '"', '(', ')', '{', '}', '[', ']', 'Ò', 'Ó', '<', '>']
