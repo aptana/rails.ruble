@@ -3,9 +3,9 @@ require 'ruble'
 bundle do |bundle|
   bundle.author = "Many"
   bundle.copyright = <<END
-Â© Copyright 2010 Aptana Inc. Distributed under the MIT license.
+Â¬Â© Copyright 2010 Aptana Inc. Distributed under the MIT license.
 
-Portions Â© Copyright 2006 syncPEOPLE, LLC, distributed under the terms of the MIT License.
+Portions Â¬Â© Copyright 2006 syncPEOPLE, LLC, distributed under the terms of the MIT License.
 END
 
   bundle.display_name = "Ruby on Rails"
@@ -442,9 +442,9 @@ env "text.haml" do |e|
   e['TM_RAILS_TEMPLATE_END_RUBY_BLOCK'] = ""
 end
 
-smart_typing_pairs["text.html.ruby"] = ['%', '%', '"', '"', '(', ')', '{', '}', '[', ']', 'Ò', 'Ó', '<', '>']
-smart_typing_pairs["text.html.ruby meta.tag"] = ['%', '%', '"', '"', '(', ')', '{', '}', '[', ']', 'Ò', 'Ó', '<', '>', "'", "'"]
-smart_typing_pairs["text.html.ruby meta.tag string"] = ['"', '"', '(', ')', '{', '}', '[', ']', 'Ò', 'Ó', 'Ô', 'Õ', '%', '%', '<', '>']
+smart_typing_pairs["text.html.ruby"] = ['%', '%', '"', '"', '(', ')', '{', '}', '[', ']', 'â€œ', 'â€', '<', '>']
+smart_typing_pairs["text.html.ruby meta.tag"] = ['%', '%', '"', '"', '(', ')', '{', '}', '[', ']', 'â€œ', 'â€', '<', '>', "'", "'"]
+smart_typing_pairs["text.html.ruby meta.tag string"] = ['"', '"', '(', ')', '{', '}', '[', ']', 'â€œ', 'â€', 'â€˜', 'â€™', '%', '%', '<', '>']
 
 module Ruble
   class Project
