@@ -1,7 +1,2004 @@
 !!com.aptana.scripting.model.BundleElement
-author: null
+author: Many
 children:
-- !command
+- !!com.aptana.scripting.model.MenuElement
+  children:
+  - children: &id001 []
+    commandName: Preview
+    customProperties: null
+    displayName: Preview
+    path: bundle.rb
+    scope: null
+  - children: *id001
+    commandName: '-'
+    customProperties: null
+    displayName: '-'
+    path: bundle.rb
+    scope: null
+  - children:
+    - children: *id001
+      commandName: Go to Alternate File
+      customProperties: null
+      displayName: Go to Alternate File
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: Go to File on Current Line
+      customProperties: null
+      displayName: Go to File on Current Line
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: '-'
+      customProperties: null
+      displayName: '-'
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: Go to Model
+      customProperties: null
+      displayName: Go to Model
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: Go to View
+      customProperties: null
+      displayName: Go to View
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: Go to Controller
+      customProperties: null
+      displayName: Go to Controller
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: Go to Functional Test
+      customProperties: null
+      displayName: Go to Functional Test
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: Go to Helper
+      customProperties: null
+      displayName: Go to Helper
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: Go to Javascript
+      customProperties: null
+      displayName: Go to Javascript
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: Go to Stylesheet
+      customProperties: null
+      displayName: Go to Stylesheet
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: Go to Unit Test
+      customProperties: null
+      displayName: Go to Unit Test
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: Go to Fixture
+      customProperties: null
+      displayName: Go to Fixture
+      path: bundle.rb
+      scope: null
+    commandName: Go To
+    customProperties: null
+    displayName: Go To
+    path: bundle.rb
+    scope: null
+  - children:
+    - children: *id001
+      commandName: Test All
+      customProperties: null
+      displayName: Test All
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: Test Functionals
+      customProperties: null
+      displayName: Test Functionals
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: Test Integration
+      customProperties: null
+      displayName: Test Integration
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: Test Plugins
+      customProperties: null
+      displayName: Test Plugins
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: Test Recent
+      customProperties: null
+      displayName: Test Recent
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: Test Uncommitted
+      customProperties: null
+      displayName: Test Uncommitted
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: Test Units
+      customProperties: null
+      displayName: Test Units
+      path: bundle.rb
+      scope: null
+    commandName: Run Tests
+    customProperties: null
+    displayName: Run Tests
+    path: bundle.rb
+    scope: null
+  - children: *id001
+    commandName: '-'
+    customProperties: null
+    displayName: '-'
+    path: bundle.rb
+    scope: null
+  - children: *id001
+    commandName: Call Generate Script
+    customProperties: null
+    displayName: Call Generate Script
+    path: bundle.rb
+    scope: null
+  - children:
+    - children: *id001
+      commandName: Migrate to Current
+      customProperties: null
+      displayName: Migrate to Current
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: Migrate to Version...
+      customProperties: null
+      displayName: Migrate to Version...
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: Migrate to Previous Version
+      customProperties: null
+      displayName: Migrate to Previous Version
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: Redo Last Migration
+      customProperties: null
+      displayName: Redo Last Migration
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: '-'
+      customProperties: null
+      displayName: '-'
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: Load Fixtures (Development DB)
+      customProperties: null
+      displayName: Load Fixtures (Development DB)
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: Load Fixtures (Test DB)
+      customProperties: null
+      displayName: Load Fixtures (Test DB)
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: '-'
+      customProperties: null
+      displayName: '-'
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: Load schema.rb to DB
+      customProperties: null
+      displayName: Load schema.rb to DB
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: Dump DB to schema.rb
+      customProperties: null
+      displayName: Dump DB to schema.rb
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: Clone Development DB to Test DB
+      customProperties: null
+      displayName: Clone Development DB to Test DB
+      path: bundle.rb
+      scope: null
+    commandName: Database
+    customProperties: null
+    displayName: Database
+    path: bundle.rb
+    scope: null
+  - children: *id001
+    commandName: '-'
+    customProperties: null
+    displayName: '-'
+    path: bundle.rb
+    scope: null
+  - children: *id001
+    commandName: params[...]
+    customProperties: null
+    displayName: params[...]
+    path: bundle.rb
+    scope: null
+  - children: *id001
+    commandName: session[...]
+    customProperties: null
+    displayName: session[...]
+    path: bundle.rb
+    scope: null
+  - children:
+    - children: *id001
+      commandName: logger.debug
+      customProperties: null
+      displayName: logger.debug
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: logger.info
+      customProperties: null
+      displayName: logger.info
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: logger.warn
+      customProperties: null
+      displayName: logger.warn
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: logger.error
+      customProperties: null
+      displayName: logger.error
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: logger.fatal
+      customProperties: null
+      displayName: logger.fatal
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: RAILS_DEFAULT_LOGGER.debug
+      customProperties: null
+      displayName: RAILS_DEFAULT_LOGGER.debug
+      path: bundle.rb
+      scope: null
+    commandName: Logger
+    customProperties: null
+    displayName: Logger
+    path: bundle.rb
+    scope: null
+  - children: *id001
+    commandName: '-'
+    customProperties: null
+    displayName: '-'
+    path: bundle.rb
+    scope: null
+  - children:
+    - children: *id001
+      commandName: Show DB Schema for Current Class
+      customProperties: null
+      displayName: Show DB Schema for Current Class
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: '-'
+      customProperties: null
+      displayName: '-'
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: alias_attribute
+      customProperties: null
+      displayName: alias_attribute
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: '-'
+      customProperties: null
+      displayName: '-'
+      path: bundle.rb
+      scope: null
+    - children:
+      - children: *id001
+        commandName: before_validation
+        customProperties: null
+        displayName: before_validation
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: before_validation_on_create
+        customProperties: null
+        displayName: before_validation_on_create
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: before_validation_on_update
+        customProperties: null
+        displayName: before_validation_on_update
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: after_validation
+        customProperties: null
+        displayName: after_validation
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: after_validation_on_create
+        customProperties: null
+        displayName: after_validation_on_create
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: after_validation_on_update
+        customProperties: null
+        displayName: after_validation_on_update
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: before_save
+        customProperties: null
+        displayName: before_save
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: after_save
+        customProperties: null
+        displayName: after_save
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: before_create
+        customProperties: null
+        displayName: before_create
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: after_create
+        customProperties: null
+        displayName: after_create
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: before_update
+        customProperties: null
+        displayName: before_update
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: after_update
+        customProperties: null
+        displayName: after_update
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: before_destroy
+        customProperties: null
+        displayName: before_destroy
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: after_destroy
+        customProperties: null
+        displayName: after_destroy
+        path: bundle.rb
+        scope: null
+      commandName: Callbacks
+      customProperties: null
+      displayName: Callbacks
+      path: bundle.rb
+      scope: null
+    - children:
+      - children: *id001
+        commandName: belongs_to
+        customProperties: null
+        displayName: belongs_to
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: has_and_belongs_to_many
+        customProperties: null
+        displayName: has_and_belongs_to_many
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: has_one
+        customProperties: null
+        displayName: has_one
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: has_many
+        customProperties: null
+        displayName: has_many
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: has_many :dependent => :destroy
+        customProperties: null
+        displayName: has_many :dependent => :destroy
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: has_many (through)
+        customProperties: null
+        displayName: has_many (through)
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: '-'
+        customProperties: null
+        displayName: '-'
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: accepts_nested_attributes_for
+        customProperties: null
+        displayName: accepts_nested_attributes_for
+        path: bundle.rb
+        scope: null
+      commandName: Associations
+      customProperties: null
+      displayName: Associations
+      path: bundle.rb
+      scope: null
+    - children:
+      - children: *id001
+        commandName: find(id)
+        customProperties: null
+        displayName: find(id)
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: find(:all)
+        customProperties: null
+        displayName: find(:all)
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: find(:first)
+        customProperties: null
+        displayName: find(:first)
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: find(:last)
+        customProperties: null
+        displayName: find(:last)
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: find_in_batches
+        customProperties: null
+        displayName: find_in_batches
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: '-'
+        customProperties: null
+        displayName: '-'
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: scoped_by
+        customProperties: null
+        displayName: scoped_by
+        path: bundle.rb
+        scope: null
+      commandName: Scopes
+      customProperties: null
+      displayName: Scopes
+      path: bundle.rb
+      scope: null
+    - children:
+      - children: *id001
+        commandName: find(id)
+        customProperties: null
+        displayName: find(id)
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: find(:all)
+        customProperties: null
+        displayName: find(:all)
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: find(:first)
+        customProperties: null
+        displayName: find(:first)
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: find(:last)
+        customProperties: null
+        displayName: find(:last)
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: find_in_batches
+        customProperties: null
+        displayName: find_in_batches
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: '-'
+        customProperties: null
+        displayName: '-'
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: scoped_by
+        customProperties: null
+        displayName: scoped_by
+        path: bundle.rb
+        scope: null
+      commandName: Finders
+      customProperties: null
+      displayName: Finders
+      path: bundle.rb
+      scope: null
+    - children:
+      - children: *id001
+        commandName: validates_acceptance_of
+        customProperties: null
+        displayName: validates_acceptance_of
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: validates_acceptance_of if
+        customProperties: null
+        displayName: validates_acceptance_of if
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: validates_associated
+        customProperties: null
+        displayName: validates_associated
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: validates_associated if
+        customProperties: null
+        displayName: validates_associated if
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: validates_confirmation_of
+        customProperties: null
+        displayName: validates_confirmation_of
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: validates_confirmation_of if
+        customProperties: null
+        displayName: validates_confirmation_of if
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: validates_exclusion_of
+        customProperties: null
+        displayName: validates_exclusion_of
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: validates_exclusion_of if
+        customProperties: null
+        displayName: validates_exclusion_of if
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: validates_inclusion_of
+        customProperties: null
+        displayName: validates_inclusion_of
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: validates_inclusion_of if
+        customProperties: null
+        displayName: validates_inclusion_of if
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: validates_format_of
+        customProperties: null
+        displayName: validates_format_of
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: validates_format_of if
+        customProperties: null
+        displayName: validates_format_of if
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: validates_length_of
+        customProperties: null
+        displayName: validates_length_of
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: validates_length_of if
+        customProperties: null
+        displayName: validates_length_of if
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: validates_numericality_of
+        customProperties: null
+        displayName: validates_numericality_of
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: validates_numericality_of if
+        customProperties: null
+        displayName: validates_numericality_of if
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: validates_presence_of
+        customProperties: null
+        displayName: validates_presence_of
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: validates_presence_of if
+        customProperties: null
+        displayName: validates_presence_of if
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: validates_uniqueness_of
+        customProperties: null
+        displayName: validates_uniqueness_of
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: validates_uniqueness_of if
+        customProperties: null
+        displayName: validates_uniqueness_of if
+        path: bundle.rb
+        scope: null
+      commandName: Validations
+      customProperties: null
+      displayName: Validations
+      path: bundle.rb
+      scope: null
+    commandName: Models
+    customProperties: null
+    displayName: Models
+    path: bundle.rb
+    scope: null
+  - children:
+    - children: *id001
+      commandName: Create controller class
+      customProperties: null
+      displayName: Create controller class
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: Create resources controller class
+      customProperties: null
+      displayName: Create resources controller class
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: layout
+      customProperties: null
+      displayName: layout
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: before_filter
+      customProperties: null
+      displayName: before_filter
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: flash[...]
+      customProperties: null
+      displayName: flash[...]
+      path: bundle.rb
+      scope: null
+    - children:
+      - children: *id001
+        commandName: respond_to (html)
+        customProperties: null
+        displayName: respond_to (html)
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: respond_to
+        customProperties: null
+        displayName: respond_to
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: wants.format
+        customProperties: null
+        displayName: wants.format
+        path: bundle.rb
+        scope: null
+      commandName: respond_to
+      customProperties: null
+      displayName: respond_to
+      path: bundle.rb
+      scope: null
+    - children:
+      - children: *id001
+        commandName: redirect_to (path)
+        customProperties: null
+        displayName: redirect_to (path)
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: redirect_to (path plural)
+        customProperties: null
+        displayName: redirect_to (path plural)
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: redirect_to (nested path)
+        customProperties: null
+        displayName: redirect_to (nested path)
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: redirect_to (nested path plural)
+        customProperties: null
+        displayName: redirect_to (nested path plural)
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: redirect_to (action)
+        customProperties: null
+        displayName: redirect_to (action)
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: redirect_to (action, id)
+        customProperties: null
+        displayName: redirect_to (action, id)
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: redirect_to (controller)
+        customProperties: null
+        displayName: redirect_to (controller)
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: redirect_to (controller, action)
+        customProperties: null
+        displayName: redirect_to (controller, action)
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: redirect_to (controller, action, id)
+        customProperties: null
+        displayName: redirect_to (controller, action, id)
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: redirect_to :back
+        customProperties: null
+        displayName: redirect_to :back
+        path: bundle.rb
+        scope: null
+      commandName: redirect_to
+      customProperties: null
+      displayName: redirect_to
+      path: bundle.rb
+      scope: null
+    - children:
+      - children: *id001
+        commandName: render (action)
+        customProperties: null
+        displayName: render (action)
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: render (action, layout)
+        customProperties: null
+        displayName: render (action, layout)
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: render (file)
+        customProperties: null
+        displayName: render (file)
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: render (file, use_full_path)
+        customProperties: null
+        displayName: render (file, use_full_path)
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: render (inline)
+        customProperties: null
+        displayName: render (inline)
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: render (inline, locals)
+        customProperties: null
+        displayName: render (inline, locals)
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: render (inline, type)
+        customProperties: null
+        displayName: render (inline, type)
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: render (layout)
+        customProperties: null
+        displayName: render (layout)
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: render (nothing)
+        customProperties: null
+        displayName: render (nothing)
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: render (nothing, status)
+        customProperties: null
+        displayName: render (nothing, status)
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: render (partial)
+        customProperties: null
+        displayName: render (partial)
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: render (partial, collection)
+        customProperties: null
+        displayName: render (partial, collection)
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: render (partial, locals)
+        customProperties: null
+        displayName: render (partial, locals)
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: render (partial, object)
+        customProperties: null
+        displayName: render (partial, object)
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: render (partial, status)
+        customProperties: null
+        displayName: render (partial, status)
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: render (text)
+        customProperties: null
+        displayName: render (text)
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: render (text, layout)
+        customProperties: null
+        displayName: render (text, layout)
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: render (text, layout => true)
+        customProperties: null
+        displayName: render (text, layout => true)
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: render (text, status)
+        customProperties: null
+        displayName: render (text, status)
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: render (update)
+        customProperties: null
+        displayName: render (update)
+        path: bundle.rb
+        scope: null
+      commandName: render
+      customProperties: null
+      displayName: render
+      path: bundle.rb
+      scope: null
+    - children:
+      - children: *id001
+        commandName: def create - resource
+        customProperties: null
+        displayName: def create - resource
+        path: bundle.rb
+        scope: null
+      commandName: REST methods
+      customProperties: null
+      displayName: REST methods
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: '-'
+      customProperties: null
+      displayName: '-'
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: verify - render
+      customProperties: null
+      displayName: verify - render
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: verify - redirect
+      customProperties: null
+      displayName: verify - redirect
+      path: bundle.rb
+      scope: null
+    commandName: Controllers
+    customProperties: null
+    displayName: Controllers
+    path: bundle.rb
+    scope: null
+  - children:
+    - children: *id001
+      commandName: Create Partial From Selection
+      customProperties: null
+      displayName: Create Partial From Selection
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: '-'
+      customProperties: null
+      displayName: '-'
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: form_for
+      customProperties: null
+      displayName: form_for
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: form_for with errors
+      customProperties: null
+      displayName: form_for with errors
+      path: bundle.rb
+      scope: null
+    - children:
+      - children: *id001
+        commandName: f.label (ffl)
+        customProperties: null
+        displayName: f.label (ffl)
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: f.text_field (fftf)
+        customProperties: null
+        displayName: f.text_field (fftf)
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: f.text_area (ffta)
+        customProperties: null
+        displayName: f.text_area (ffta)
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: f.check_box (ffcb)
+        customProperties: null
+        displayName: f.check_box (ffcb)
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: f.radio_button (ffrb)
+        customProperties: null
+        displayName: f.radio_button (ffrb)
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: f.password_field (ffpf)
+        customProperties: null
+        displayName: f.password_field (ffpf)
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: f.hidden_field (ffhf)
+        customProperties: null
+        displayName: f.hidden_field (ffhf)
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: f.file_field (ffff)
+        customProperties: null
+        displayName: f.file_field (ffff)
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: f.submit (ffs)
+        customProperties: null
+        displayName: f.submit (ffs)
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: f.fields_for (nff)
+        customProperties: null
+        displayName: f.fields_for (nff)
+        path: bundle.rb
+        scope: null
+      commandName: form_for f.drop-down list
+      customProperties: null
+      displayName: form_for f.drop-down list
+      path: bundle.rb
+      scope: null
+    - children:
+      - children: *id001
+        commandName: form_for label
+        customProperties: null
+        displayName: form_for label
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: form_for text_field
+        customProperties: null
+        displayName: form_for text_field
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: form_for text_area
+        customProperties: null
+        displayName: form_for text_area
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: form_for check_box
+        customProperties: null
+        displayName: form_for check_box
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: form_for radio_button
+        customProperties: null
+        displayName: form_for radio_button
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: form_for password_field
+        customProperties: null
+        displayName: form_for password_field
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: form_for hidden_field
+        customProperties: null
+        displayName: form_for hidden_field
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: form_for file_field
+        customProperties: null
+        displayName: form_for file_field
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: form_for submit
+        customProperties: null
+        displayName: form_for submit
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: form_for fields_for
+        customProperties: null
+        displayName: form_for fields_for
+        path: bundle.rb
+        scope: null
+      commandName: form_for helpers
+      customProperties: null
+      displayName: form_for helpers
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: fields_for
+      customProperties: null
+      displayName: fields_for
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: '-'
+      customProperties: null
+      displayName: '-'
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: form_tag
+      customProperties: null
+      displayName: form_tag
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: submit_tag
+      customProperties: null
+      displayName: submit_tag
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: image_submit_tag
+      customProperties: null
+      displayName: image_submit_tag
+      path: bundle.rb
+      scope: null
+    - children:
+      - children: *id001
+        commandName: link_to (path)
+        customProperties: null
+        displayName: link_to (path)
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: link_to (path plural)
+        customProperties: null
+        displayName: link_to (path plural)
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: link_to (nested path)
+        customProperties: null
+        displayName: link_to (nested path)
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: link_to (nested path plural)
+        customProperties: null
+        displayName: link_to (nested path plural)
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: link_to (action)
+        customProperties: null
+        displayName: link_to (action)
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: link_to (action, id)
+        customProperties: null
+        displayName: link_to (action, id)
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: link_to (controller)
+        customProperties: null
+        displayName: link_to (controller)
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: link_to (controller, action)
+        customProperties: null
+        displayName: link_to (controller, action)
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: link_to (controller, action, id)
+        customProperties: null
+        displayName: link_to (controller, action, id)
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: link_to model
+        customProperties: null
+        displayName: link_to model
+        path: bundle.rb
+        scope: null
+      commandName: link_to
+      customProperties: null
+      displayName: link_to
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: end (ERB)
+      customProperties: null
+      displayName: end (ERB)
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: '-'
+      customProperties: null
+      displayName: '-'
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: map(&:sym_proc)
+      customProperties: null
+      displayName: map(&:sym_proc)
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: '-'
+      customProperties: null
+      displayName: '-'
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: content_for
+      customProperties: null
+      displayName: content_for
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: for loop in rhtml
+      customProperties: null
+      displayName: for loop in rhtml
+      path: bundle.rb
+      scope: null
+    commandName: View Templates
+    customProperties: null
+    displayName: View Templates
+    path: bundle.rb
+    scope: null
+  - children:
+    - children: *id001
+      commandName: javascript_include_tag
+      customProperties: null
+      displayName: javascript_include_tag
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: stylesheet_link_tag
+      customProperties: null
+      displayName: stylesheet_link_tag
+      path: bundle.rb
+      scope: null
+    commandName: Layouts
+    customProperties: null
+    displayName: Layouts
+    path: bundle.rb
+    scope: null
+  - children:
+    - children: *id001
+      commandName: page.replace (id, partial)
+      customProperties: null
+      displayName: page.replace (id, partial)
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: page.hide (*ids)
+      customProperties: null
+      displayName: page.hide (*ids)
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: page.replace_html (id, partial)
+      customProperties: null
+      displayName: page.replace_html (id, partial)
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: page.insert_html (position, id, partial)
+      customProperties: null
+      displayName: page.insert_html (position, id, partial)
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: page.visual_effect (effect, id)
+      customProperties: null
+      displayName: page.visual_effect (effect, id)
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: page.show (*ids)
+      customProperties: null
+      displayName: page.show (*ids)
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: page.toggle (*ids)
+      customProperties: null
+      displayName: page.toggle (*ids)
+      path: bundle.rb
+      scope: null
+    commandName: RJS
+    customProperties: null
+    displayName: RJS
+    path: bundle.rb
+    scope: null
+  - children:
+    - children:
+      - children: *id001
+        commandName: Add / Remove Column
+        customProperties: null
+        displayName: Add / Remove Column
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: Add / Remove Several Columns
+        customProperties: null
+        displayName: Add / Remove Several Columns
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: Add / Remove Several Columns (marcc)
+        customProperties: null
+        displayName: Add / Remove Several Columns (marcc)
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: Add / Remove Timestamps
+        customProperties: null
+        displayName: Add / Remove Timestamps
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: Change Column
+        customProperties: null
+        displayName: Change Column
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: Change Column Default
+        customProperties: null
+        displayName: Change Column Default
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: Rename Column
+        customProperties: null
+        displayName: Rename Column
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: Rename Several Columns
+        customProperties: null
+        displayName: Rename Several Columns
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: Rename Several Columns (mncc)
+        customProperties: null
+        displayName: Rename Several Columns (mncc)
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: Remove / Add Column
+        customProperties: null
+        displayName: Remove / Add Column
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: Remove / Add Timestamps
+        customProperties: null
+        displayName: Remove / Add Timestamps
+        path: bundle.rb
+        scope: null
+      commandName: Columns
+      customProperties: null
+      displayName: Columns
+      path: bundle.rb
+      scope: null
+    - children:
+      - children: *id001
+        commandName: Create / Drop Table
+        customProperties: null
+        displayName: Create / Drop Table
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: Rename Table
+        customProperties: null
+        displayName: Rename Table
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: Drop / Create Table
+        customProperties: null
+        displayName: Drop / Create Table
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: Change Table
+        customProperties: null
+        displayName: Change Table
+        path: bundle.rb
+        scope: null
+      - children:
+        - children: *id001
+          commandName: t.string (tcs)
+          customProperties: null
+          displayName: t.string (tcs)
+          path: bundle.rb
+          scope: null
+        - children: *id001
+          commandName: t.text (tct)
+          customProperties: null
+          displayName: t.text (tct)
+          path: bundle.rb
+          scope: null
+        - children: *id001
+          commandName: t.integer (tci)
+          customProperties: null
+          displayName: t.integer (tci)
+          path: bundle.rb
+          scope: null
+        - children: *id001
+          commandName: t.float (tcf)
+          customProperties: null
+          displayName: t.float (tcf)
+          path: bundle.rb
+          scope: null
+        - children: *id001
+          commandName: t.decimal (tcd)
+          customProperties: null
+          displayName: t.decimal (tcd)
+          path: bundle.rb
+          scope: null
+        - children: *id001
+          commandName: t.datetime (tcdt)
+          customProperties: null
+          displayName: t.datetime (tcdt)
+          path: bundle.rb
+          scope: null
+        - children: *id001
+          commandName: t.timestamp (tcts)
+          customProperties: null
+          displayName: t.timestamp (tcts)
+          path: bundle.rb
+          scope: null
+        - children: *id001
+          commandName: t.time (tcti)
+          customProperties: null
+          displayName: t.time (tcti)
+          path: bundle.rb
+          scope: null
+        - children: *id001
+          commandName: t.date (tcda)
+          customProperties: null
+          displayName: t.date (tcda)
+          path: bundle.rb
+          scope: null
+        - children: *id001
+          commandName: t.boolean (tcb)
+          customProperties: null
+          displayName: t.boolean (tcb)
+          path: bundle.rb
+          scope: null
+        - children: *id001
+          commandName: t.binary (tcbi)
+          customProperties: null
+          displayName: t.binary (tcbi)
+          path: bundle.rb
+          scope: null
+        - children: *id001
+          commandName: t.timestamps (tctss)
+          customProperties: null
+          displayName: t.timestamps (tctss)
+          path: bundle.rb
+          scope: null
+        - children: *id001
+          commandName: t.lock_version (tcl)
+          customProperties: null
+          displayName: t.lock_version (tcl)
+          path: bundle.rb
+          scope: null
+        - children: *id001
+          commandName: t.references (tcr)
+          customProperties: null
+          displayName: t.references (tcr)
+          path: bundle.rb
+          scope: null
+        commandName: Create columns t. drop-down list
+        customProperties: null
+        displayName: Create columns t. drop-down list
+        path: bundle.rb
+        scope: null
+      - children:
+        - children: *id001
+          commandName: Table column string
+          customProperties: null
+          displayName: Table column string
+          path: bundle.rb
+          scope: null
+        - children: *id001
+          commandName: Table column text
+          customProperties: null
+          displayName: Table column text
+          path: bundle.rb
+          scope: null
+        - children: *id001
+          commandName: Table column integer
+          customProperties: null
+          displayName: Table column integer
+          path: bundle.rb
+          scope: null
+        - children: *id001
+          commandName: Table column float
+          customProperties: null
+          displayName: Table column float
+          path: bundle.rb
+          scope: null
+        - children: *id001
+          commandName: Table column decimal
+          customProperties: null
+          displayName: Table column decimal
+          path: bundle.rb
+          scope: null
+        - children: *id001
+          commandName: Table column datetime
+          customProperties: null
+          displayName: Table column datetime
+          path: bundle.rb
+          scope: null
+        - children: *id001
+          commandName: Table column timestamp
+          customProperties: null
+          displayName: Table column timestamp
+          path: bundle.rb
+          scope: null
+        - children: *id001
+          commandName: Table column time
+          customProperties: null
+          displayName: Table column time
+          path: bundle.rb
+          scope: null
+        - children: *id001
+          commandName: Table column date
+          customProperties: null
+          displayName: Table column date
+          path: bundle.rb
+          scope: null
+        - children: *id001
+          commandName: Table column boolean
+          customProperties: null
+          displayName: Table column boolean
+          path: bundle.rb
+          scope: null
+        - children: *id001
+          commandName: Table column binary
+          customProperties: null
+          displayName: Table column binary
+          path: bundle.rb
+          scope: null
+        - children: *id001
+          commandName: Table column timestamps
+          customProperties: null
+          displayName: Table column timestamps
+          path: bundle.rb
+          scope: null
+        - children: *id001
+          commandName: Table column lock_version
+          customProperties: null
+          displayName: Table column lock_version
+          path: bundle.rb
+          scope: null
+        - children: *id001
+          commandName: Table column(s) references
+          customProperties: null
+          displayName: Table column(s) references
+          path: bundle.rb
+          scope: null
+        commandName: Create columns helpers
+        customProperties: null
+        displayName: Create columns helpers
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: Create Column in Table
+        customProperties: null
+        displayName: Create Column in Table
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: Create Several Columns in Table
+        customProperties: null
+        displayName: Create Several Columns in Table
+        path: bundle.rb
+        scope: null
+      - children:
+        - children: *id001
+          commandName: t.change (tch)
+          customProperties: null
+          displayName: t.change (tch)
+          path: bundle.rb
+          scope: null
+        - children: *id001
+          commandName: t.rename (tre)
+          customProperties: null
+          displayName: t.rename (tre)
+          path: bundle.rb
+          scope: null
+        commandName: Change columns t. drop-down list
+        customProperties: null
+        displayName: Change columns t. drop-down list
+        path: bundle.rb
+        scope: null
+      - children:
+        - children: *id001
+          commandName: Table column(s) change
+          customProperties: null
+          displayName: Table column(s) change
+          path: bundle.rb
+          scope: null
+        - children: *id001
+          commandName: Table column(s) rename
+          customProperties: null
+          displayName: Table column(s) rename
+          path: bundle.rb
+          scope: null
+        commandName: Change columns t. helpers
+        customProperties: null
+        displayName: Change columns t. helpers
+        path: bundle.rb
+        scope: null
+      commandName: Tables
+      customProperties: null
+      displayName: Tables
+      path: bundle.rb
+      scope: null
+    - children:
+      - children: *id001
+        commandName: Add / Remove Index
+        customProperties: null
+        displayName: Add / Remove Index
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: Add / Remove Named Index
+        customProperties: null
+        displayName: Add / Remove Named Index
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: Add / Remove Unique Index
+        customProperties: null
+        displayName: Add / Remove Unique Index
+        path: bundle.rb
+        scope: null
+      commandName: Indices
+      customProperties: null
+      displayName: Indices
+      path: bundle.rb
+      scope: null
+    commandName: Migrations
+    customProperties: null
+    displayName: Migrations
+    path: bundle.rb
+    scope: null
+  - children:
+    - children: *id001
+      commandName: config.gem
+      customProperties: null
+      displayName: config.gem
+      path: bundle.rb
+      scope: null
+    commandName: Environment
+    customProperties: null
+    displayName: Environment
+    path: bundle.rb
+    scope: null
+  - children:
+    - children: *id001
+      commandName: map.named_route
+      customProperties: null
+      displayName: map.named_route
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: map.resources
+      customProperties: null
+      displayName: map.resources
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: map.resource
+      customProperties: null
+      displayName: map.resource
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: map.with_options
+      customProperties: null
+      displayName: map.with_options
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: map.catch_all
+      customProperties: null
+      displayName: map.catch_all
+      path: bundle.rb
+      scope: null
+    commandName: Routes
+    customProperties: null
+    displayName: Routes
+    path: bundle.rb
+    scope: null
+  - children:
+    - children: *id001
+      commandName: cattr_accessor
+      customProperties: null
+      displayName: cattr_accessor
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: mattr_accessor
+      customProperties: null
+      displayName: mattr_accessor
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: returning do |variable| ... end
+      customProperties: null
+      displayName: returning do |variable| ... end
+      path: bundle.rb
+      scope: null
+    commandName: ActiveSupport
+    customProperties: null
+    displayName: ActiveSupport
+    path: bundle.rb
+    scope: null
+  - children: *id001
+    commandName: '-'
+    customProperties: null
+    displayName: '-'
+    path: bundle.rb
+    scope: null
+  - children:
+    - children: *id001
+      commandName: $LABEL
+      customProperties: null
+      displayName: $LABEL
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: <%= Fixtures.identify(:symbol) %>
+      customProperties: null
+      displayName: <%= Fixtures.identify(:symbol) %>
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: '-'
+      customProperties: null
+      displayName: '-'
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: Autocomplete Foreign Key Fixture Reference
+      customProperties: null
+      displayName: Autocomplete Foreign Key Fixture Reference
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: Autocomplete Foreign Key Fixture Reference (habtm)
+      customProperties: null
+      displayName: Autocomplete Foreign Key Fixture Reference (habtm)
+      path: bundle.rb
+      scope: null
+    commandName: Fixtures
+    customProperties: null
+    displayName: Fixtures
+    path: bundle.rb
+    scope: null
+  - children: *id001
+    commandName: test do...end
+    customProperties: null
+    displayName: test do...end
+    path: bundle.rb
+    scope: null
+  - children:
+    - children: *id001
+      commandName: assert_difference
+      customProperties: null
+      displayName: assert_difference
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: assert_no_difference
+      customProperties: null
+      displayName: assert_no_difference
+      path: bundle.rb
+      scope: null
+    commandName: Unit Tests
+    customProperties: null
+    displayName: Unit Tests
+    path: bundle.rb
+    scope: null
+  - children:
+    - children: *id001
+      commandName: Create functional test class
+      customProperties: null
+      displayName: Create functional test class
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: def test_should_get_action
+      customProperties: null
+      displayName: def test_should_get_action
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: def test_should_post_action
+      customProperties: null
+      displayName: def test_should_post_action
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: '-'
+      customProperties: null
+      displayName: '-'
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: assert_response
+      customProperties: null
+      displayName: assert_response
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: assert_redirected_to
+      customProperties: null
+      displayName: assert_redirected_to
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: assert_redirected_to (path)
+      customProperties: null
+      displayName: assert_redirected_to (path)
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: assert_redirected_to (path plural)
+      customProperties: null
+      displayName: assert_redirected_to (path plural)
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: assert_redirected_to (nested path)
+      customProperties: null
+      displayName: assert_redirected_to (nested path)
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: assert_redirected_to (nested path plural)
+      customProperties: null
+      displayName: assert_redirected_to (nested path plural)
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: '-'
+      customProperties: null
+      displayName: '-'
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: assert_select
+      customProperties: null
+      displayName: assert_select
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: '-'
+      customProperties: null
+      displayName: '-'
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: assert_rjs
+      customProperties: null
+      displayName: assert_rjs
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: '-'
+      customProperties: null
+      displayName: '-'
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: assert(var= assigns(:var))
+      customProperties: null
+      displayName: assert(var= assigns(:var))
+      path: bundle.rb
+      scope: null
+    commandName: Functional Tests
+    customProperties: null
+    displayName: Functional Tests
+    path: bundle.rb
+    scope: null
+  - children:
+    - children: *id001
+      commandName: xhr post
+      customProperties: null
+      displayName: xhr post
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: xhr get
+      customProperties: null
+      displayName: xhr get
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: xhr delete
+      customProperties: null
+      displayName: xhr delete
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: xhr put
+      customProperties: null
+      displayName: xhr put
+      path: bundle.rb
+      scope: null
+    commandName: Ajax Tests
+    customProperties: null
+    displayName: Ajax Tests
+    path: bundle.rb
+    scope: null
+  - children: *id001
+    commandName: '-'
+    customProperties: null
+    displayName: '-'
+    path: bundle.rb
+    scope: null
+  - children: *id001
+    commandName: Documentation for Word
+    customProperties: null
+    displayName: Documentation for Word
+    path: bundle.rb
+    scope: null
+  - children: *id001
+    commandName: find_each
+    customProperties: null
+    displayName: find_each
+    path: bundle.rb
+    scope: null
+  - children: *id001
+    commandName: List Columns of a Model
+    customProperties: null
+    displayName: List Columns of a Model
+    path: bundle.rb
+    scope: null
+  commandName: Rails
+  customProperties: null
+  displayName: Rails
+  path: bundle.rb
+  scope: source.ruby, project.rails, source.yaml, text.haml, text.html.ruby
+- !!com.aptana.scripting.model.EnvironmentElement {customProperties: null, displayName: snippet-1e28d457-1dc3-4cae-874c-b67eecf965e9,
+  path: bundle.rb, scope: text.html.ruby}
+- !!com.aptana.scripting.model.EnvironmentElement {customProperties: null, displayName: snippet-ad6ac373-4f9a-4c01-937b-1a2083e1dbd8,
+  path: bundle.rb, scope: text.haml}
+- !!com.aptana.scripting.model.SmartTypingPairsElement {customProperties: null, displayName: smart_typing_pairs-af466bf9-6313-4f05-9c75-577705c909a7,
+  path: bundle.rb, scope: text.html.ruby}
+- !!com.aptana.scripting.model.SmartTypingPairsElement {customProperties: null, displayName: smart_typing_pairs-aaed27b1-12bc-4e39-95a8-e07f3f1bcf85,
+  path: bundle.rb, scope: text.html.ruby meta.tag}
+- !!com.aptana.scripting.model.SmartTypingPairsElement {customProperties: null, displayName: smart_typing_pairs-a39ecb37-8593-47d0-8770-9aa519725998,
+  path: bundle.rb, scope: text.html.ruby meta.tag string}
+- !!com.aptana.scripting.model.CommandElement
   async: false
   customProperties: null
   displayName: Autocomplete Foreign Key Fixture Reference
@@ -10,11 +2007,11 @@ children:
     !!com.aptana.scripting.model.Platform 'ALL': [M4+ESC]
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/commands/autocomplete_foreign_key_fixture_reference.rb
+  path: commands/autocomplete_foreign_key_fixture_reference.rb
   runType: current_thread
   scope: source.yaml, source.ruby.rails, meta.rails.unit_test, meta.rails.functional_test
   workingDirectoryType: UNDEFINED
-- !command
+- !!com.aptana.scripting.model.CommandElement
   async: false
   customProperties: null
   displayName: Autocomplete Foreign Key Fixture Reference (habtm)
@@ -23,15 +2020,15 @@ children:
     !!com.aptana.scripting.model.Platform 'ALL': [M4+M2+ESC]
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/commands/autocomplete_foreign_key_fixture_reference_habtm.rb
+  path: commands/autocomplete_foreign_key_fixture_reference_habtm.rb
   runType: current_thread
   scope: source.yaml
   workingDirectoryType: UNDEFINED
 - !!com.aptana.scripting.model.ContentAssistElement {async: false, customProperties: null,
   displayName: ERb Content Assist, inputPath: null, keyBindingMap: null, outputPath: null,
-  outputType: discard, path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/commands/content_assist.rb,
-  runType: current_thread, scope: source.ruby.rails.embedded.html, workingDirectoryType: UNDEFINED}
-- !command
+  outputType: discard, path: commands/content_assist.rb, runType: current_thread,
+  scope: source.ruby.rails.embedded.html, workingDirectoryType: UNDEFINED}
+- !!com.aptana.scripting.model.CommandElement
   async: false
   customProperties: null
   displayName: Clone Development DB to Test DB
@@ -40,11 +2037,11 @@ children:
     !!com.aptana.scripting.model.Platform 'ALL': [M1+M2+\]
   outputPath: null
   outputType: discard
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/commands/db_migration.rb
+  path: commands/db_migration.rb
   runType: current_thread
   scope: source.ruby.rails, source.yaml
   workingDirectoryType: UNDEFINED
-- !command
+- !!com.aptana.scripting.model.CommandElement
   async: false
   customProperties: null
   displayName: Dump DB to schema.rb
@@ -53,11 +2050,11 @@ children:
     !!com.aptana.scripting.model.Platform 'ALL': [M1+M2+\]
   outputPath: null
   outputType: discard
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/commands/db_migration.rb
+  path: commands/db_migration.rb
   runType: current_thread
   scope: source.ruby.rails, source.yaml
   workingDirectoryType: UNDEFINED
-- !command
+- !!com.aptana.scripting.model.CommandElement
   async: false
   customProperties: null
   displayName: Load schema.rb to DB
@@ -66,11 +2063,11 @@ children:
     !!com.aptana.scripting.model.Platform 'ALL': [M1+M2+\]
   outputPath: null
   outputType: discard
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/commands/db_migration.rb
+  path: commands/db_migration.rb
   runType: current_thread
   scope: source.ruby.rails, source.yaml
   workingDirectoryType: UNDEFINED
-- !command
+- !!com.aptana.scripting.model.CommandElement
   async: false
   customProperties: null
   displayName: Load Fixtures to Test DB
@@ -79,11 +2076,11 @@ children:
     !!com.aptana.scripting.model.Platform 'ALL': [M1+M2+\]
   outputPath: null
   outputType: discard
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/commands/db_migration.rb
+  path: commands/db_migration.rb
   runType: current_thread
   scope: source.ruby.rails, source.yaml
   workingDirectoryType: UNDEFINED
-- !command
+- !!com.aptana.scripting.model.CommandElement
   async: false
   customProperties: null
   displayName: Load Fixtures to Development DB
@@ -92,11 +2089,11 @@ children:
     !!com.aptana.scripting.model.Platform 'ALL': [M1+M2+\]
   outputPath: null
   outputType: discard
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/commands/db_migration.rb
+  path: commands/db_migration.rb
   runType: current_thread
   scope: source.ruby.rails, source.yaml
   workingDirectoryType: UNDEFINED
-- !command
+- !!com.aptana.scripting.model.CommandElement
   async: false
   customProperties: null
   displayName: Migrate to Previous Version
@@ -105,11 +2102,11 @@ children:
     !!com.aptana.scripting.model.Platform 'ALL': [M1+M2+\]
   outputPath: null
   outputType: discard
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/commands/db_migration.rb
+  path: commands/db_migration.rb
   runType: current_thread
   scope: source.ruby.rails, source.yaml
   workingDirectoryType: UNDEFINED
-- !command
+- !!com.aptana.scripting.model.CommandElement
   async: false
   customProperties: null
   displayName: Migrate to Current
@@ -118,11 +2115,11 @@ children:
     !!com.aptana.scripting.model.Platform 'ALL': [M1+M2+\]
   outputPath: null
   outputType: discard
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/commands/db_migration.rb
+  path: commands/db_migration.rb
   runType: current_thread
   scope: source.ruby.rails, source.yaml
   workingDirectoryType: UNDEFINED
-- !command
+- !!com.aptana.scripting.model.CommandElement
   async: false
   customProperties: null
   displayName: Redo Last Migration
@@ -131,11 +2128,11 @@ children:
     !!com.aptana.scripting.model.Platform 'ALL': [M1+M2+\]
   outputPath: null
   outputType: discard
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/commands/db_migration.rb
+  path: commands/db_migration.rb
   runType: current_thread
   scope: source.ruby.rails, source.yaml
   workingDirectoryType: UNDEFINED
-- !command
+- !!com.aptana.scripting.model.CommandElement
   async: false
   customProperties:
     prefix_values: [mcol]
@@ -144,11 +2141,11 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/commands/db_migration.rb
+  path: commands/db_migration.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
-- !command
+- !!com.aptana.scripting.model.CommandElement
   async: false
   customProperties:
     prefix_values: [mind]
@@ -157,11 +2154,11 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/commands/db_migration.rb
+  path: commands/db_migration.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
-- !command
+- !!com.aptana.scripting.model.CommandElement
   async: false
   customProperties:
     prefix_values: [mind]
@@ -170,11 +2167,11 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/commands/db_migration.rb
+  path: commands/db_migration.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
-- !command
+- !!com.aptana.scripting.model.CommandElement
   async: false
   customProperties:
     prefix_values: [marcc]
@@ -183,11 +2180,11 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/commands/db_migration.rb
+  path: commands/db_migration.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
-- !command
+- !!com.aptana.scripting.model.CommandElement
   async: false
   customProperties:
     prefix_values: [mcol]
@@ -196,11 +2193,11 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/commands/db_migration.rb
+  path: commands/db_migration.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
-- !command
+- !!com.aptana.scripting.model.CommandElement
   async: false
   customProperties:
     prefix_values: [mcol]
@@ -209,11 +2206,11 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/commands/db_migration.rb
+  path: commands/db_migration.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
-- !command
+- !!com.aptana.scripting.model.CommandElement
   async: false
   customProperties:
     prefix_values: [mind]
@@ -222,11 +2219,11 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/commands/db_migration.rb
+  path: commands/db_migration.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
-- !command
+- !!com.aptana.scripting.model.CommandElement
   async: false
   customProperties:
     prefix_values: [mtab]
@@ -235,11 +2232,11 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/commands/db_migration.rb
+  path: commands/db_migration.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
-- !command
+- !!com.aptana.scripting.model.CommandElement
   async: false
   customProperties:
     prefix_values: [mcol]
@@ -248,11 +2245,11 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/commands/db_migration.rb
+  path: commands/db_migration.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
-- !command
+- !!com.aptana.scripting.model.CommandElement
   async: false
   customProperties:
     prefix_values: [mcol]
@@ -261,11 +2258,11 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/commands/db_migration.rb
+  path: commands/db_migration.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
-- !command
+- !!com.aptana.scripting.model.CommandElement
   async: false
   customProperties:
     prefix_values: [mtab]
@@ -274,11 +2271,11 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/commands/db_migration.rb
+  path: commands/db_migration.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
-- !command
+- !!com.aptana.scripting.model.CommandElement
   async: false
   customProperties:
     prefix_values: [mcol]
@@ -287,11 +2284,11 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/commands/db_migration.rb
+  path: commands/db_migration.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
-- !command
+- !!com.aptana.scripting.model.CommandElement
   async: false
   customProperties:
     prefix_values: [mncc]
@@ -300,11 +2297,11 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/commands/db_migration.rb
+  path: commands/db_migration.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
-- !command
+- !!com.aptana.scripting.model.CommandElement
   async: false
   customProperties:
     prefix_values: [mcol]
@@ -313,11 +2310,11 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/commands/db_migration.rb
+  path: commands/db_migration.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
-- !command
+- !!com.aptana.scripting.model.CommandElement
   async: false
   customProperties:
     prefix_values: [mcol]
@@ -326,11 +2323,11 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/commands/db_migration.rb
+  path: commands/db_migration.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
-- !command
+- !!com.aptana.scripting.model.CommandElement
   async: false
   customProperties:
     prefix_values: [mtab]
@@ -339,11 +2336,11 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/commands/db_migration.rb
+  path: commands/db_migration.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
-- !command
+- !!com.aptana.scripting.model.CommandElement
   async: false
   customProperties: null
   displayName: Documentation for Word
@@ -352,11 +2349,11 @@ children:
     !!com.aptana.scripting.model.Platform 'ALL': [CONTROL+H]
   outputPath: null
   outputType: show_as_html
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/commands/documentation_for_word.rb
+  path: commands/documentation_for_word.rb
   runType: current_thread
   scope: source.ruby.rails, text.html.ruby, text.haml
   workingDirectoryType: UNDEFINED
-- !command
+- !!com.aptana.scripting.model.CommandElement
   async: false
   customProperties: null
   displayName: Call Generate Script
@@ -365,11 +2362,11 @@ children:
     !!com.aptana.scripting.model.Platform 'ALL': [CONTROL+SHIFT+\]
   outputPath: null
   outputType: discard
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/commands/generate.rb
+  path: commands/generate.rb
   runType: current_thread
   scope: source.ruby.rails, source.yaml, project.rails
   workingDirectoryType: UNDEFINED
-- !command
+- !!com.aptana.scripting.model.CommandElement
   async: false
   customProperties: null
   displayName: Go to Controller
@@ -378,11 +2375,11 @@ children:
     !!com.aptana.scripting.model.Platform 'ALL': [M1+M2+M3+ARROW_DOWN]
   outputPath: null
   outputType: show_as_tooltip
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/commands/go_to_file.rb
+  path: commands/go_to_file.rb
   runType: current_thread
   scope: source.ruby, text.html.ruby, source.ruby.rails.embedded.html, meta.rails.helper, meta.rails.functional_test, source.js, source.css, source.yaml, meta.rails.model, meta.rails.unit_test, text.haml
   workingDirectoryType: UNDEFINED
-- !command
+- !!com.aptana.scripting.model.CommandElement
   async: false
   customProperties: null
   displayName: Go to Alternate File
@@ -391,11 +2388,11 @@ children:
     !!com.aptana.scripting.model.Platform 'ALL': [M1+M2+M3+ARROW_DOWN]
   outputPath: null
   outputType: show_as_tooltip
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/commands/go_to_file.rb
+  path: commands/go_to_file.rb
   runType: current_thread
   scope: source.ruby.rails, text.html.ruby, source.ruby.rails.embedded.html, source.yaml, text.haml, source.css, source.js, source.sass
   workingDirectoryType: UNDEFINED
-- !command
+- !!com.aptana.scripting.model.CommandElement
   async: false
   customProperties: null
   displayName: Go to File on Current Line
@@ -404,11 +2401,11 @@ children:
     !!com.aptana.scripting.model.Platform 'ALL': [M1+M2+M3+ARROW_DOWN]
   outputPath: null
   outputType: show_as_tooltip
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/commands/go_to_file.rb
+  path: commands/go_to_file.rb
   runType: current_thread
   scope: source.ruby.rails, text.html.ruby, source.ruby.rails.embedded.html, text.haml
   workingDirectoryType: UNDEFINED
-- !command
+- !!com.aptana.scripting.model.CommandElement
   async: false
   customProperties: null
   displayName: Go to Fixture
@@ -417,11 +2414,11 @@ children:
     !!com.aptana.scripting.model.Platform 'ALL': [M1+M2+M3+ARROW_DOWN]
   outputPath: null
   outputType: show_as_tooltip
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/commands/go_to_file.rb
+  path: commands/go_to_file.rb
   runType: current_thread
   scope: meta.rails.controller, meta.rails.helper, meta.rails.model, meta.rails.unit_test, meta.rails.functional_test
   workingDirectoryType: UNDEFINED
-- !command
+- !!com.aptana.scripting.model.CommandElement
   async: false
   customProperties: null
   displayName: Go to Functional Test
@@ -430,11 +2427,11 @@ children:
     !!com.aptana.scripting.model.Platform 'ALL': [M1+M2+M3+ARROW_DOWN]
   outputPath: null
   outputType: show_as_tooltip
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/commands/go_to_file.rb
+  path: commands/go_to_file.rb
   runType: current_thread
   scope: meta.rails.controller, meta.rails.helper, meta.rails.model, source.yaml, meta.rails.unit_test
   workingDirectoryType: UNDEFINED
-- !command
+- !!com.aptana.scripting.model.CommandElement
   async: false
   customProperties: null
   displayName: Go to Helper
@@ -443,11 +2440,11 @@ children:
     !!com.aptana.scripting.model.Platform 'ALL': [M1+M2+M3+ARROW_DOWN]
   outputPath: null
   outputType: show_as_tooltip
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/commands/go_to_file.rb
+  path: commands/go_to_file.rb
   runType: current_thread
   scope: text.html.ruby, source.ruby.rails.embedded.html, meta.rails.controller, meta.rails.model, meta.rails.unit_test, meta.rails.functional_test, text.haml
   workingDirectoryType: UNDEFINED
-- !command
+- !!com.aptana.scripting.model.CommandElement
   async: false
   customProperties: null
   displayName: Go to Javascript
@@ -456,11 +2453,11 @@ children:
     !!com.aptana.scripting.model.Platform 'ALL': [M1+M2+M3+ARROW_DOWN]
   outputPath: null
   outputType: show_as_tooltip
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/commands/go_to_file.rb
+  path: commands/go_to_file.rb
   runType: current_thread
   scope: text.html.ruby, source.ruby.rails.embedded.html, meta.rails.controller, meta.rails.helper, text.haml
   workingDirectoryType: UNDEFINED
-- !command
+- !!com.aptana.scripting.model.CommandElement
   async: false
   customProperties: null
   displayName: Go to Model
@@ -469,11 +2466,11 @@ children:
     !!com.aptana.scripting.model.Platform 'ALL': [M1+M2+M3+ARROW_DOWN]
   outputPath: null
   outputType: show_as_tooltip
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/commands/go_to_file.rb
+  path: commands/go_to_file.rb
   runType: current_thread
   scope: text.html.ruby, source.ruby.rails.embedded.html, meta.rails.helper, meta.rails.unit_test, source.js, source.css, source.yaml, meta.rails.controller, meta.rails.functional_test, text.haml
   workingDirectoryType: UNDEFINED
-- !command
+- !!com.aptana.scripting.model.CommandElement
   async: false
   customProperties: null
   displayName: Go to Stylesheet
@@ -482,11 +2479,11 @@ children:
     !!com.aptana.scripting.model.Platform 'ALL': [M1+M2+M3+ARROW_DOWN]
   outputPath: null
   outputType: show_as_tooltip
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/commands/go_to_file.rb
+  path: commands/go_to_file.rb
   runType: current_thread
   scope: text.html.ruby, source.ruby.rails.embedded.html, meta.rails.controller, meta.rails.helper, text.haml
   workingDirectoryType: UNDEFINED
-- !command
+- !!com.aptana.scripting.model.CommandElement
   async: false
   customProperties: null
   displayName: Go to Unit Test
@@ -495,11 +2492,11 @@ children:
     !!com.aptana.scripting.model.Platform 'ALL': [M1+M2+M3+ARROW_DOWN]
   outputPath: null
   outputType: show_as_tooltip
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/commands/go_to_file.rb
+  path: commands/go_to_file.rb
   runType: current_thread
   scope: meta.rails.controller, meta.rails.helper, meta.rails.model, meta.rails.functional_test, source.yaml
   workingDirectoryType: UNDEFINED
-- !command
+- !!com.aptana.scripting.model.CommandElement
   async: false
   customProperties: null
   displayName: Go to View
@@ -508,11 +2505,11 @@ children:
     !!com.aptana.scripting.model.Platform 'ALL': [M1+M2+M3+ARROW_DOWN]
   outputPath: null
   outputType: show_as_tooltip
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/commands/go_to_file.rb
+  path: commands/go_to_file.rb
   runType: current_thread
   scope: meta.rails.controller, meta.rails.mailer, source.js, source.css
   workingDirectoryType: UNDEFINED
-- !command
+- !!com.aptana.scripting.model.CommandElement
   async: false
   customProperties:
     prefix_values: [.]
@@ -522,11 +2519,11 @@ children:
     !!com.aptana.scripting.model.Platform 'ALL': [M3+SPACE]
   outputPath: null
   outputType: insert_as_text
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/commands/list_model_columns.rb
+  path: commands/list_model_columns.rb
   runType: current_thread
   scope: source.ruby.rails, text.html.ruby, text.haml
   workingDirectoryType: UNDEFINED
-- !command
+- !!com.aptana.scripting.model.CommandElement
   async: false
   customProperties: null
   displayName: Create Partial From Selection
@@ -535,11 +2532,11 @@ children:
     !!com.aptana.scripting.model.Platform 'ALL': [CONTROL+H]
   outputPath: null
   outputType: replace_selection
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/commands/make_selection_into_partial.rb
+  path: commands/make_selection_into_partial.rb
   runType: current_thread
   scope: source.ruby.rails, text.html.ruby, text.haml
   workingDirectoryType: UNDEFINED
-- !command
+- !!com.aptana.scripting.model.CommandElement
   async: false
   customProperties: null
   displayName: Preview
@@ -548,11 +2545,11 @@ children:
     !!com.aptana.scripting.model.Platform 'ALL': [M1+M2+P]
   outputPath: null
   outputType: discard
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/commands/preview.rb
+  path: commands/preview.rb
   runType: current_thread
   scope: source.ruby.rails, text.html.ruby, text.haml
   workingDirectoryType: UNDEFINED
-- !command
+- !!com.aptana.scripting.model.CommandElement
   async: false
   customProperties: null
   displayName: Show DB Schema for Current Class
@@ -561,11 +2558,11 @@ children:
     !!com.aptana.scripting.model.Platform 'ALL': [CONTROL+SHIFT+COMMAND+S]
   outputPath: null
   outputType: show_as_tooltip
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/commands/show_db_schema.rb
+  path: commands/show_db_schema.rb
   runType: current_thread
   scope: source.ruby, text.html.ruby, source.ruby.rails.embedded.html, meta.rails.helper, meta.rails.functional_test, source.js, source.css, source.yaml, meta.rails.model, meta.rails.unit_test, text.haml
   workingDirectoryType: UNDEFINED
-- !command
+- !!com.aptana.scripting.model.CommandElement
   async: false
   customProperties: null
   displayName: Test All
@@ -574,11 +2571,11 @@ children:
     !!com.aptana.scripting.model.Platform 'ALL': [CONTROL+\]
   outputPath: null
   outputType: discard
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/commands/test.rb
+  path: commands/test.rb
   runType: current_thread
   scope: source.ruby.rails, source.yaml
   workingDirectoryType: UNDEFINED
-- !command
+- !!com.aptana.scripting.model.CommandElement
   async: false
   customProperties: null
   displayName: Test Functionals
@@ -587,11 +2584,11 @@ children:
     !!com.aptana.scripting.model.Platform 'ALL': [CONTROL+\]
   outputPath: null
   outputType: discard
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/commands/test.rb
+  path: commands/test.rb
   runType: current_thread
   scope: source.ruby.rails, source.yaml
   workingDirectoryType: UNDEFINED
-- !command
+- !!com.aptana.scripting.model.CommandElement
   async: false
   customProperties: null
   displayName: Test Integration
@@ -600,11 +2597,11 @@ children:
     !!com.aptana.scripting.model.Platform 'ALL': [CONTROL+\]
   outputPath: null
   outputType: discard
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/commands/test.rb
+  path: commands/test.rb
   runType: current_thread
   scope: source.ruby.rails, source.yaml
   workingDirectoryType: UNDEFINED
-- !command
+- !!com.aptana.scripting.model.CommandElement
   async: false
   customProperties: null
   displayName: Test Plugins
@@ -613,11 +2610,11 @@ children:
     !!com.aptana.scripting.model.Platform 'ALL': [CONTROL+\]
   outputPath: null
   outputType: discard
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/commands/test.rb
+  path: commands/test.rb
   runType: current_thread
   scope: source.ruby.rails, source.yaml
   workingDirectoryType: UNDEFINED
-- !command
+- !!com.aptana.scripting.model.CommandElement
   async: false
   customProperties: null
   displayName: Test Recent
@@ -626,11 +2623,11 @@ children:
     !!com.aptana.scripting.model.Platform 'ALL': [CONTROL+\]
   outputPath: null
   outputType: discard
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/commands/test.rb
+  path: commands/test.rb
   runType: current_thread
   scope: source.ruby.rails, source.yaml
   workingDirectoryType: UNDEFINED
-- !command
+- !!com.aptana.scripting.model.CommandElement
   async: false
   customProperties: null
   displayName: Test Uncommitted
@@ -639,11 +2636,11 @@ children:
     !!com.aptana.scripting.model.Platform 'ALL': [CONTROL+\]
   outputPath: null
   outputType: discard
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/commands/test.rb
+  path: commands/test.rb
   runType: current_thread
   scope: source.ruby.rails, source.yaml
   workingDirectoryType: UNDEFINED
-- !command
+- !!com.aptana.scripting.model.CommandElement
   async: false
   customProperties: null
   displayName: Test Units
@@ -652,7 +2649,7 @@ children:
     !!com.aptana.scripting.model.Platform 'ALL': [CONTROL+\]
   outputPath: null
   outputType: discard
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/commands/test.rb
+  path: commands/test.rb
   runType: current_thread
   scope: source.ruby.rails, source.yaml
   workingDirectoryType: UNDEFINED
@@ -667,7 +2664,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/180_rails_snippets.rb
+  path: snippets/180_rails_snippets.rb
   runType: current_thread
   scope: text.html.ruby, text.haml
   workingDirectoryType: UNDEFINED
@@ -684,7 +2681,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/accepts_nested_attributes_snippets.rb
+  path: snippets/accepts_nested_attributes_snippets.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
@@ -700,7 +2697,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/assert_snippets.rb
+  path: snippets/assert_snippets.rb
   runType: current_thread
   scope: source.ruby
   workingDirectoryType: UNDEFINED
@@ -718,7 +2715,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/assert_snippets.rb
+  path: snippets/assert_snippets.rb
   runType: current_thread
   scope: source.ruby
   workingDirectoryType: UNDEFINED
@@ -736,7 +2733,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/assert_snippets.rb
+  path: snippets/assert_snippets.rb
   runType: current_thread
   scope: source.ruby
   workingDirectoryType: UNDEFINED
@@ -750,7 +2747,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/assert_snippets.rb
+  path: snippets/assert_snippets.rb
   runType: current_thread
   scope: source.ruby
   workingDirectoryType: UNDEFINED
@@ -764,7 +2761,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/assert_snippets.rb
+  path: snippets/assert_snippets.rb
   runType: current_thread
   scope: source.ruby
   workingDirectoryType: UNDEFINED
@@ -778,7 +2775,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/assert_snippets.rb
+  path: snippets/assert_snippets.rb
   runType: current_thread
   scope: source.ruby
   workingDirectoryType: UNDEFINED
@@ -792,7 +2789,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/assert_snippets.rb
+  path: snippets/assert_snippets.rb
   runType: current_thread
   scope: source.ruby
   workingDirectoryType: UNDEFINED
@@ -806,7 +2803,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/assert_snippets.rb
+  path: snippets/assert_snippets.rb
   runType: current_thread
   scope: source.ruby
   workingDirectoryType: UNDEFINED
@@ -821,7 +2818,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/assert_snippets.rb
+  path: snippets/assert_snippets.rb
   runType: current_thread
   scope: source.ruby
   workingDirectoryType: UNDEFINED
@@ -835,11 +2832,11 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/controller_snippets.rb
+  path: snippets/controller_snippets.rb
   runType: current_thread
   scope: source.ruby, meta.rails.controller
   workingDirectoryType: UNDEFINED
-- !command
+- !!com.aptana.scripting.model.CommandElement
   async: false
   customProperties: null
   displayName: respond_to (html)
@@ -848,7 +2845,7 @@ children:
     !!com.aptana.scripting.model.Platform 'ALL': [M1+SHIFT+H]
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/controller_snippets.rb
+  path: snippets/controller_snippets.rb
   runType: current_thread
   scope: source.ruby, meta.rails.controller
   workingDirectoryType: UNDEFINED
@@ -862,7 +2859,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/controller_snippets.rb
+  path: snippets/controller_snippets.rb
   runType: current_thread
   scope: source.ruby, meta.rails.controller
   workingDirectoryType: UNDEFINED
@@ -876,7 +2873,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/form_snippets.rb
+  path: snippets/form_snippets.rb
   runType: current_thread
   scope: text.html.ruby, text.haml
   workingDirectoryType: UNDEFINED
@@ -891,7 +2888,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/form_snippets.rb
+  path: snippets/form_snippets.rb
   runType: current_thread
   scope: text.html.ruby, text.haml
   workingDirectoryType: UNDEFINED
@@ -905,7 +2902,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/form_snippets.rb
+  path: snippets/form_snippets.rb
   runType: current_thread
   scope: text.html.ruby, text.haml
   workingDirectoryType: UNDEFINED
@@ -919,7 +2916,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/form_snippets.rb
+  path: snippets/form_snippets.rb
   runType: current_thread
   scope: text.html.ruby, text.haml
   workingDirectoryType: UNDEFINED
@@ -933,7 +2930,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/form_snippets.rb
+  path: snippets/form_snippets.rb
   runType: current_thread
   scope: text.html.ruby, text.haml
   workingDirectoryType: UNDEFINED
@@ -947,7 +2944,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/form_snippets.rb
+  path: snippets/form_snippets.rb
   runType: current_thread
   scope: text.html.ruby, text.haml
   workingDirectoryType: UNDEFINED
@@ -961,7 +2958,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/form_snippets.rb
+  path: snippets/form_snippets.rb
   runType: current_thread
   scope: text.html.ruby, text.haml
   workingDirectoryType: UNDEFINED
@@ -975,7 +2972,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/form_snippets.rb
+  path: snippets/form_snippets.rb
   runType: current_thread
   scope: text.html.ruby, text.haml
   workingDirectoryType: UNDEFINED
@@ -989,7 +2986,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/form_snippets.rb
+  path: snippets/form_snippets.rb
   runType: current_thread
   scope: text.html.ruby, text.haml
   workingDirectoryType: UNDEFINED
@@ -1003,7 +3000,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/form_snippets.rb
+  path: snippets/form_snippets.rb
   runType: current_thread
   scope: text.html.ruby, text.haml
   workingDirectoryType: UNDEFINED
@@ -1019,7 +3016,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/form_snippets.rb
+  path: snippets/form_snippets.rb
   runType: current_thread
   scope: text.html.ruby, text.haml
   workingDirectoryType: UNDEFINED
@@ -1034,7 +3031,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/form_snippets.rb
+  path: snippets/form_snippets.rb
   runType: current_thread
   scope: text.html.ruby, text.haml
   workingDirectoryType: UNDEFINED
@@ -1049,7 +3046,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/form_snippets.rb
+  path: snippets/form_snippets.rb
   runType: current_thread
   scope: text.html.ruby, text.haml
   workingDirectoryType: UNDEFINED
@@ -1063,7 +3060,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/hook_snippets.rb
+  path: snippets/hook_snippets.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
@@ -1077,7 +3074,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/hook_snippets.rb
+  path: snippets/hook_snippets.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
@@ -1091,7 +3088,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/hook_snippets.rb
+  path: snippets/hook_snippets.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
@@ -1105,7 +3102,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/hook_snippets.rb
+  path: snippets/hook_snippets.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
@@ -1119,7 +3116,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/hook_snippets.rb
+  path: snippets/hook_snippets.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
@@ -1133,7 +3130,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/hook_snippets.rb
+  path: snippets/hook_snippets.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
@@ -1147,7 +3144,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/hook_snippets.rb
+  path: snippets/hook_snippets.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
@@ -1161,7 +3158,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/hook_snippets.rb
+  path: snippets/hook_snippets.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
@@ -1175,7 +3172,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/hook_snippets.rb
+  path: snippets/hook_snippets.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
@@ -1189,7 +3186,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/hook_snippets.rb
+  path: snippets/hook_snippets.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
@@ -1203,7 +3200,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/hook_snippets.rb
+  path: snippets/hook_snippets.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
@@ -1217,7 +3214,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/hook_snippets.rb
+  path: snippets/hook_snippets.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
@@ -1231,7 +3228,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/hook_snippets.rb
+  path: snippets/hook_snippets.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
@@ -1245,7 +3242,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/hook_snippets.rb
+  path: snippets/hook_snippets.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
@@ -1259,7 +3256,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/hook_snippets.rb
+  path: snippets/hook_snippets.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
@@ -1273,7 +3270,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/label_snippets.rb
+  path: snippets/label_snippets.rb
   runType: current_thread
   scope: source.yaml
   workingDirectoryType: UNDEFINED
@@ -1287,7 +3284,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/logger_snippets.rb
+  path: snippets/logger_snippets.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
@@ -1301,7 +3298,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/logger_snippets.rb
+  path: snippets/logger_snippets.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
@@ -1315,7 +3312,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/logger_snippets.rb
+  path: snippets/logger_snippets.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
@@ -1329,7 +3326,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/logger_snippets.rb
+  path: snippets/logger_snippets.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
@@ -1343,7 +3340,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/logger_snippets.rb
+  path: snippets/logger_snippets.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
@@ -1357,7 +3354,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/logger_snippets.rb
+  path: snippets/logger_snippets.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
@@ -1371,7 +3368,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/migration_snippets.rb
+  path: snippets/migration_snippets.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
@@ -1385,7 +3382,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/migration_snippets.rb
+  path: snippets/migration_snippets.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
@@ -1400,7 +3397,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/migration_snippets.rb
+  path: snippets/migration_snippets.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
@@ -1416,7 +3413,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/migration_snippets.rb
+  path: snippets/migration_snippets.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
@@ -1432,7 +3429,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/migration_snippets.rb
+  path: snippets/migration_snippets.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
@@ -1446,7 +3443,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/migration_snippets.rb
+  path: snippets/migration_snippets.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
@@ -1462,7 +3459,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/migration_snippets.rb
+  path: snippets/migration_snippets.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
@@ -1478,7 +3475,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/migration_snippets.rb
+  path: snippets/migration_snippets.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
@@ -1494,7 +3491,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/migration_snippets.rb
+  path: snippets/migration_snippets.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
@@ -1510,7 +3507,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/migration_snippets.rb
+  path: snippets/migration_snippets.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
@@ -1527,7 +3524,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/migration_snippets.rb
+  path: snippets/migration_snippets.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
@@ -1543,7 +3540,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/migration_snippets.rb
+  path: snippets/migration_snippets.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
@@ -1559,7 +3556,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/migration_snippets.rb
+  path: snippets/migration_snippets.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
@@ -1575,7 +3572,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/migration_snippets.rb
+  path: snippets/migration_snippets.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
@@ -1592,7 +3589,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/migration_snippets.rb
+  path: snippets/migration_snippets.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
@@ -1608,7 +3605,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/migration_snippets.rb
+  path: snippets/migration_snippets.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
@@ -1624,7 +3621,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/migration_snippets.rb
+  path: snippets/migration_snippets.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
@@ -1640,7 +3637,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/migration_snippets.rb
+  path: snippets/migration_snippets.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
@@ -1656,7 +3653,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/migration_snippets.rb
+  path: snippets/migration_snippets.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
@@ -1672,7 +3669,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/migration_snippets.rb
+  path: snippets/migration_snippets.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
@@ -1688,7 +3685,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/migration_snippets.rb
+  path: snippets/migration_snippets.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
@@ -1704,7 +3701,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/migration_snippets.rb
+  path: snippets/migration_snippets.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
@@ -1718,7 +3715,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/model_snippets.rb
+  path: snippets/model_snippets.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
@@ -1732,7 +3729,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/model_snippets.rb
+  path: snippets/model_snippets.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
@@ -1746,7 +3743,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/model_snippets.rb
+  path: snippets/model_snippets.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
@@ -1760,7 +3757,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/model_snippets.rb
+  path: snippets/model_snippets.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
@@ -1775,7 +3772,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/model_snippets.rb
+  path: snippets/model_snippets.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
@@ -1790,7 +3787,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/model_snippets.rb
+  path: snippets/model_snippets.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
@@ -1804,7 +3801,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/model_snippets.rb
+  path: snippets/model_snippets.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
@@ -1818,7 +3815,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/model_snippets.rb
+  path: snippets/model_snippets.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
@@ -1832,7 +3829,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/model_snippets.rb
+  path: snippets/model_snippets.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
@@ -1846,7 +3843,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/model_snippets.rb
+  path: snippets/model_snippets.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
@@ -1860,7 +3857,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/model_snippets.rb
+  path: snippets/model_snippets.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
@@ -1874,7 +3871,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/model_snippets.rb
+  path: snippets/model_snippets.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
@@ -1888,7 +3885,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/model_snippets.rb
+  path: snippets/model_snippets.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
@@ -1902,7 +3899,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/model_snippets.rb
+  path: snippets/model_snippets.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
@@ -1916,7 +3913,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/model_snippets.rb
+  path: snippets/model_snippets.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
@@ -1930,7 +3927,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/model_snippets.rb
+  path: snippets/model_snippets.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
@@ -1944,7 +3941,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/model_snippets.rb
+  path: snippets/model_snippets.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
@@ -1958,7 +3955,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/model_snippets.rb
+  path: snippets/model_snippets.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
@@ -1972,7 +3969,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/model_snippets.rb
+  path: snippets/model_snippets.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
@@ -1986,7 +3983,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/model_snippets.rb
+  path: snippets/model_snippets.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
@@ -2000,7 +3997,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/model_snippets.rb
+  path: snippets/model_snippets.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
@@ -2014,7 +4011,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/model_snippets.rb
+  path: snippets/model_snippets.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
@@ -2028,7 +4025,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/model_snippets.rb
+  path: snippets/model_snippets.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
@@ -2042,7 +4039,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/model_snippets.rb
+  path: snippets/model_snippets.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
@@ -2056,7 +4053,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/model_snippets.rb
+  path: snippets/model_snippets.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
@@ -2070,7 +4067,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/model_snippets.rb
+  path: snippets/model_snippets.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
@@ -2084,7 +4081,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/model_snippets.rb
+  path: snippets/model_snippets.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
@@ -2098,7 +4095,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/model_snippets.rb
+  path: snippets/model_snippets.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
@@ -2112,7 +4109,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/model_snippets.rb
+  path: snippets/model_snippets.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
@@ -2126,7 +4123,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/model_snippets.rb
+  path: snippets/model_snippets.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
@@ -2140,7 +4137,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/model_snippets.rb
+  path: snippets/model_snippets.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
@@ -2154,7 +4151,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/page_snippets.rb
+  path: snippets/page_snippets.rb
   runType: current_thread
   scope: source.ruby.rails.rjs
   workingDirectoryType: UNDEFINED
@@ -2168,7 +4165,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/page_snippets.rb
+  path: snippets/page_snippets.rb
   runType: current_thread
   scope: source.ruby.rails.rjs
   workingDirectoryType: UNDEFINED
@@ -2182,7 +4179,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/page_snippets.rb
+  path: snippets/page_snippets.rb
   runType: current_thread
   scope: source.ruby.rails.rjs
   workingDirectoryType: UNDEFINED
@@ -2196,7 +4193,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/page_snippets.rb
+  path: snippets/page_snippets.rb
   runType: current_thread
   scope: source.ruby.rails.rjs
   workingDirectoryType: UNDEFINED
@@ -2210,7 +4207,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/page_snippets.rb
+  path: snippets/page_snippets.rb
   runType: current_thread
   scope: source.ruby.rails.rjs
   workingDirectoryType: UNDEFINED
@@ -2224,7 +4221,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/page_snippets.rb
+  path: snippets/page_snippets.rb
   runType: current_thread
   scope: source.ruby.rails.rjs
   workingDirectoryType: UNDEFINED
@@ -2238,7 +4235,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/page_snippets.rb
+  path: snippets/page_snippets.rb
   runType: current_thread
   scope: source.ruby.rails.rjs
   workingDirectoryType: UNDEFINED
@@ -2252,7 +4249,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/render_snippets.rb
+  path: snippets/render_snippets.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
@@ -2266,7 +4263,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/render_snippets.rb
+  path: snippets/render_snippets.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
@@ -2280,7 +4277,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/render_snippets.rb
+  path: snippets/render_snippets.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
@@ -2294,7 +4291,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/render_snippets.rb
+  path: snippets/render_snippets.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
@@ -2308,7 +4305,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/render_snippets.rb
+  path: snippets/render_snippets.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
@@ -2322,7 +4319,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/render_snippets.rb
+  path: snippets/render_snippets.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
@@ -2336,7 +4333,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/render_snippets.rb
+  path: snippets/render_snippets.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
@@ -2350,7 +4347,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/render_snippets.rb
+  path: snippets/render_snippets.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
@@ -2364,7 +4361,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/render_snippets.rb
+  path: snippets/render_snippets.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
@@ -2378,7 +4375,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/render_snippets.rb
+  path: snippets/render_snippets.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
@@ -2392,7 +4389,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/render_snippets.rb
+  path: snippets/render_snippets.rb
   runType: current_thread
   scope: source.ruby.rails, text.html.ruby, text.haml
   workingDirectoryType: UNDEFINED
@@ -2406,7 +4403,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/render_snippets.rb
+  path: snippets/render_snippets.rb
   runType: current_thread
   scope: source.ruby.rails, text.html.ruby, text.haml
   workingDirectoryType: UNDEFINED
@@ -2420,7 +4417,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/render_snippets.rb
+  path: snippets/render_snippets.rb
   runType: current_thread
   scope: source.ruby.rails, text.html.ruby, text.haml
   workingDirectoryType: UNDEFINED
@@ -2434,7 +4431,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/render_snippets.rb
+  path: snippets/render_snippets.rb
   runType: current_thread
   scope: source.ruby.rails, text.html.ruby, text.haml
   workingDirectoryType: UNDEFINED
@@ -2448,7 +4445,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/render_snippets.rb
+  path: snippets/render_snippets.rb
   runType: current_thread
   scope: source.ruby.rails, text.html.ruby, text.haml
   workingDirectoryType: UNDEFINED
@@ -2462,7 +4459,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/render_snippets.rb
+  path: snippets/render_snippets.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
@@ -2476,7 +4473,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/render_snippets.rb
+  path: snippets/render_snippets.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
@@ -2490,7 +4487,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/render_snippets.rb
+  path: snippets/render_snippets.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
@@ -2504,7 +4501,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/render_snippets.rb
+  path: snippets/render_snippets.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
@@ -2518,7 +4515,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/render_snippets.rb
+  path: snippets/render_snippets.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
@@ -2532,7 +4529,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/route_snippets.rb
+  path: snippets/route_snippets.rb
   runType: current_thread
   scope: text.html.ruby, text.haml
   workingDirectoryType: UNDEFINED
@@ -2546,7 +4543,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/route_snippets.rb
+  path: snippets/route_snippets.rb
   runType: current_thread
   scope: text.html.ruby, text.haml
   workingDirectoryType: UNDEFINED
@@ -2560,7 +4557,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/route_snippets.rb
+  path: snippets/route_snippets.rb
   runType: current_thread
   scope: text.html.ruby, text.haml
   workingDirectoryType: UNDEFINED
@@ -2574,7 +4571,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/route_snippets.rb
+  path: snippets/route_snippets.rb
   runType: current_thread
   scope: text.html.ruby, text.haml
   workingDirectoryType: UNDEFINED
@@ -2588,7 +4585,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/route_snippets.rb
+  path: snippets/route_snippets.rb
   runType: current_thread
   scope: text.html.ruby, text.haml
   workingDirectoryType: UNDEFINED
@@ -2602,7 +4599,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/route_snippets.rb
+  path: snippets/route_snippets.rb
   runType: current_thread
   scope: text.html.ruby, text.haml
   workingDirectoryType: UNDEFINED
@@ -2616,7 +4613,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/route_snippets.rb
+  path: snippets/route_snippets.rb
   runType: current_thread
   scope: text.html.ruby, text.haml
   workingDirectoryType: UNDEFINED
@@ -2630,7 +4627,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/route_snippets.rb
+  path: snippets/route_snippets.rb
   runType: current_thread
   scope: text.html.ruby, text.haml
   workingDirectoryType: UNDEFINED
@@ -2644,7 +4641,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/route_snippets.rb
+  path: snippets/route_snippets.rb
   runType: current_thread
   scope: text.html.ruby, text.haml
   workingDirectoryType: UNDEFINED
@@ -2658,7 +4655,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/route_snippets.rb
+  path: snippets/route_snippets.rb
   runType: current_thread
   scope: text.html.ruby, text.haml
   workingDirectoryType: UNDEFINED
@@ -2672,7 +4669,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/route_snippets.rb
+  path: snippets/route_snippets.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
@@ -2686,7 +4683,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/route_snippets.rb
+  path: snippets/route_snippets.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
@@ -2700,7 +4697,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/route_snippets.rb
+  path: snippets/route_snippets.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
@@ -2714,7 +4711,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/route_snippets.rb
+  path: snippets/route_snippets.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
@@ -2728,7 +4725,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/route_snippets.rb
+  path: snippets/route_snippets.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
@@ -2742,7 +4739,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/route_snippets.rb
+  path: snippets/route_snippets.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
@@ -2756,7 +4753,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/route_snippets.rb
+  path: snippets/route_snippets.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
@@ -2770,7 +4767,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/route_snippets.rb
+  path: snippets/route_snippets.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
@@ -2784,7 +4781,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/route_snippets.rb
+  path: snippets/route_snippets.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
@@ -2798,7 +4795,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/route_snippets.rb
+  path: snippets/route_snippets.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
@@ -2812,7 +4809,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/route_snippets.rb
+  path: snippets/route_snippets.rb
   runType: current_thread
   scope: meta.rails.routes
   workingDirectoryType: UNDEFINED
@@ -2826,7 +4823,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/route_snippets.rb
+  path: snippets/route_snippets.rb
   runType: current_thread
   scope: meta.rails.routes
   workingDirectoryType: UNDEFINED
@@ -2840,7 +4837,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/route_snippets.rb
+  path: snippets/route_snippets.rb
   runType: current_thread
   scope: meta.rails.routes
   workingDirectoryType: UNDEFINED
@@ -2854,7 +4851,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/route_snippets.rb
+  path: snippets/route_snippets.rb
   runType: current_thread
   scope: meta.rails.routes
   workingDirectoryType: UNDEFINED
@@ -2869,7 +4866,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/route_snippets.rb
+  path: snippets/route_snippets.rb
   runType: current_thread
   scope: meta.rails.routes
   workingDirectoryType: UNDEFINED
@@ -2883,7 +4880,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/snippets.rb
+  path: snippets/snippets.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
@@ -2897,7 +4894,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/snippets.rb
+  path: snippets/snippets.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
@@ -2911,7 +4908,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/snippets.rb
+  path: snippets/snippets.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
@@ -2925,7 +4922,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/snippets.rb
+  path: snippets/snippets.rb
   runType: current_thread
   scope: text.html.ruby
   workingDirectoryType: UNDEFINED
@@ -2941,7 +4938,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/snippets.rb
+  path: snippets/snippets.rb
   runType: current_thread
   scope: source.ruby
   workingDirectoryType: UNDEFINED
@@ -2956,7 +4953,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/snippets.rb
+  path: snippets/snippets.rb
   runType: current_thread
   scope: source.ruby
   workingDirectoryType: UNDEFINED
@@ -2995,7 +4992,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/snippets.rb
+  path: snippets/snippets.rb
   runType: current_thread
   scope: source.ruby
   workingDirectoryType: UNDEFINED
@@ -3013,7 +5010,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/snippets.rb
+  path: snippets/snippets.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
@@ -3032,7 +5029,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/snippets.rb
+  path: snippets/snippets.rb
   runType: current_thread
   scope: meta.rails.controller
   workingDirectoryType: UNDEFINED
@@ -3047,7 +5044,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/snippets.rb
+  path: snippets/snippets.rb
   runType: current_thread
   scope: meta.rails.functional_test
   workingDirectoryType: UNDEFINED
@@ -3063,7 +5060,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/snippets.rb
+  path: snippets/snippets.rb
   runType: current_thread
   scope: meta.rails.functional_test
   workingDirectoryType: UNDEFINED
@@ -3077,7 +5074,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/snippets.rb
+  path: snippets/snippets.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
@@ -3091,7 +5088,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/snippets.rb
+  path: snippets/snippets.rb
   runType: current_thread
   scope: text.html.ruby
   workingDirectoryType: UNDEFINED
@@ -3106,7 +5103,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/snippets.rb
+  path: snippets/snippets.rb
   runType: current_thread
   scope: text.html.ruby
   workingDirectoryType: UNDEFINED
@@ -3120,7 +5117,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/snippets.rb
+  path: snippets/snippets.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
@@ -3134,7 +5131,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/snippets.rb
+  path: snippets/snippets.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
@@ -3148,7 +5145,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/snippets.rb
+  path: snippets/snippets.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
@@ -3162,7 +5159,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/snippets.rb
+  path: snippets/snippets.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
@@ -3176,7 +5173,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/snippets.rb
+  path: snippets/snippets.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
@@ -3190,7 +5187,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/snippets.rb
+  path: snippets/snippets.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
@@ -3204,7 +5201,7 @@ children:
     !!com.aptana.scripting.model.Platform 'ALL': [CTRL+P]
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/snippets.rb
+  path: snippets/snippets.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
@@ -3218,7 +5215,7 @@ children:
     !!com.aptana.scripting.model.Platform 'ALL': [CTRL+J]
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/snippets.rb
+  path: snippets/snippets.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
@@ -3232,7 +5229,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/snippets.rb
+  path: snippets/snippets.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
@@ -3246,7 +5243,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/snippets.rb
+  path: snippets/snippets.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
@@ -3260,7 +5257,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/snippets.rb
+  path: snippets/snippets.rb
   runType: current_thread
   scope: text.html.ruby, text.haml
   workingDirectoryType: UNDEFINED
@@ -3274,7 +5271,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/snippets.rb
+  path: snippets/snippets.rb
   runType: current_thread
   scope: text.html.ruby, text.haml
   workingDirectoryType: UNDEFINED
@@ -3288,7 +5285,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/snippets.rb
+  path: snippets/snippets.rb
   runType: current_thread
   scope: text.html.ruby, text.haml
   workingDirectoryType: UNDEFINED
@@ -3302,7 +5299,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/snippets.rb
+  path: snippets/snippets.rb
   runType: current_thread
   scope: text.html.ruby, text.haml
   workingDirectoryType: UNDEFINED
@@ -3316,7 +5313,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/test_snippets.rb
+  path: snippets/test_snippets.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
@@ -3330,7 +5327,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/test_snippets.rb
+  path: snippets/test_snippets.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
@@ -3344,7 +5341,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/test_snippets.rb
+  path: snippets/test_snippets.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
@@ -3361,7 +5358,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/test_snippets.rb
+  path: snippets/test_snippets.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
@@ -3378,7 +5375,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/test_snippets.rb
+  path: snippets/test_snippets.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
@@ -3392,7 +5389,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/test_snippets.rb
+  path: snippets/test_snippets.rb
   runType: current_thread
   scope: source.yaml
   workingDirectoryType: UNDEFINED
@@ -3406,7 +5403,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/xhr_snippets.rb
+  path: snippets/xhr_snippets.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
@@ -3420,7 +5417,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/xhr_snippets.rb
+  path: snippets/xhr_snippets.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
@@ -3434,7 +5431,7 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/xhr_snippets.rb
+  path: snippets/xhr_snippets.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
@@ -3448,30 +5445,42 @@ children:
   keyBindingMap: null
   outputPath: null
   outputType: insert_as_snippet
-  path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/snippets/xhr_snippets.rb
+  path: snippets/xhr_snippets.rb
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
 - !!com.aptana.scripting.model.TemplateElement {async: false, customProperties: null,
   displayName: HTML ERB Template, filetype: '*.html.erb', inputPath: null, keyBindingMap: null,
-  outputPath: null, outputType: discard, path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/templates/templates.rb,
-  runType: current_thread, scope: null, workingDirectoryType: UNDEFINED}
+  outputPath: null, outputType: discard, path: templates/templates.rb, runType: current_thread,
+  scope: null, workingDirectoryType: UNDEFINED}
 - !!com.aptana.scripting.model.TemplateElement {async: false, customProperties: null,
   displayName: RHTML Template, filetype: '*.rhtml', inputPath: null, keyBindingMap: null,
-  outputPath: null, outputType: discard, path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/templates/templates.rb,
-  runType: current_thread, scope: null, workingDirectoryType: UNDEFINED}
-copyright: null
+  outputPath: null, outputType: discard, path: templates/templates.rb, runType: current_thread,
+  scope: null, workingDirectoryType: UNDEFINED}
+copyright: '¬© Copyright 2010 Aptana Inc. Distributed under the MIT license.
+
+
+  Portions ¬© Copyright 2006 syncPEOPLE, LLC, distributed under the terms of the MIT
+  License.
+
+  '
 customProperties: null
-decreaseIndentMarkers: {}
-description: null
+decreaseIndentMarkers: &id002 {}
+description: 'Rails bundle for RadRails, based heavily on Dr. Nic''s tmbundle
+
+  (http://github.com/drnic/ruby-on-rails-tmbundle), which in turn was
+
+  based heavily on the original SyncPeople bundle.
+
+  '
 displayName: Ruby on Rails
 fileTypeRegistry: {'*.rb': source.ruby.rails}
 fileTypes: ['*.rb']
-foldingStartMarkers: {}
-foldingStopMarkers: {}
-increaseIndentMarkers: {}
+foldingStartMarkers: *id002
+foldingStopMarkers: *id002
+increaseIndentMarkers: *id002
 license: null
 licenseUrl: null
-path: /Users/ingo/Documents/Aptana Rubles/rails.ruble/bundle.rb
+path: bundle.rb
 repository: git://github.com/aptana/rails.ruble.git
 visible: true
