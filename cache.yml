@@ -1988,15 +1988,15 @@ children:
   displayName: Rails
   path: bundle.rb
   scope: source.ruby, project.rails, source.yaml, text.haml, text.html.ruby
-- !!com.aptana.scripting.model.EnvironmentElement {customProperties: null, displayName: snippet-1e28d457-1dc3-4cae-874c-b67eecf965e9,
+- !!com.aptana.scripting.model.EnvironmentElement {customProperties: null, displayName: snippet-0b592fbf-661c-48b1-9365-8743ff58278d,
   path: bundle.rb, scope: text.html.ruby}
-- !!com.aptana.scripting.model.EnvironmentElement {customProperties: null, displayName: snippet-ad6ac373-4f9a-4c01-937b-1a2083e1dbd8,
+- !!com.aptana.scripting.model.EnvironmentElement {customProperties: null, displayName: snippet-268ce6c1-16d2-45be-bdf8-a4ced03ae089,
   path: bundle.rb, scope: text.haml}
-- !!com.aptana.scripting.model.SmartTypingPairsElement {customProperties: null, displayName: smart_typing_pairs-af466bf9-6313-4f05-9c75-577705c909a7,
+- !!com.aptana.scripting.model.SmartTypingPairsElement {customProperties: null, displayName: smart_typing_pairs-b84225b0-2207-45f7-a006-6f80d106d93c,
   path: bundle.rb, scope: text.html.ruby}
-- !!com.aptana.scripting.model.SmartTypingPairsElement {customProperties: null, displayName: smart_typing_pairs-aaed27b1-12bc-4e39-95a8-e07f3f1bcf85,
+- !!com.aptana.scripting.model.SmartTypingPairsElement {customProperties: null, displayName: smart_typing_pairs-f4324986-67b3-423b-83a4-cdbca42715c2,
   path: bundle.rb, scope: text.html.ruby meta.tag}
-- !!com.aptana.scripting.model.SmartTypingPairsElement {customProperties: null, displayName: smart_typing_pairs-a39ecb37-8593-47d0-8770-9aa519725998,
+- !!com.aptana.scripting.model.SmartTypingPairsElement {customProperties: null, displayName: smart_typing_pairs-bd485e04-a6a7-44a8-b3d1-ceb968ea67b3,
   path: bundle.rb, scope: text.html.ruby meta.tag string}
 - !!com.aptana.scripting.model.CommandElement
   async: false
