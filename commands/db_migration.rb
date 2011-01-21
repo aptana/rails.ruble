@@ -87,7 +87,7 @@ with_defaults :scope => "source.ruby.rails",
     cmd.invoke {|context| require 'rails/intelligent_migration'; IntelligentMigration.process_migration(context, :add_remove_unique_index) }
   end
 
-  command "Change / Change Table" do |cmd|
+  command "Change Table" do |cmd|
     cmd.trigger = "mtab"    
     cmd.invoke {|context| require 'rails/intelligent_migration'; IntelligentMigration.process_migration(context, :change_change_table) }
   end

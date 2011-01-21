@@ -314,22 +314,22 @@ END
         tables_menu.command "Drop / Create Table"
         tables_menu.command "Change Table"
     
-        tables_menu.menu "Create columns t. drop-down list" do |create_columns_list_menu|
-          create_columns_list_menu.command "t.string (tcs)"
-          create_columns_list_menu.command "t.text (tct)"
-          create_columns_list_menu.command "t.integer (tci)"
-          create_columns_list_menu.command "t.float (tcf)"
-          create_columns_list_menu.command "t.decimal (tcd)"
-          create_columns_list_menu.command "t.datetime (tcdt)"
-          create_columns_list_menu.command "t.timestamp (tcts)"
-          create_columns_list_menu.command "t.time (tcti)"
-          create_columns_list_menu.command "t.date (tcda)"
-          create_columns_list_menu.command "t.boolean (tcb)"
-          create_columns_list_menu.command "t.binary (tcbi)"
-          create_columns_list_menu.command "t.timestamps (tctss)"
-          create_columns_list_menu.command "t.lock_version (tcl)"
-          create_columns_list_menu.command "t.references (tcr)"
-        end
+        # tables_menu.menu "Create columns t. drop-down list" do |create_columns_list_menu|
+        #   create_columns_list_menu.command "t.string (tcs)"
+        #   create_columns_list_menu.command "t.text (tct)"
+        #   create_columns_list_menu.command "t.integer (tci)"
+        #   create_columns_list_menu.command "t.float (tcf)"
+        #   create_columns_list_menu.command "t.decimal (tcd)"
+        #   create_columns_list_menu.command "t.datetime (tcdt)"
+        #   create_columns_list_menu.command "t.timestamp (tcts)"
+        #   create_columns_list_menu.command "t.time (tcti)"
+        #   create_columns_list_menu.command "t.date (tcda)"
+        #   create_columns_list_menu.command "t.boolean (tcb)"
+        #   create_columns_list_menu.command "t.binary (tcbi)"
+        #   create_columns_list_menu.command "t.timestamps (tctss)"
+        #   create_columns_list_menu.command "t.lock_version (tcl)"
+        #   create_columns_list_menu.command "t.references (tcr)"
+        # end
         tables_menu.menu "Create columns helpers" do |create_columns_helpers_menu|
           create_columns_helpers_menu.command "Table column string"
           create_columns_helpers_menu.command "Table column text"
@@ -347,7 +347,7 @@ END
           create_columns_helpers_menu.command "Table column(s) references"
         end
         tables_menu.command "Create Column in Table"
-        tables_menu.command "Create Several Columns in Table"
+        # tables_menu.command "Create Several Columns in Table"
         tables_menu.menu "Change columns t. drop-down list" do |change_columns_list_menu|
           change_columns_list_menu.command "t.change (tch)"
           change_columns_list_menu.command "t.rename (tre)"
