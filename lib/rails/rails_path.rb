@@ -52,7 +52,7 @@ class RailsPath
   include AssociationMessages
 
   def initialize(filepath = Ruble.filepath)
-    if filepath[0..0] == '/' || filepath[0..2] == "C:\\"
+    if filepath[0..0] == '/' || filepath[1..2] == ":\\"
       # Absolute file, treat as is
       @filepath = filepath
     else
