@@ -1,4 +1,3 @@
 config/*.yml
 website/dist
 .DS_Store
-cache.yml
