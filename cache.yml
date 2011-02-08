@@ -1892,27 +1892,27 @@ children:
   displayName: Rails
   path: bundle.rb
   scope: source.ruby, project.rails, source.yaml, text.haml, text.html.ruby
-- !!com.aptana.scripting.model.EnvironmentElement {customProperties: null, displayName: snippet-6821a737-5d05-4639-b307-4014235a3c90,
+- !!com.aptana.scripting.model.EnvironmentElement {customProperties: null, displayName: environment-10d62414-3d05-4d0c-a407-909057edb1a4,
   path: bundle.rb, scope: text.html.ruby}
-- !!com.aptana.scripting.model.EnvironmentElement {customProperties: null, displayName: snippet-0a88be17-4857-4e3d-af89-978fa364009f,
+- !!com.aptana.scripting.model.EnvironmentElement {customProperties: null, displayName: environment-57635b62-b0b6-4bdc-8fe9-5b13af966ddc,
   path: bundle.rb, scope: text.haml}
 - !!com.aptana.scripting.model.SmartTypingPairsElement
   customProperties: null
-  displayName: smart_typing_pairs-f1e905a1-598d-4485-b40b-6fac2f9fd351
+  displayName: smart_typing_pairs-87db36a5-e7b0-41dc-ae34-6ede8392f425
   pairs: [&id002 '%', *id002, &id003 '"', *id003, &id004 (, &id005 ), &id006 '{',
     &id007 '}', &id008 '[', &id009 ']', &id010 <, &id011 '>']
   path: bundle.rb
   scope: text.html.ruby
 - !!com.aptana.scripting.model.SmartTypingPairsElement
   customProperties: null
-  displayName: smart_typing_pairs-a2c55d5d-8cb7-4963-bcb0-b5f3926dd7fb
+  displayName: smart_typing_pairs-c52e11df-e50d-4a28-940c-74b14022c51a
   pairs: [*id002, *id002, *id003, *id003, *id004, *id005, *id006, *id007, *id008,
     *id009, *id010, *id011, &id012 '''', *id012]
   path: bundle.rb
   scope: text.html.ruby meta.tag
 - !!com.aptana.scripting.model.SmartTypingPairsElement
   customProperties: null
-  displayName: smart_typing_pairs-4011ed36-2f9c-4b4d-a682-2c2633d6d8a5
+  displayName: smart_typing_pairs-9d4c7ab7-4f7c-4344-9b20-8666e53b23e5
   pairs: [*id003, *id003, *id004, *id005, *id006, *id007, *id008, *id009, *id002,
     *id002, *id010, *id011]
   path: bundle.rb
@@ -1921,6 +1921,7 @@ children:
   async: false
   customProperties: null
   displayName: Autocomplete Foreign Key Fixture Reference
+  input: [selection, line]
   inputPath: null
   keyBindingMap:
     !!com.aptana.scripting.model.Platform 'ALL': [M4+ESC]
@@ -1934,6 +1935,7 @@ children:
   async: false
   customProperties: null
   displayName: Autocomplete Foreign Key Fixture Reference (habtm)
+  input: [selection, line]
   inputPath: null
   keyBindingMap:
     !!com.aptana.scripting.model.Platform 'ALL': [M4+M2+ESC]
@@ -1943,14 +1945,24 @@ children:
   runType: current_thread
   scope: source.yaml
   workingDirectoryType: UNDEFINED
-- !!com.aptana.scripting.model.ContentAssistElement {async: false, customProperties: null,
-  displayName: ERb Content Assist, inputPath: null, keyBindingMap: null, outputPath: null,
-  outputType: discard, path: commands/content_assist.rb, runType: current_thread,
-  scope: source.ruby.rails.embedded.html, workingDirectoryType: UNDEFINED}
+- !!com.aptana.scripting.model.ContentAssistElement
+  async: false
+  customProperties: null
+  displayName: ERb Content Assist
+  input: [none]
+  inputPath: null
+  keyBindingMap: null
+  outputPath: null
+  outputType: discard
+  path: commands/content_assist.rb
+  runType: current_thread
+  scope: source.ruby.rails.embedded.html
+  workingDirectoryType: UNDEFINED
 - !!com.aptana.scripting.model.CommandElement
   async: false
   customProperties: null
   displayName: Clone Development DB to Test DB
+  input: []
   inputPath: null
   keyBindingMap:
     !!com.aptana.scripting.model.Platform 'ALL': [M1+M2+\]
@@ -1964,6 +1976,7 @@ children:
   async: false
   customProperties: null
   displayName: Dump DB to schema.rb
+  input: []
   inputPath: null
   keyBindingMap:
     !!com.aptana.scripting.model.Platform 'ALL': [M1+M2+\]
@@ -1977,6 +1990,7 @@ children:
   async: false
   customProperties: null
   displayName: Load schema.rb to DB
+  input: []
   inputPath: null
   keyBindingMap:
     !!com.aptana.scripting.model.Platform 'ALL': [M1+M2+\]
@@ -1990,6 +2004,7 @@ children:
   async: false
   customProperties: null
   displayName: Load Fixtures to Test DB
+  input: []
   inputPath: null
   keyBindingMap:
     !!com.aptana.scripting.model.Platform 'ALL': [M1+M2+\]
@@ -2003,6 +2018,7 @@ children:
   async: false
   customProperties: null
   displayName: Load Fixtures to Development DB
+  input: []
   inputPath: null
   keyBindingMap:
     !!com.aptana.scripting.model.Platform 'ALL': [M1+M2+\]
@@ -2016,6 +2032,7 @@ children:
   async: false
   customProperties: null
   displayName: Migrate to Previous Version
+  input: []
   inputPath: null
   keyBindingMap:
     !!com.aptana.scripting.model.Platform 'ALL': [M1+M2+\]
@@ -2029,6 +2046,7 @@ children:
   async: false
   customProperties: null
   displayName: Migrate to Current
+  input: []
   inputPath: null
   keyBindingMap:
     !!com.aptana.scripting.model.Platform 'ALL': [M1+M2+\]
@@ -2042,6 +2060,7 @@ children:
   async: false
   customProperties: null
   displayName: Redo Last Migration
+  input: []
   inputPath: null
   keyBindingMap:
     !!com.aptana.scripting.model.Platform 'ALL': [M1+M2+\]
@@ -2056,6 +2075,7 @@ children:
   customProperties:
     prefix_values: [mcol]
   displayName: Add / Remove Column
+  input: [selection]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -2069,6 +2089,7 @@ children:
   customProperties:
     prefix_values: [mind]
   displayName: Add / Remove Index
+  input: [selection]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -2082,6 +2103,7 @@ children:
   customProperties:
     prefix_values: [mind]
   displayName: Add / Remove Named Index
+  input: [selection]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -2095,6 +2117,7 @@ children:
   customProperties:
     prefix_values: [marcc]
   displayName: Add / Remove Several Columns (marcc)
+  input: [selection]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -2108,6 +2131,7 @@ children:
   customProperties:
     prefix_values: [mcol]
   displayName: Add / Remove Several Columns
+  input: [selection]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -2121,6 +2145,7 @@ children:
   customProperties:
     prefix_values: [mcol]
   displayName: Add / Remove Timestamps
+  input: [selection]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -2134,6 +2159,7 @@ children:
   customProperties:
     prefix_values: [mind]
   displayName: Add / Remove Unique Index
+  input: [selection]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -2147,6 +2173,7 @@ children:
   customProperties:
     prefix_values: [mtab]
   displayName: Change Table
+  input: [selection]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -2160,6 +2187,7 @@ children:
   customProperties:
     prefix_values: [mcol]
   displayName: Change Column Default
+  input: [selection]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -2173,6 +2201,7 @@ children:
   customProperties:
     prefix_values: [mcol]
   displayName: Change Column
+  input: [selection]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -2186,6 +2215,7 @@ children:
   customProperties:
     prefix_values: [mtab]
   displayName: Create / Drop Table
+  input: [selection]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -2199,6 +2229,7 @@ children:
   customProperties:
     prefix_values: [mcol]
   displayName: Remove / Add Timestamps
+  input: [selection]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -2212,6 +2243,7 @@ children:
   customProperties:
     prefix_values: [mncc]
   displayName: Rename Several Columns (mncc)
+  input: [selection]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -2225,6 +2257,7 @@ children:
   customProperties:
     prefix_values: [mcol]
   displayName: Rename Several Columns
+  input: [selection]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -2238,6 +2271,7 @@ children:
   customProperties:
     prefix_values: [mcol]
   displayName: Rename Column
+  input: [selection]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -2251,6 +2285,7 @@ children:
   customProperties:
     prefix_values: [mtab]
   displayName: Rename Table
+  input: [selection]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -2263,6 +2298,7 @@ children:
   async: false
   customProperties: null
   displayName: Documentation for Word
+  input: [selection, word]
   inputPath: null
   keyBindingMap:
     !!com.aptana.scripting.model.Platform 'ALL': [CONTROL+H]
@@ -2276,6 +2312,7 @@ children:
   async: false
   customProperties: null
   displayName: Call Generate Script
+  input: [none]
   inputPath: null
   keyBindingMap:
     !!com.aptana.scripting.model.Platform 'ALL': [CONTROL+SHIFT+\]
@@ -2289,6 +2326,7 @@ children:
   async: false
   customProperties: null
   displayName: Go to Controller
+  input: []
   inputPath: null
   keyBindingMap:
     !!com.aptana.scripting.model.Platform 'ALL': [M1+M2+M3+ARROW_DOWN]
@@ -2302,6 +2340,7 @@ children:
   async: false
   customProperties: null
   displayName: Go to Alternate File
+  input: []
   inputPath: null
   keyBindingMap:
     !!com.aptana.scripting.model.Platform 'ALL': [M1+M2+M3+ARROW_DOWN]
@@ -2315,6 +2354,7 @@ children:
   async: false
   customProperties: null
   displayName: Go to File on Current Line
+  input: []
   inputPath: null
   keyBindingMap:
     !!com.aptana.scripting.model.Platform 'ALL': [M1+M2+M3+ARROW_DOWN]
@@ -2328,6 +2368,7 @@ children:
   async: false
   customProperties: null
   displayName: Go to Fixture
+  input: []
   inputPath: null
   keyBindingMap:
     !!com.aptana.scripting.model.Platform 'ALL': [M1+M2+M3+ARROW_DOWN]
@@ -2341,6 +2382,7 @@ children:
   async: false
   customProperties: null
   displayName: Go to Functional Test
+  input: []
   inputPath: null
   keyBindingMap:
     !!com.aptana.scripting.model.Platform 'ALL': [M1+M2+M3+ARROW_DOWN]
@@ -2354,6 +2396,7 @@ children:
   async: false
   customProperties: null
   displayName: Go to Helper
+  input: []
   inputPath: null
   keyBindingMap:
     !!com.aptana.scripting.model.Platform 'ALL': [M1+M2+M3+ARROW_DOWN]
@@ -2367,6 +2410,7 @@ children:
   async: false
   customProperties: null
   displayName: Go to Javascript
+  input: []
   inputPath: null
   keyBindingMap:
     !!com.aptana.scripting.model.Platform 'ALL': [M1+M2+M3+ARROW_DOWN]
@@ -2380,6 +2424,7 @@ children:
   async: false
   customProperties: null
   displayName: Go to Model
+  input: []
   inputPath: null
   keyBindingMap:
     !!com.aptana.scripting.model.Platform 'ALL': [M1+M2+M3+ARROW_DOWN]
@@ -2393,6 +2438,7 @@ children:
   async: false
   customProperties: null
   displayName: Go to Stylesheet
+  input: []
   inputPath: null
   keyBindingMap:
     !!com.aptana.scripting.model.Platform 'ALL': [M1+M2+M3+ARROW_DOWN]
@@ -2406,6 +2452,7 @@ children:
   async: false
   customProperties: null
   displayName: Go to Unit Test
+  input: []
   inputPath: null
   keyBindingMap:
     !!com.aptana.scripting.model.Platform 'ALL': [M1+M2+M3+ARROW_DOWN]
@@ -2419,6 +2466,7 @@ children:
   async: false
   customProperties: null
   displayName: Go to View
+  input: []
   inputPath: null
   keyBindingMap:
     !!com.aptana.scripting.model.Platform 'ALL': [M1+M2+M3+ARROW_DOWN]
@@ -2433,6 +2481,7 @@ children:
   customProperties:
     prefix_values: [.]
   displayName: List Columns of a Model
+  input: [selection, word]
   inputPath: null
   keyBindingMap:
     !!com.aptana.scripting.model.Platform 'ALL': [M3+SPACE]
@@ -2446,6 +2495,7 @@ children:
   async: false
   customProperties: null
   displayName: Create Partial From Selection
+  input: [selection, line]
   inputPath: null
   keyBindingMap:
     !!com.aptana.scripting.model.Platform 'ALL': [CONTROL+H]
@@ -2459,6 +2509,7 @@ children:
   async: false
   customProperties: null
   displayName: Preview
+  input: [none]
   inputPath: null
   keyBindingMap:
     !!com.aptana.scripting.model.Platform 'ALL': [M1+M2+P]
@@ -2472,6 +2523,7 @@ children:
   async: false
   customProperties: null
   displayName: Show DB Schema for Current Class
+  input: [none]
   inputPath: null
   keyBindingMap:
     !!com.aptana.scripting.model.Platform 'ALL': [CONTROL+SHIFT+COMMAND+S]
@@ -2485,6 +2537,7 @@ children:
   async: false
   customProperties: null
   displayName: Test All
+  input: []
   inputPath: null
   keyBindingMap:
     !!com.aptana.scripting.model.Platform 'ALL': [CONTROL+\]
@@ -2498,6 +2551,7 @@ children:
   async: false
   customProperties: null
   displayName: Test Functionals
+  input: []
   inputPath: null
   keyBindingMap:
     !!com.aptana.scripting.model.Platform 'ALL': [CONTROL+\]
@@ -2511,6 +2565,7 @@ children:
   async: false
   customProperties: null
   displayName: Test Integration
+  input: []
   inputPath: null
   keyBindingMap:
     !!com.aptana.scripting.model.Platform 'ALL': [CONTROL+\]
@@ -2524,6 +2579,7 @@ children:
   async: false
   customProperties: null
   displayName: Test Plugins
+  input: []
   inputPath: null
   keyBindingMap:
     !!com.aptana.scripting.model.Platform 'ALL': [CONTROL+\]
@@ -2537,6 +2593,7 @@ children:
   async: false
   customProperties: null
   displayName: Test Recent
+  input: []
   inputPath: null
   keyBindingMap:
     !!com.aptana.scripting.model.Platform 'ALL': [CONTROL+\]
@@ -2550,6 +2607,7 @@ children:
   async: false
   customProperties: null
   displayName: Test Uncommitted
+  input: []
   inputPath: null
   keyBindingMap:
     !!com.aptana.scripting.model.Platform 'ALL': [CONTROL+\]
@@ -2563,6 +2621,7 @@ children:
   async: false
   customProperties: null
   displayName: Test Units
+  input: []
   inputPath: null
   keyBindingMap:
     !!com.aptana.scripting.model.Platform 'ALL': [CONTROL+\]
@@ -2579,6 +2638,7 @@ children:
   displayName: form_tag
   expansion: "form_tag(:action => \"${1:update}\", {:${2:class} => \"${3:form}\"})\
     \ do\n\t$0\n"
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -2596,6 +2656,7 @@ children:
     => true, :reject_if => proc { |obj| ${2:obj.blank?} }
 
     '
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -2612,6 +2673,7 @@ children:
   expansion: 'assert(${1:var} = assigns(:${1}), "Cannot find @${1}")
 
     $0'
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -2630,6 +2692,7 @@ children:
     $0
 
     end'
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -2648,6 +2711,7 @@ children:
     $0
 
     end'
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -2662,6 +2726,7 @@ children:
     prefix_values: [artnpp]
   displayName: assert_redirected_to (nested path plural)
   expansion: assert_redirected_to ${1:parent}_${2:child}_path(@${1})
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -2676,6 +2741,7 @@ children:
     prefix_values: [artnp]
   displayName: assert_redirected_to (nested path)
   expansion: assert_redirected_to ${1:parent}_${2:child}_path(@${1}, @${2})
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -2690,6 +2756,7 @@ children:
     prefix_values: [artpp]
   displayName: assert_redirected_to (path plural)
   expansion: assert_redirected_to ${1:model}s_path
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -2704,6 +2771,7 @@ children:
     prefix_values: [artp]
   displayName: assert_redirected_to (path)
   expansion: assert_redirected_to ${1:model}_path(@${1})
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -2718,6 +2786,7 @@ children:
     prefix_values: [asrj]
   displayName: assert_rjs
   expansion: assert_rjs :${1:replace}, "${2:dom id}"
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -2733,6 +2802,7 @@ children:
   displayName: assert_select
   expansion: "assert_select '${1:path}', :${2:text} => '${3:inner_html}' do\n  $0\n\
     end"
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -2747,6 +2817,7 @@ children:
     prefix_values: [rest]
   displayName: respond_to
   expansion: "respond_to do |wants|\n  wants.${1:html} { $0 }\nend"
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -2759,6 +2830,7 @@ children:
   async: false
   customProperties: null
   displayName: respond_to (html)
+  input: [selection, word]
   inputPath: null
   keyBindingMap:
     !!com.aptana.scripting.model.Platform 'ALL': [M1+SHIFT+H]
@@ -2774,6 +2846,7 @@ children:
     prefix_values: [wants]
   displayName: wants.format
   expansion: wants.${1:js/xml/html} { $0 }
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -2788,6 +2861,7 @@ children:
     prefix_values: [f., ffcb]
   displayName: form_for check_box
   expansion: ${TM_RAILS_TEMPLATE_START_RUBY_EXPR}f.check_box :${1:attribute}${TM_RAILS_TEMPLATE_END_RUBY_EXPR}
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -2803,6 +2877,7 @@ children:
   displayName: form_for fields_for
   expansion: "${TM_RAILS_TEMPLATE_START_RUBY_INLINE}f.fields_for :${1:attribute} do\
     \ |${2:f}|${TM_RAILS_TEMPLATE_END_RUBY_INLINE}\n  $0\n${TM_RAILS_TEMPLATE_END_RUBY_BLOCK}"
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -2817,6 +2892,7 @@ children:
     prefix_values: [f., ffff]
   displayName: form_for file_field
   expansion: ${TM_RAILS_TEMPLATE_START_RUBY_EXPR}f.file_field :${1:attribute}${TM_RAILS_TEMPLATE_END_RUBY_EXPR}
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -2831,6 +2907,7 @@ children:
     prefix_values: [f., ffhf]
   displayName: form_for hidden_field
   expansion: ${TM_RAILS_TEMPLATE_START_RUBY_EXPR}f.hidden_field :${1:attribute}${TM_RAILS_TEMPLATE_END_RUBY_EXPR}
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -2845,6 +2922,7 @@ children:
     prefix_values: [f., ffl]
   displayName: form_for label
   expansion: ${TM_RAILS_TEMPLATE_START_RUBY_EXPR}f.label :${1:attribute}, "${1}"${TM_RAILS_TEMPLATE_END_RUBY_EXPR}
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -2859,6 +2937,7 @@ children:
     prefix_values: [f., ffpf]
   displayName: form_for password_field
   expansion: ${TM_RAILS_TEMPLATE_START_RUBY_EXPR}f.password_field :${1:attribute}${TM_RAILS_TEMPLATE_END_RUBY_EXPR}
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -2873,6 +2952,7 @@ children:
     prefix_values: [f., ffrb]
   displayName: form_for radio_button
   expansion: ${TM_RAILS_TEMPLATE_START_RUBY_EXPR}f.radio_button :${1:attribute}, :${2:tag_value}${TM_RAILS_TEMPLATE_END_RUBY_EXPR}
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -2887,6 +2967,7 @@ children:
     prefix_values: [f., ffs]
   displayName: form_for submit
   expansion: ${TM_RAILS_TEMPLATE_START_RUBY_EXPR}f.submit "${1:Submit}", :disable_with => '$1ing...'${TM_RAILS_TEMPLATE_END_RUBY_EXPR}
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -2901,6 +2982,7 @@ children:
     prefix_values: [f., ffta]
   displayName: form_for text_area
   expansion: ${TM_RAILS_TEMPLATE_START_RUBY_EXPR}f.text_area :${1:attribute}${TM_RAILS_TEMPLATE_END_RUBY_EXPR}
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -2915,6 +2997,7 @@ children:
     prefix_values: [f., fftf]
   displayName: form_for text_field
   expansion: ${TM_RAILS_TEMPLATE_START_RUBY_EXPR}f.text_field :${1:attribute}${TM_RAILS_TEMPLATE_END_RUBY_EXPR}
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -2931,6 +3014,7 @@ children:
   expansion: "${TM_RAILS_TEMPLATE_START_RUBY_EXPR}error_messages_for :${1:model}${TM_RAILS_TEMPLATE_END_RUBY_EXPR}\n\
     ${TM_RAILS_TEMPLATE_START_RUBY_INLINE}form_for @$1 do |f|${TM_RAILS_TEMPLATE_END_RUBY_INLINE}\n\
     \  $0\n${TM_RAILS_TEMPLATE_END_RUBY_BLOCK}"
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -2946,6 +3030,7 @@ children:
   displayName: form_for
   expansion: "${TM_RAILS_TEMPLATE_START_RUBY_INLINE}form_for @${1:model} do |f|${TM_RAILS_TEMPLATE_END_RUBY_INLINE}\n\
     \  $0\n${TM_RAILS_TEMPLATE_END_RUBY_BLOCK}"
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -2961,6 +3046,7 @@ children:
   displayName: fields_for
   expansion: "${TM_RAILS_TEMPLATE_START_RUBY_INLINE}fields_for :${1:model}, @$1 do\
     \ |$1|${TM_RAILS_TEMPLATE_END_RUBY_INLINE}\n  $0\n${TM_RAILS_TEMPLATE_END_RUBY_BLOCK}"
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -2975,6 +3061,7 @@ children:
     prefix_values: [aftc]
   displayName: after_create
   expansion: 'after_create '
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -2989,6 +3076,7 @@ children:
     prefix_values: [aftd]
   displayName: after_destroy
   expansion: 'after_destroy '
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -3003,6 +3091,7 @@ children:
     prefix_values: [afts]
   displayName: after_save
   expansion: 'after_save '
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -3017,6 +3106,7 @@ children:
     prefix_values: [aftu]
   displayName: after_update
   expansion: 'after_update '
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -3031,6 +3121,7 @@ children:
     prefix_values: [aftv]
   displayName: after_validation
   expansion: 'after_validation '
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -3045,6 +3136,7 @@ children:
     prefix_values: [aftvoc]
   displayName: after_validation_on_create
   expansion: 'after_validation_on_create '
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -3059,6 +3151,7 @@ children:
     prefix_values: [aftvou]
   displayName: after_validation_on_update
   expansion: 'after_validation_on_update '
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -3073,6 +3166,7 @@ children:
     prefix_values: [befc]
   displayName: before_create
   expansion: 'before_create '
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -3087,6 +3181,7 @@ children:
     prefix_values: [befd]
   displayName: before_destroy
   expansion: 'before_destroy '
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -3101,6 +3196,7 @@ children:
     prefix_values: [bf]
   displayName: before_filter
   expansion: 'before_filter '
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -3115,6 +3211,7 @@ children:
     prefix_values: [befs]
   displayName: before_save
   expansion: 'before_save '
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -3129,6 +3226,7 @@ children:
     prefix_values: [befu]
   displayName: before_update
   expansion: 'before_update '
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -3143,6 +3241,7 @@ children:
     prefix_values: [befv]
   displayName: before_validation
   expansion: 'before_validation '
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -3157,6 +3256,7 @@ children:
     prefix_values: [befvoc]
   displayName: before_validation_on_create
   expansion: 'before_validation_on_create '
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -3171,6 +3271,7 @@ children:
     prefix_values: [befvou]
   displayName: before_validation_on_update
   expansion: 'before_validation_on_update '
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -3185,6 +3286,7 @@ children:
     prefix_values: [$L]
   displayName: $LABEL
   expansion: $LABEL
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -3199,6 +3301,7 @@ children:
     prefix_values: [logd]
   displayName: logger.debug
   expansion: logger.debug { "${1:message}" }$0
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -3213,6 +3316,7 @@ children:
     prefix_values: [loge]
   displayName: logger.error
   expansion: logger.error { "${1:message}" }$0
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -3227,6 +3331,7 @@ children:
     prefix_values: [logf]
   displayName: logger.fatal
   expansion: logger.fatal { "${1:message}" }$0
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -3241,6 +3346,7 @@ children:
     prefix_values: [logi]
   displayName: logger.info
   expansion: logger.info { "${1:message}" }$0
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -3255,6 +3361,7 @@ children:
     prefix_values: [logw]
   displayName: logger.warn
   expansion: logger.warn { "${1:message}" }$0
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -3269,6 +3376,7 @@ children:
     prefix_values: [rdb]
   displayName: RAILS_DEFAULT_LOGGER.debug
   expansion: RAILS_DEFAULT_LOGGER.debug { "${1:message}" }$0
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -3283,6 +3391,7 @@ children:
     prefix_values: [mcol]
   displayName: Create Column in Table
   expansion: "t.column ${1:title}, :${2:string}\n\t$0"
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -3297,6 +3406,7 @@ children:
     prefix_values: [mtab]
   displayName: Drop / Create Table
   expansion: 'drop_table :${1:table}${2: [press tab twice to generate create_table]}'
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -3312,6 +3422,7 @@ children:
   displayName: Remove / Add Column
   expansion: 'remove_column :${1:table}, :${2:column}${3: [press tab twice to generate
     add_column]}'
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -3328,6 +3439,7 @@ children:
   expansion: 't.change :${1:name}${2:, :${3:string}${4:, :${5:limit} => ${6:80}}}
 
     $0'
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -3344,6 +3456,7 @@ children:
   expansion: 't.rename :${1:old_column_name}, :${2:new_column_name}
 
     $0'
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -3358,6 +3471,7 @@ children:
     prefix_values: [mcol]
   displayName: Table column
   expansion: "t.column ${1:title}, :${2:string}\n\t$0"
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -3374,6 +3488,7 @@ children:
   expansion: 't.binary :${1:title}${2:, :limit => ${3:2}.megabytes}
 
     $0'
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -3390,6 +3505,7 @@ children:
   expansion: 't.boolean :${1:title}
 
     $0'
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -3406,6 +3522,7 @@ children:
   expansion: 't.date :${1:title}
 
     $0'
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -3422,6 +3539,7 @@ children:
   expansion: 't.datetime :${1:title}
 
     $0'
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -3439,6 +3557,7 @@ children:
     ${6:2}}}
 
     $0'
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -3455,6 +3574,7 @@ children:
   expansion: 't.float :${1:title}
 
     $0'
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -3471,6 +3591,7 @@ children:
   expansion: 't.integer :${1:title}
 
     $0'
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -3487,6 +3608,7 @@ children:
   expansion: 't.binary integer :lock_version, :null => false, :default => 0
 
     $0'
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -3504,6 +3626,7 @@ children:
     }}}
 
     $0'
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -3520,6 +3643,7 @@ children:
   expansion: 't.string :${1:title}
 
     $0'
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -3536,6 +3660,7 @@ children:
   expansion: 't.text :${1:title}
 
     $0'
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -3552,6 +3677,7 @@ children:
   expansion: 't.time :${1:title}
 
     $0'
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -3568,6 +3694,7 @@ children:
   expansion: 't.timestamp :${1:title}
 
     $0'
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -3584,6 +3711,7 @@ children:
   expansion: 't.timestamps
 
     $0'
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -3600,6 +3728,7 @@ children:
   expansion: 't.change :${1:name}${2:, :${3:string}${4:, :${5:limit} => ${6:80}}}
 
     t.$0'
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -3616,6 +3745,7 @@ children:
   expansion: 't.rename :${1:old_column_name}, :${2:new_column_name}
 
     t.$0'
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -3630,6 +3760,7 @@ children:
     prefix_values: [fina]
   displayName: find(:all)
   expansion: find(:all, :conditions => ['${3:field} = ?', ${5:true}])
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -3644,6 +3775,7 @@ children:
     prefix_values: [finf]
   displayName: find(:first)
   expansion: find(:first, :conditions => ['${3:field} = ?', ${5:true}])
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -3658,6 +3790,7 @@ children:
     prefix_values: [finl]
   displayName: find(:last)
   expansion: find(:last, :conditions => ['${3:field} = ?', ${5:true}])
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -3672,6 +3805,7 @@ children:
     prefix_values: [fini]
   displayName: find(id)
   expansion: find(${1:id})
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -3687,6 +3821,7 @@ children:
   displayName: find_each
   expansion: "find_each(:conditions => {:${2:field} => ${3:true}}) do |${TM_CURRENT_WORD}|\n\
     \  $0\nend"
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -3702,6 +3837,7 @@ children:
   displayName: find_in_batches
   expansion: "find_in_batches(:conditions => {:${2:field} => ${3:true}}) do |${TM_CURRENT_WORD}s|\n\
     \  ${TM_CURRENT_WORD}s.each do |${TM_CURRENT_WORD}|\n    $0\n  end\nend"
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -3716,6 +3852,7 @@ children:
     prefix_values: [bt]
   displayName: belongs_to
   expansion: belongs_to :${1:object}, :class_name => "${1}", :foreign_key => "${1}_id"
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -3730,6 +3867,7 @@ children:
     prefix_values: [habtm]
   displayName: has_and_belongs_to_many
   expansion: has_and_belongs_to_many :${1:object}, :join_table => "${3:table_name}", :foreign_key => "${1}_id"
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -3744,6 +3882,7 @@ children:
     prefix_values: [hm]
   displayName: has_many
   expansion: has_many :${1:object}s, :class_name => "${1}", :foreign_key => "${4:reference}_id"
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -3758,6 +3897,7 @@ children:
     prefix_values: [hmt]
   displayName: has_many (through)
   expansion: has_many :${1:objects}, :through => :${2:join_association}, :source => :${2}_table_foreign_key_to_${1}_table
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -3772,6 +3912,7 @@ children:
     prefix_values: [hmd]
   displayName: has_many :dependent => :destroy
   expansion: has_many :${1:object}s, :class_name => "${1}", :foreign_key => "${4:reference}_id", :dependent => :destroy$0
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -3786,6 +3927,7 @@ children:
     prefix_values: [ho]
   displayName: has_one
   expansion: has_one :${1:object}, :class_name => "${1}", :foreign_key => "${1}_id"
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -3800,6 +3942,7 @@ children:
     prefix_values: [vaoif]
   displayName: validates_acceptance_of if (vaoif)
   expansion: validates_acceptance_of :${1:terms}, :accept => '${1}', :message => '${6:You must accept the terms of service}', :if => proc { |{7:obj}| ${7}.${8:condition?} }
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -3814,6 +3957,7 @@ children:
     prefix_values: [vao]
   displayName: validates_acceptance_of (vao)
   expansion: validates_acceptance_of :${1:terms}, :accept => '${1}', :message => '${6:You must accept the terms of service}'
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -3828,6 +3972,7 @@ children:
     prefix_values: [va]
   displayName: validates_associated (va)
   expansion: validates_associated :${1:attribute}, :on => :${3:create}
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -3842,6 +3987,7 @@ children:
     prefix_values: [vaif]
   displayName: validates_associated if (vaif)
   expansion: validates_associated :${1:attribute}, :on => :${3:create}, :if => proc { |obj| ${5:obj.condition?} }
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -3856,6 +4002,7 @@ children:
     prefix_values: [vc]
   displayName: validates_confirmation_of (vc)
   expansion: validates_confirmation_of :${1:attribute}, :on => :${3:create}, :message => '${4:should match confirmation}'
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -3870,6 +4017,7 @@ children:
     prefix_values: [vcif]
   displayName: validates_confirmation_of if (vcif)
   expansion: validates_confirmation_of :${1:attribute}, :on => :${3:create}, :message => '${4:should match confirmation}'}, :if => proc { |obj| ${5:obj.condition?} }
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -3884,6 +4032,7 @@ children:
     prefix_values: [ve]
   displayName: validates_exclusion_of (ve)
   expansion: validates_exclusion_of :${1:attribute}, :in => %w( ${4:mov avi} ), :on => :${5:create}, :message => '${6:extension %s is not allowed}'
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -3898,6 +4047,7 @@ children:
     prefix_values: [vfif]
   displayName: validates_format_of if (vfif)
   expansion: validates_format_of :${1:attribute}, :with => /${2:^[wd]+$}/, :on => :${5:create}, :message => '${6:is invalid}', :if => proc { |obj| ${7:obj.condition?} }
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -3912,6 +4062,7 @@ children:
     prefix_values: [vf]
   displayName: validates_format_of (vf)
   expansion: validates_format_of :${1:attribute}, :with => /${2:^[wd]+$}/, :on => :${5:create}, :message => '${6:is invalid}'
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -3926,6 +4077,7 @@ children:
     prefix_values: [viif]
   displayName: validates_inclusion_of if
   expansion: validates_inclusion_of :${1:attribute}, :in => %w( ${4:mov avi} ), :on => :${5:create}, :message => '${6:extension %s is not included in the list}', :if => proc { |obj| ${7:obj.condition?} }
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -3940,6 +4092,7 @@ children:
     prefix_values: [vi]
   displayName: validates_inclusion_of
   expansion: validates_inclusion_of :${1:attribute}, :in => %w( ${4:mov avi} ), :on => :${5:create}, :message => '${6:extension %s is not included in the list}'
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -3954,6 +4107,7 @@ children:
     prefix_values: [vl]
   displayName: validates_length_of
   expansion: validates_length_of :${1:attribute}, :within => ${2:3..20}, :on => :${4:create}, :message => '${5:must be present}'
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -3968,6 +4122,7 @@ children:
     prefix_values: [vlif]
   displayName: validates_length_of if
   expansion: validates_length_of :${1:attribute}, :within => ${2:3..20}, :on => :${4:create}, :message => '${5:must be present}', :if => proc { |obj| ${6:obj.condition?} }
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -3982,6 +4137,7 @@ children:
     prefix_values: [vn]
   displayName: validates_numericality_of
   expansion: validates_numericality_of :${1:attribute}, :on => :${3:create}, :message => '${4:is not a number}'
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -3996,6 +4152,7 @@ children:
     prefix_values: [vnif]
   displayName: validates_numericality_of if
   expansion: validates_numericality_of :${1:attribute}, :on => :${3:create}, :message => '${4:is not a number}', :if => proc { |obj| ${5:obj.condition?} }
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -4010,6 +4167,7 @@ children:
     prefix_values: [vp]
   displayName: validates_presence_of
   expansion: validates_presence_of :${1:attribute}, :on => :${3:create}, :message => "${4:can't be blank}"
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -4024,6 +4182,7 @@ children:
     prefix_values: [vpif]
   displayName: validates_presence_of if
   expansion: validates_exclusion_of :${1:attribute}, :in => %w( ${4:mov avi} ), :on => :${5:create}, :message => '${6:extension %s is not allowed}', :if => proc { |obj| ${5:obj.condition?} }
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -4038,6 +4197,7 @@ children:
     prefix_values: [vu]
   displayName: validates_uniqueness_of
   expansion: validates_uniqueness_of :${1:attribute}, :on => :${3:create}, :message => '${4:must be unique}'
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -4052,6 +4212,7 @@ children:
     prefix_values: [vuif]
   displayName: validates_uniqueness_of if
   expansion: validates_uniqueness_of :${1:attribute}, :on => :${3:create}, :message => '${4:must be unique}'}, :if => proc { |obj| ${6:obj.condition?} }
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -4066,6 +4227,7 @@ children:
     prefix_values: [hide]
   displayName: page.hide (*ids)
   expansion: page.hide "${2:id(s)}"
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -4080,6 +4242,7 @@ children:
     prefix_values: [ins]
   displayName: page.insert_html (position, id, partial)
   expansion: page.insert_html :${1:top}, "${3:id}", :partial => "${5:template}"
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -4094,6 +4257,7 @@ children:
     prefix_values: [rep]
   displayName: page.replace (id, partial)
   expansion: page.replace "${2:id}", :partial => "${4:template}"
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -4108,6 +4272,7 @@ children:
     prefix_values: [reph]
   displayName: page.replace_html (id, partial)
   expansion: page.replace_html "${2:id}", :partial => "${4:template}"
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -4122,6 +4287,7 @@ children:
     prefix_values: [show]
   displayName: page.show (*ids)
   expansion: page.show "${2:id(s)}"
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -4136,6 +4302,7 @@ children:
     prefix_values: [tog]
   displayName: page.toggle (*ids)
   expansion: page.toggle "${2:id(s)}"
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -4150,6 +4317,7 @@ children:
     prefix_values: [vis]
   displayName: page.visual_effect (effect, id)
   expansion: page.visual_effect :${1:toggle_slide}, "${3:DOM ID}"
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -4164,6 +4332,7 @@ children:
     prefix_values: [ra]
   displayName: render (action)
   expansion: render :action => '${1:action}'
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -4178,6 +4347,7 @@ children:
     prefix_values: [ral]
   displayName: render (action, layout)
   expansion: render :action => '${1:action}', :layout => '${2:layoutname}'
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -4192,6 +4362,7 @@ children:
     prefix_values: [rf]
   displayName: render (file)
   expansion: render :file => '${1:filepath}'
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -4206,6 +4377,7 @@ children:
     prefix_values: [rfu]
   displayName: render (file, use_full_path)
   expansion: render :file => '${1:filepath}', :use_full_path => ${2:false}
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -4220,6 +4392,7 @@ children:
     prefix_values: [ri]
   displayName: render (inline)
   expansion: render :inline => '${1:<%= "hello" %>}'
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -4234,6 +4407,7 @@ children:
     prefix_values: [ril]
   displayName: render (inline, locals) (ril)
   expansion: render :inline => '${1:<%= "hello" %>}', :locals => { ${2::name} => '${3:value}'$4 }
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -4248,6 +4422,7 @@ children:
     prefix_values: [rit]
   displayName: render (inline, type) (rit)
   expansion: render :inline => '${1:<%= "hello" %>}', :type => ${2::rxml}
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -4262,6 +4437,7 @@ children:
     prefix_values: [rl]
   displayName: render (layout)
   expansion: render :layout => '${1:layoutname}'
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -4276,6 +4452,7 @@ children:
     prefix_values: [rn]
   displayName: render (nothing)
   expansion: render :nothing => '${1:true}'
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -4290,6 +4467,7 @@ children:
     prefix_values: [rns]
   displayName: render (nothing, status)
   expansion: render :nothing => '${1:true}', :status => ${2:401}
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -4304,6 +4482,7 @@ children:
     prefix_values: [rp]
   displayName: render (partial) (rp)
   expansion: render :partial => '${1:item}'
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -4318,6 +4497,7 @@ children:
     prefix_values: [rpc]
   displayName: render (partial, collection) (rpc)
   expansion: render :partial => '${1:item}', :collection => @$1s
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -4332,6 +4512,7 @@ children:
     prefix_values: [rpl]
   displayName: render (partial, locals) (rpl)
   expansion: render :partial => '${1:item}', :locals => { :$1 => @${1}$0 }
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -4346,6 +4527,7 @@ children:
     prefix_values: [rpo]
   displayName: render (partial, object) (rpo)
   expansion: render :partial => '${1:item}', :object => @$1
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -4360,6 +4542,7 @@ children:
     prefix_values: [rps]
   displayName: render (partial, status) (rps)
   expansion: render :partial => '${1:item}', :status => ${2:500}
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -4374,6 +4557,7 @@ children:
     prefix_values: [rt]
   displayName: render (text)
   expansion: render :text => '${1:text to render}'
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -4388,6 +4572,7 @@ children:
     prefix_values: [rtl]
   displayName: render (text, layout)
   expansion: render :text => '${1:text to render}', :layout => '${2:layoutname}'
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -4402,6 +4587,7 @@ children:
     prefix_values: [rtlt]
   displayName: render (text, layout=>true)
   expansion: render :text => '${1:text to render}', :layout => '${2:true}'
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -4416,6 +4602,7 @@ children:
     prefix_values: [rts]
   displayName: render (text, status)
   expansion: render :text => '${1:text to render}', :status => ${2:401}
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -4430,6 +4617,7 @@ children:
     prefix_values: [ru]
   displayName: render (update)
   expansion: "render :update do |${2:page}|\n  $2.$0\nend"
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -4444,6 +4632,7 @@ children:
     prefix_values: [lia]
   displayName: link_to (action)
   expansion: link_to "${1:link text...}", :action => "${2:index}"
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -4458,6 +4647,7 @@ children:
     prefix_values: [liai]
   displayName: link_to (action, id)
   expansion: link_to "${1:link text...}", :action => "${2:index}", :id => ${3:@item}
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -4472,6 +4662,7 @@ children:
     prefix_values: [lic]
   displayName: link_to (controller)
   expansion: link_to "${1:link text...}", :controller => "${2:items}"
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -4486,6 +4677,7 @@ children:
     prefix_values: [lica]
   displayName: link_to (controller, action)
   expansion: link_to "${1:link text...}", :controller => "${2:items}", :action => ${3:@index}
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -4500,6 +4692,7 @@ children:
     prefix_values: [licai]
   displayName: link_to (controller, action, id)
   expansion: link_to "${1:link text...}", :controller => "${2:items}", :action => ${3:@index}, :id => ${4:@item}
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -4514,6 +4707,7 @@ children:
     prefix_values: [linpp]
   displayName: link_to (nested path plural)
   expansion: link_to "${2:link text...}", ${10:parent}_${11:child}_path(${12:@}${10})
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -4528,6 +4722,7 @@ children:
     prefix_values: [linp]
   displayName: link_to (nested path)
   expansion: link_to "${2:link text...}", ${12:parent}_${13:child}_path(${14:@}${12}, ${16:@}${13})
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -4542,6 +4737,7 @@ children:
     prefix_values: [lipp]
   displayName: link_to (path plural)
   expansion: link_to "${2:link text...}", ${4:model}s_path
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -4556,6 +4752,7 @@ children:
     prefix_values: [lip]
   displayName: link_to (path)
   expansion: link_to "${2:link text...}", ${12:model}_path(${13:@}${12})
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -4570,6 +4767,7 @@ children:
     prefix_values: [lim]
   displayName: link_to model
   expansion: link_to ${1:model}.${2:name}, ${1}_path($1)
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -4584,6 +4782,7 @@ children:
     prefix_values: [rea]
   displayName: redirect_to (action)
   expansion: redirect_to action => "${1:index}"
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -4598,6 +4797,7 @@ children:
     prefix_values: [reai]
   displayName: redirect_to (action, id)
   expansion: redirect_to :action => "${1:index}", :id => ${0:@item}
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -4612,6 +4812,7 @@ children:
     prefix_values: [rec]
   displayName: redirect_to (controller)
   expansion: redirect_to :controller => "${1:items}"
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -4626,6 +4827,7 @@ children:
     prefix_values: [reca]
   displayName: redirect_to (controller, action)
   expansion: redirect_to :controller => "${1:items}", :action => ${2:list}
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -4640,6 +4842,7 @@ children:
     prefix_values: [recai]
   displayName: redirect_to (controller, action, id)
   expansion: redirect_to :controller => "${1:items}", :action => ${2:show}, :id => ${0:@item}
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -4654,6 +4857,7 @@ children:
     prefix_values: [renpp]
   displayName: redirect_to (nested path plural)
   expansion: redirect_to(${10:parent}_${11:child}_path(${12:@}${10}))
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -4668,6 +4872,7 @@ children:
     prefix_values: [renp]
   displayName: redirect_to (nested path)
   expansion: redirect_to(${12:parent}_${13:child}_path(${14:@}${12}, ${16:@}${13}))
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -4682,6 +4887,7 @@ children:
     prefix_values: [repp]
   displayName: redirect_to (path plural)
   expansion: redirect_to(${10:model}s_path)
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -4696,6 +4902,7 @@ children:
     prefix_values: [rep]
   displayName: redirect_to (path)
   expansion: redirect_to(${12:model}_path(${13:@}${12}))
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -4710,6 +4917,7 @@ children:
     prefix_values: [reb]
   displayName: redirect_to :back
   expansion: redirect_to :back
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -4724,6 +4932,7 @@ children:
     prefix_values: [mapca]
   displayName: map.catch_all
   expansion: ${1:map}.catch_all "*${2:anything}", :controller => "${3:default}", :action => "${4:error}"\n
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -4738,6 +4947,7 @@ children:
     prefix_values: [map]
   displayName: map.named_route
   expansion: ${1:map}.${2:connect} '${3::controller/:action/:id}'
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -4752,6 +4962,7 @@ children:
     prefix_values: [mapr]
   displayName: map.resource
   expansion: "${1:map}.resource :${2:resource} do |${2}|\n  $0\nend"
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -4766,6 +4977,7 @@ children:
     prefix_values: [maprs]
   displayName: map.resources
   expansion: "${1:map}.resources :${2:resource} do |${2}|\n  $0\nend"
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -4781,6 +4993,7 @@ children:
   displayName: map.with_options
   expansion: "${1:map}.with_options :${2:controller} => '${3:thing}' do |${3}|\n \
     \ $0\nend\n"
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -4795,6 +5008,7 @@ children:
     prefix_values: [alias]
   displayName: alias_attribute
   expansion: alias_attribute :${1:new_name}, :${2:old_name}
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -4809,6 +5023,7 @@ children:
     prefix_values: [crw]
   displayName: cattr_accessor
   expansion: cattr_accessor :${1:attr_names}
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -4823,6 +5038,7 @@ children:
     prefix_values: [config.gem]
   displayName: config.gem
   expansion: config.gem "${1:name}", :lib => "${1}", :version => "${6:>= 1.0.0}", :source => "${8:http://gemcutter.org}"
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -4837,6 +5053,7 @@ children:
     prefix_values: [conf]
   displayName: content_for
   expansion: "<% content_for :${1:yield_label_in_layout} do -%>\n\t$0\n<% end -%>"
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -4853,6 +5070,7 @@ children:
   expansion: "class ${1:Model}Controller < ApplicationController\n\tbefore_filter\
     \ :find_${2:model}\n\n\t$0\n\n\tprivate\n\tdef find_${2}\n\t\t@$2 = $1.find(params[:id])\
     \ if params[:id]\n\tend\nend"
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -4868,6 +5086,7 @@ children:
   displayName: Create functional test class
   expansion: "require File.dirname(__FILE__) + '/../test_helper'\n\nclass ${1:Model}ControllerTest\
     \ < ActionController::TestCase\n\tdeft$0\nend\n"
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -4907,6 +5126,7 @@ children:
     \n    respond_to do |wants|\n      wants.html { redirect_to(${1}s_url) }\n   \
     \   wants.xml  { head :ok }\n    end\n  end\n\n  private\n    def find_${1}\n\
     \      @${1} = ${1:Model}.find(params[:id])\n    end\n\nend\n"
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -4925,6 +5145,7 @@ children:
     \ after_destroy(${1})\n    expire_cache(${1})\n  end\n\n  private\n\n    def expire_cache(${1})\n\
     \      expire_page ${1}s_path \n      expire_page ${1}_path(${1})\n    end\n\n\
     end"
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -4944,6 +5165,7 @@ children:
     \ :status => :created, :location => @$1 }\n    else\n      wants.html { render\
     \ :action => \"new\" }\n      wants.xml { render :xml => @$1.errors, :status =>\
     \ :unprocessable_entity }\n    end\n  end\nend\n"
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -4959,6 +5181,7 @@ children:
   displayName: def test_should_get_action
   expansion: "def test_should_get_${1:action}\n  @${3:model} = $3s(:${5:fixture_name})\n\
     \  get :${1}, :id => @$3.to_param\n  assert_response :success\n  $0\nend"
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -4975,6 +5198,7 @@ children:
   expansion: "def test_should_post_${1:action}\n  @${2:model} = ${2:model}s(:${5:fixture_name})\n\
     \  post :${1}, :id => @${2:model}.to_param, :${2:model} => { $0 }\n  assert_response\
     \ :redirect\n\nend"
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -4989,6 +5213,7 @@ children:
     prefix_values: [dc]
   displayName: default_scope
   expansion: default_scope :${1:order} => 'created_at DESC', :joins => :${2:table}
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -5003,6 +5228,7 @@ children:
     prefix_values: [end]
   displayName: end (ERB)
   expansion: <% end -%>
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -5018,6 +5244,7 @@ children:
   displayName: for loop in rhtml
   expansion: "<% if !${1:list}.blank? %>\n  <% for ${2:item} in ${1} %>\n    $3\n\
     \  <% end %>\n<% else %>\n  $4\n<% end %>\n"
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -5032,6 +5259,7 @@ children:
     prefix_values: [layout]
   displayName: layout
   expansion: layout "${1:template_name}", :only => [:${2:action}, :${3:action}], :except => [:${4:action}, :${5:action}]
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -5046,6 +5274,7 @@ children:
     prefix_values: [mp]
   displayName: map(&:sym_proc)
   expansion: map(&:${1:id})
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -5060,6 +5289,7 @@ children:
     prefix_values: [mrw]
   displayName: mattr_accessor
   expansion: mattr_accessor :${1:attr_names}
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -5074,6 +5304,7 @@ children:
     prefix_values: [ncl]
   displayName: named_scope lambda
   expansion: named_scope :${1:name}, lambda { |${2:param}| { :conditions => ['${5:field} = ?', $2] } }\n
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -5088,6 +5319,7 @@ children:
     prefix_values: [nc]
   displayName: named_scope
   expansion: named_scope :${1:name}, :joins => :${3:table}, :conditions => ['${6:field} = ?', ${7:true}]\n
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -5102,6 +5334,7 @@ children:
     prefix_values: [flash]
   displayName: flash[...]
   expansion: flash[:${1:notice}] = "${2:Successfully created...}"$0
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -5115,6 +5348,7 @@ children:
   customProperties: null
   displayName: params[...]
   expansion: params[:${1:id}]
+  input: [none]
   inputPath: null
   keyBindingMap:
     !!com.aptana.scripting.model.Platform 'ALL': [CTRL+P]
@@ -5129,6 +5363,7 @@ children:
   customProperties: null
   displayName: session[...]
   expansion: session[:${1:user}]
+  input: [none]
   inputPath: null
   keyBindingMap:
     !!com.aptana.scripting.model.Platform 'ALL': [CTRL+J]
@@ -5144,6 +5379,7 @@ children:
     prefix_values: [returning]
   displayName: returning do |variable| ... end
   expansion: "returning ${1:variable} do |${2:v}|\n  $0\nend"
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -5158,6 +5394,7 @@ children:
     prefix_values: [sb]
   displayName: scoped_by
   expansion: scoped_by_${1:attribute}(${2:id})
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -5172,6 +5409,7 @@ children:
     prefix_values: [slt]
   displayName: stylesheet_link_tag
   expansion: ${TM_RAILS_TEMPLATE_START_RUBY_EXPR}stylesheet_link_tag ${1::all}, :cache => ${3:true}$TM_RAILS_TEMPLATE_END_RUBY_EXPR
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -5186,6 +5424,7 @@ children:
     prefix_values: [st]
   displayName: submit_tag
   expansion: ${TM_RAILS_TEMPLATE_START_RUBY_EXPR}submit_tag "${1:Save changes}", :id => "${3:submit}", :name => "$3", :class => "${7:form_}$3", :disabled => ${9:false}, :disable_with => "${11:Please wait...}"${TM_RAILS_TEMPLATE_END_RUBY_EXPR}
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -5200,6 +5439,7 @@ children:
     prefix_values: [ist]
   displayName: image_submit_tag
   expansion: ${TM_RAILS_TEMPLATE_START_RUBY_EXPR}image_submit_tag("${1:agree}.${2:png}", :id => "${1}", :name => "${1}", :class => "${1}-button", :disabled => ${10:false})${TM_RAILS_TEMPLATE_END_RUBY_EXPR}
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -5214,6 +5454,7 @@ children:
     prefix_values: [jit]
   displayName: javascript_include_tag
   expansion: ${TM_RAILS_TEMPLATE_START_RUBY_EXPR}javascript_include_tag ${1::all}, :cache => ${3:true}${TM_RAILS_TEMPLATE_END_RUBY_EXPR}
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -5228,6 +5469,7 @@ children:
     prefix_values: [art]
   displayName: assert_redirected_to
   expansion: assert_redirected_to :action => "${1:index}"
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -5242,6 +5484,7 @@ children:
     prefix_values: [asre]
   displayName: assert_response
   expansion: assert_response :${1:success}, @response.body$0
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -5256,6 +5499,7 @@ children:
     prefix_values: [test]
   displayName: test do...end
   expansion: "test \"${1:something interesting}\" do\n  $0\nend"
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -5273,6 +5517,7 @@ children:
     :text => "use HTTP-POST"}
 
     '
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -5290,6 +5535,7 @@ children:
     => {:action => ''${2:index}''}
 
     '
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -5304,6 +5550,7 @@ children:
     prefix_values: [fi]
   displayName: <%= Fixtures.identify(:symbol) %>
   expansion: ${TM_RAILS_TEMPLATE_START_RUBY_EXPR}Fixtures.identify(:${1:name})${TM_RAILS_TEMPLATE_END_RUBY_EXPR}$0
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -5318,6 +5565,7 @@ children:
     prefix_values: [xput]
   displayName: xhr put
   expansion: xhr :put, :${1:update}, :id => ${2:1}, :${3:object} => { $4 }$0
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -5332,6 +5580,7 @@ children:
     prefix_values: [xdelete]
   displayName: xhr delete
   expansion: xhr :delete, :${1:destroy}, :id => ${2:1}$0
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -5346,6 +5595,7 @@ children:
     prefix_values: [xget]
   displayName: xhr get
   expansion: xhr :get, :${1:show}, :id => ${3:1}$0
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -5360,6 +5610,7 @@ children:
     prefix_values: [xpost]
   displayName: xhr post
   expansion: xhr :post, :${1:create}, :${2:object} => { $3 }
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -5368,14 +5619,34 @@ children:
   runType: current_thread
   scope: source.ruby.rails
   workingDirectoryType: UNDEFINED
-- !!com.aptana.scripting.model.TemplateElement {async: false, customProperties: null,
-  displayName: HTML ERB Template, filetype: '*.html.erb', inputPath: null, keyBindingMap: null,
-  outputPath: null, outputType: discard, path: templates/templates.rb, runType: current_thread,
-  scope: null, workingDirectoryType: UNDEFINED}
-- !!com.aptana.scripting.model.TemplateElement {async: false, customProperties: null,
-  displayName: RHTML Template, filetype: '*.rhtml', inputPath: null, keyBindingMap: null,
-  outputPath: null, outputType: discard, path: templates/templates.rb, runType: current_thread,
-  scope: null, workingDirectoryType: UNDEFINED}
+- !!com.aptana.scripting.model.TemplateElement
+  async: false
+  customProperties: null
+  displayName: HTML ERB Template
+  filetype: '*.html.erb'
+  input: []
+  inputPath: null
+  keyBindingMap: null
+  outputPath: null
+  outputType: discard
+  path: templates/templates.rb
+  runType: current_thread
+  scope: null
+  workingDirectoryType: UNDEFINED
+- !!com.aptana.scripting.model.TemplateElement
+  async: false
+  customProperties: null
+  displayName: RHTML Template
+  filetype: '*.rhtml'
+  input: []
+  inputPath: null
+  keyBindingMap: null
+  outputPath: null
+  outputType: discard
+  path: templates/templates.rb
+  runType: current_thread
+  scope: null
+  workingDirectoryType: UNDEFINED
 copyright: 'Copyright 2010 Aptana Inc. Distributed under the MIT license.
 
 
