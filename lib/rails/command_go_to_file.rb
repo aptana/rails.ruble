@@ -56,7 +56,8 @@ class CommandGoToFile
         ext = current_file.default_extension_for(:view)
         partial = File.join(current_file.rails_root, 'app', 'views', modules, "_#{partial_name}#{ext}")
         Ruble.open(partial)
-
+        nil # Don't show a tooltip
+        
       # Example: render :action => 'login'
       when /render[\s\(].*:action\s*=>\s*['"](.+?)['"]/
         action = $1
@@ -64,6 +65,7 @@ class CommandGoToFile
           current_file.buffer.line_number = 0
           if search = current_file.buffer.find { /def\s+#{action}\b/ }
             Ruble.open(current_file, search[0])
+            nil # Don't show a tooltip
           end
         else
           return "Don't know where to go when rendering an action from outside a controller"
@@ -94,6 +96,7 @@ class CommandGoToFile
 
         if search = controller_file.buffer.find(:direction => :backward) { /def\s+#{action}\b/ }
           Ruble.open(controller_file, search[0])
+          nil # Don't show a tooltip
         else
           return "Couldn't find the #{action} action inside '#{controller_file.basename}'"
         end
@@ -103,9 +106,11 @@ class CommandGoToFile
         javascript = $1
         if javascript =~ %r{^https?://}
           Ruble::Editor.open javascript
+          nil # Don't show a tooltip
         else
           full_path = File.join(current_file.rails_root, 'public', javascript)
           Ruble.open full_path
+          nil # Don't show a tooltip
         end
 
       # Example: <%= javascript_include_tag 'general' %>
@@ -117,6 +122,7 @@ class CommandGoToFile
           # If there is no leading slash, assume it's a js from the public/javascripts dir
           public_file = javascript[0..0] == "/" ? javascript[1..-1] : "javascripts/#{javascript}"
           Ruble.open File.join(current_file.rails_root, 'public', public_file)
+          nil # Don't show a tooltip
         else
           "No javascript identified"
         end
@@ -127,9 +133,11 @@ class CommandGoToFile
         stylesheet = $1
         if stylesheet =~ %r{^https?://}
           Ruble::Editor.open stylesheet
+          nil # Don't show a tooltip
         else
           full_path = File.join(current_file.rails_root, 'public', stylesheet[1..-1])
           Ruble.open full_path
+          nil # Don't show a tooltip
         end
 
       # Example: <%= stylesheet_link_tag 'application' %>
@@ -140,6 +148,7 @@ class CommandGoToFile
           # If there is no leading slash, assume it's a js from the public/javascripts dir
           public_file = stylesheet[0..0] == "/" ? stylesheet[1..-1] : "stylesheets/#{stylesheet}"
           Ruble.open File.join(current_file.rails_root, 'public', public_file)
+          nil # Don't show a tooltip
         else
           return "No stylesheet identified"
         end
