@@ -38,19 +38,19 @@ class Generator
     list = nil
 
     FileUtils.chdir(RailsPath.new.rails_root) do
-      if File.exists?("script/rails")
-        output = ruby 'script/rails generate'
+      if File.exists?("script/generate")
+        output = ruby 'script/generate'
+        output = output.grep(/^  [A-Z]/).to_s.gsub!("  ", "")
+        output = "" if output.nil?
+        list = output.split(/[,\s]+/).reject {|f| f =~ /:/}
+      else
+        output = ruby 'rails generate'
         output = output.grep(/^  [A-Za-z]/).to_s.gsub!("  ", "")
         output = "" if output.nil?
         list = output.split(/\n/)
         list.each do |name|
           name.strip!
         end
-      else
-        output = ruby 'script/generate'
-        output = output.grep(/^  [A-Z]/).to_s.gsub!("  ", "")
-        output = "" if output.nil?
-        list = output.split(/[,\s]+/).reject {|f| f =~ /:/}
       end
     end
     list
