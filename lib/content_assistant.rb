@@ -45,7 +45,7 @@ class ContentAssistant
   end
   
   def parser_config
-    org.jrubyparser.parser.ParserConfiguration.new(0, org.jrubyparser.CompatVersion::RUBY1_8)
+    org.jrubyparser.parser.ParserConfiguration.new(0, org.jrubyparser.CompatVersion::BOTH)
   end
   
   def get_children_recursive(parent, type)
