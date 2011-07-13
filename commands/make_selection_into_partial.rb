@@ -12,7 +12,7 @@ command "Create Partial From Selection" do |cmd|
   cmd.scope = "source.ruby.rails, text.html.ruby, text.haml"
   cmd.output = :replace_selection
   cmd.input = :selection, :line
-  cmd.key_binding = "CONTROL+H"
+  #cmd.key_binding = "M4+H"
   cmd.invoke do |context|
     require 'rails_bundle_tools'
     

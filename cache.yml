@@ -1892,29 +1892,26 @@ children:
   displayName: Rails
   path: bundle.rb
   scope: source.ruby, project.rails, source.yaml, text.haml, text.html.ruby
-- !!com.aptana.scripting.model.EnvironmentElement {customProperties: null, displayName: environment-10d62414-3d05-4d0c-a407-909057edb1a4,
+- !!com.aptana.scripting.model.EnvironmentElement {customProperties: null, displayName: environment-b39256ac-5dcd-4cfe-9d47-54088c3edda1,
   path: bundle.rb, scope: text.html.ruby}
-- !!com.aptana.scripting.model.EnvironmentElement {customProperties: null, displayName: environment-57635b62-b0b6-4bdc-8fe9-5b13af966ddc,
+- !!com.aptana.scripting.model.EnvironmentElement {customProperties: null, displayName: environment-f8205ca8-018e-4062-95fe-f75f23caf923,
   path: bundle.rb, scope: text.haml}
 - !!com.aptana.scripting.model.SmartTypingPairsElement
   customProperties: null
-  displayName: smart_typing_pairs-87db36a5-e7b0-41dc-ae34-6ede8392f425
-  pairs: [&id002 '%', *id002, &id003 '"', *id003, &id004 (, &id005 ), &id006 '{',
-    &id007 '}', &id008 '[', &id009 ']', &id010 <, &id011 '>']
+  displayName: smart_typing_pairs-ffbeca8f-504c-42e2-b19b-4e7a9718a3dd
+  pairs: ['%', '%', '"', '"', (, ), '{', '}', '[', ']', <, '>']
   path: bundle.rb
   scope: text.html.ruby
 - !!com.aptana.scripting.model.SmartTypingPairsElement
   customProperties: null
-  displayName: smart_typing_pairs-c52e11df-e50d-4a28-940c-74b14022c51a
-  pairs: [*id002, *id002, *id003, *id003, *id004, *id005, *id006, *id007, *id008,
-    *id009, *id010, *id011, &id012 '''', *id012]
+  displayName: smart_typing_pairs-2ad3bfe1-48de-4bc9-864b-7158e3805a6b
+  pairs: ['%', '%', '"', '"', (, ), '{', '}', '[', ']', <, '>', '''', '''']
   path: bundle.rb
   scope: text.html.ruby meta.tag
 - !!com.aptana.scripting.model.SmartTypingPairsElement
   customProperties: null
-  displayName: smart_typing_pairs-9d4c7ab7-4f7c-4344-9b20-8666e53b23e5
-  pairs: [*id003, *id003, *id004, *id005, *id006, *id007, *id008, *id009, *id002,
-    *id002, *id010, *id011]
+  displayName: smart_typing_pairs-b8bff1f0-5351-473a-8982-0c47fc50512a
+  pairs: ['"', '"', (, ), '{', '}', '[', ']', '%', '%', <, '>']
   path: bundle.rb
   scope: text.html.ruby meta.tag string
 - !!com.aptana.scripting.model.CommandElement
@@ -2300,8 +2297,7 @@ children:
   displayName: Documentation for Word
   input: [selection, word]
   inputPath: null
-  keyBindingMap:
-    !!com.aptana.scripting.model.Platform 'ALL': [CONTROL+H]
+  keyBindingMap: null
   outputPath: null
   outputType: show_as_html
   path: commands/documentation_for_word.rb
@@ -2497,8 +2493,7 @@ children:
   displayName: Create Partial From Selection
   input: [selection, line]
   inputPath: null
-  keyBindingMap:
-    !!com.aptana.scripting.model.Platform 'ALL': [CONTROL+H]
+  keyBindingMap: null
   outputPath: null
   outputType: replace_selection
   path: commands/make_selection_into_partial.rb
@@ -5655,7 +5650,7 @@ copyright: 'Copyright 2010 Aptana Inc. Distributed under the MIT license.
 
   '
 customProperties: null
-decreaseIndentMarkers: &id013 {}
+decreaseIndentMarkers: &id002 {}
 description: 'Rails bundle for RadRails, based heavily on Dr. Nic''s tmbundle
 
   (http://github.com/drnic/ruby-on-rails-tmbundle), which in turn was
@@ -5666,9 +5661,9 @@ description: 'Rails bundle for RadRails, based heavily on Dr. Nic''s tmbundle
 displayName: Ruby on Rails
 fileTypeRegistry: {'*.rb': source.ruby.rails}
 fileTypes: ['*.rb']
-foldingStartMarkers: *id013
-foldingStopMarkers: *id013
-increaseIndentMarkers: *id013
+foldingStartMarkers: *id002
+foldingStopMarkers: *id002
+increaseIndentMarkers: *id002
 license: null
 licenseUrl: null
 path: bundle.rb
