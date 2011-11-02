@@ -59,14 +59,14 @@ END
     rails_menu.command "Call Generate Script"
     rails_menu.menu "Database" do |db_menu|
       db_menu.command "Migrate to Current"
-      db_menu.command "Migrate to Version..."
+      #db_menu.command "Migrate to Version..."
       db_menu.command "Migrate to Previous Version"
       db_menu.command "Redo Last Migration"
 
       db_menu.separator
 
-      db_menu.command "Load Fixtures (Development DB)"
-      db_menu.command "Load Fixtures (Test DB)"
+      db_menu.command "Load Fixtures to Development DB"
+      db_menu.command "Load Fixtures to Test DB"
 
       db_menu.separator
 
@@ -151,7 +151,7 @@ END
         validations_menu.command "validates_confirmation_of"
         validations_menu.command "validates_confirmation_of if"
         validations_menu.command "validates_exclusion_of"
-        validations_menu.command "validates_exclusion_of if"
+        #validations_menu.command "validates_exclusion_of if"
         validations_menu.command "validates_inclusion_of"
         validations_menu.command "validates_inclusion_of if"
         validations_menu.command "validates_format_of"
@@ -227,18 +227,6 @@ END
       
       view_templates_menu.command "form_for"
       view_templates_menu.command "form_for with errors"
-      view_templates_menu.menu "form_for f.drop-down list" do |for_for_list_menu|
-        for_for_list_menu.command "f.label (ffl)"
-        for_for_list_menu.command "f.text_field (fftf)"
-        for_for_list_menu.command "f.text_area (ffta)"
-        for_for_list_menu.command "f.check_box (ffcb)"
-        for_for_list_menu.command "f.radio_button (ffrb)"
-        for_for_list_menu.command "f.password_field (ffpf)"
-        for_for_list_menu.command "f.hidden_field (ffhf)"
-        for_for_list_menu.command "f.file_field (ffff)"
-        for_for_list_menu.command "f.submit (ffs)"
-        for_for_list_menu.command "f.fields_for (nff)"
-      end
       view_templates_menu.menu "form_for helpers" do |form_for_helpers_menu|
         form_for_helpers_menu.command "form_for label"
         form_for_helpers_menu.command "form_for text_field"
@@ -409,7 +397,7 @@ END
       functional_tests_menu.separator
       functional_tests_menu.command "assert_rjs"
       functional_tests_menu.separator
-      functional_tests_menu.command "assert(var= assigns(:var))"
+      functional_tests_menu.command "assert(var = assigns(:var))"
     end
     rails_menu.menu "Ajax Tests" do |ajax_tests_menu|
       ajax_tests_menu.command "xhr post"
