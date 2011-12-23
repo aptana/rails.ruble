@@ -161,12 +161,6 @@ children:
       path: bundle.rb
       scope: null
     - children: *id001
-      commandName: Migrate to Version...
-      customProperties: null
-      displayName: Migrate to Version...
-      path: bundle.rb
-      scope: null
-    - children: *id001
       commandName: Migrate to Previous Version
       customProperties: null
       displayName: Migrate to Previous Version
@@ -185,15 +179,15 @@ children:
       path: bundle.rb
       scope: null
     - children: *id001
-      commandName: Load Fixtures (Development DB)
+      commandName: Load Fixtures to Development DB
       customProperties: null
-      displayName: Load Fixtures (Development DB)
+      displayName: Load Fixtures to Development DB
       path: bundle.rb
       scope: null
     - children: *id001
-      commandName: Load Fixtures (Test DB)
+      commandName: Load Fixtures to Test DB
       customProperties: null
-      displayName: Load Fixtures (Test DB)
+      displayName: Load Fixtures to Test DB
       path: bundle.rb
       scope: null
     - children: *id001
@@ -600,12 +594,6 @@ children:
         path: bundle.rb
         scope: null
       - children: *id001
-        commandName: validates_exclusion_of if
-        customProperties: null
-        displayName: validates_exclusion_of if
-        path: bundle.rb
-        scope: null
-      - children: *id001
         commandName: validates_inclusion_of
         customProperties: null
         displayName: validates_inclusion_of
@@ -992,72 +980,6 @@ children:
       commandName: form_for with errors
       customProperties: null
       displayName: form_for with errors
-      path: bundle.rb
-      scope: null
-    - children:
-      - children: *id001
-        commandName: f.label (ffl)
-        customProperties: null
-        displayName: f.label (ffl)
-        path: bundle.rb
-        scope: null
-      - children: *id001
-        commandName: f.text_field (fftf)
-        customProperties: null
-        displayName: f.text_field (fftf)
-        path: bundle.rb
-        scope: null
-      - children: *id001
-        commandName: f.text_area (ffta)
-        customProperties: null
-        displayName: f.text_area (ffta)
-        path: bundle.rb
-        scope: null
-      - children: *id001
-        commandName: f.check_box (ffcb)
-        customProperties: null
-        displayName: f.check_box (ffcb)
-        path: bundle.rb
-        scope: null
-      - children: *id001
-        commandName: f.radio_button (ffrb)
-        customProperties: null
-        displayName: f.radio_button (ffrb)
-        path: bundle.rb
-        scope: null
-      - children: *id001
-        commandName: f.password_field (ffpf)
-        customProperties: null
-        displayName: f.password_field (ffpf)
-        path: bundle.rb
-        scope: null
-      - children: *id001
-        commandName: f.hidden_field (ffhf)
-        customProperties: null
-        displayName: f.hidden_field (ffhf)
-        path: bundle.rb
-        scope: null
-      - children: *id001
-        commandName: f.file_field (ffff)
-        customProperties: null
-        displayName: f.file_field (ffff)
-        path: bundle.rb
-        scope: null
-      - children: *id001
-        commandName: f.submit (ffs)
-        customProperties: null
-        displayName: f.submit (ffs)
-        path: bundle.rb
-        scope: null
-      - children: *id001
-        commandName: f.fields_for (nff)
-        customProperties: null
-        displayName: f.fields_for (nff)
-        path: bundle.rb
-        scope: null
-      commandName: form_for f.drop-down list
-      customProperties: null
-      displayName: form_for f.drop-down list
       path: bundle.rb
       scope: null
     - children:
@@ -1823,9 +1745,9 @@ children:
       path: bundle.rb
       scope: null
     - children: *id001
-      commandName: assert(var= assigns(:var))
+      commandName: assert(var = assigns(:var))
       customProperties: null
-      displayName: assert(var= assigns(:var))
+      displayName: assert(var = assigns(:var))
       path: bundle.rb
       scope: null
     commandName: Functional Tests
@@ -1892,25 +1814,25 @@ children:
   displayName: Rails
   path: bundle.rb
   scope: source.ruby, project.rails, source.yaml, text.haml, text.html.ruby
-- !!com.aptana.scripting.model.EnvironmentElement {customProperties: null, displayName: environment-223dba22-ac5b-456f-adb9-281c048e956a,
+- !!com.aptana.scripting.model.EnvironmentElement {customProperties: null, displayName: environment-b1d67508-7e4c-4db6-9c48-84ed66cb398b,
   path: bundle.rb, scope: text.html.ruby}
-- !!com.aptana.scripting.model.EnvironmentElement {customProperties: null, displayName: environment-7aea6e0f-659c-40b5-b07b-b0f1ccd088cd,
+- !!com.aptana.scripting.model.EnvironmentElement {customProperties: null, displayName: environment-db06a71f-4f36-427d-b42f-18d03b7da4ef,
   path: bundle.rb, scope: text.haml}
 - !!com.aptana.scripting.model.SmartTypingPairsElement
   customProperties: null
-  displayName: smart_typing_pairs-da64b238-74be-4747-a14e-ff76c9ceea06
+  displayName: smart_typing_pairs-a4dc2e8c-15d6-4f18-8b1a-09176027944e
   pairs: ['%', '%', '"', '"', (, ), '{', '}', '[', ']', <, '>']
   path: bundle.rb
   scope: text.html.ruby
 - !!com.aptana.scripting.model.SmartTypingPairsElement
   customProperties: null
-  displayName: smart_typing_pairs-562609a1-894b-4a9b-b5c9-0f1b766975a7
+  displayName: smart_typing_pairs-d81e86b2-a783-4216-89ed-c16658aad613
   pairs: ['%', '%', '"', '"', (, ), '{', '}', '[', ']', <, '>', '''', '''']
   path: bundle.rb
   scope: text.html.ruby meta.tag
 - !!com.aptana.scripting.model.SmartTypingPairsElement
   customProperties: null
-  displayName: smart_typing_pairs-0b38642a-41be-42c8-826d-daac9dfc1b07
+  displayName: smart_typing_pairs-7e418a97-7d49-40ce-a006-98ce52902189
   pairs: ['"', '"', (, ), '{', '}', '[', ']', '%', '%', <, '>']
   path: bundle.rb
   scope: text.html.ruby meta.tag string
@@ -3935,7 +3857,7 @@ children:
   async: false
   customProperties:
     prefix_values: [vaoif]
-  displayName: validates_acceptance_of if (vaoif)
+  displayName: validates_acceptance_of if
   expansion: validates_acceptance_of :${1:terms}, :accept => '${1}', :message => '${6:You must accept the terms of service}', :if => proc { |{7:obj}| ${7}.${8:condition?} }
   input: [none]
   inputPath: null
@@ -3950,7 +3872,7 @@ children:
   async: false
   customProperties:
     prefix_values: [vao]
-  displayName: validates_acceptance_of (vao)
+  displayName: validates_acceptance_of
   expansion: validates_acceptance_of :${1:terms}, :accept => '${1}', :message => '${6:You must accept the terms of service}'
   input: [none]
   inputPath: null
@@ -3965,7 +3887,7 @@ children:
   async: false
   customProperties:
     prefix_values: [va]
-  displayName: validates_associated (va)
+  displayName: validates_associated
   expansion: validates_associated :${1:attribute}, :on => :${3:create}
   input: [none]
   inputPath: null
@@ -3980,7 +3902,7 @@ children:
   async: false
   customProperties:
     prefix_values: [vaif]
-  displayName: validates_associated if (vaif)
+  displayName: validates_associated if
   expansion: validates_associated :${1:attribute}, :on => :${3:create}, :if => proc { |obj| ${5:obj.condition?} }
   input: [none]
   inputPath: null
@@ -3995,7 +3917,7 @@ children:
   async: false
   customProperties:
     prefix_values: [vc]
-  displayName: validates_confirmation_of (vc)
+  displayName: validates_confirmation_of
   expansion: validates_confirmation_of :${1:attribute}, :on => :${3:create}, :message => '${4:should match confirmation}'
   input: [none]
   inputPath: null
@@ -4010,7 +3932,7 @@ children:
   async: false
   customProperties:
     prefix_values: [vcif]
-  displayName: validates_confirmation_of if (vcif)
+  displayName: validates_confirmation_of if
   expansion: validates_confirmation_of :${1:attribute}, :on => :${3:create}, :message => '${4:should match confirmation}'}, :if => proc { |obj| ${5:obj.condition?} }
   input: [none]
   inputPath: null
@@ -4025,7 +3947,7 @@ children:
   async: false
   customProperties:
     prefix_values: [ve]
-  displayName: validates_exclusion_of (ve)
+  displayName: validates_exclusion_of
   expansion: validates_exclusion_of :${1:attribute}, :in => %w( ${4:mov avi} ), :on => :${5:create}, :message => '${6:extension %s is not allowed}'
   input: [none]
   inputPath: null
@@ -4040,7 +3962,7 @@ children:
   async: false
   customProperties:
     prefix_values: [vfif]
-  displayName: validates_format_of if (vfif)
+  displayName: validates_format_of if
   expansion: validates_format_of :${1:attribute}, :with => /${2:^[wd]+$}/, :on => :${5:create}, :message => '${6:is invalid}', :if => proc { |obj| ${7:obj.condition?} }
   input: [none]
   inputPath: null
@@ -4055,7 +3977,7 @@ children:
   async: false
   customProperties:
     prefix_values: [vf]
-  displayName: validates_format_of (vf)
+  displayName: validates_format_of
   expansion: validates_format_of :${1:attribute}, :with => /${2:^[wd]+$}/, :on => :${5:create}, :message => '${6:is invalid}'
   input: [none]
   inputPath: null
@@ -4400,7 +4322,7 @@ children:
   async: false
   customProperties:
     prefix_values: [ril]
-  displayName: render (inline, locals) (ril)
+  displayName: render (inline, locals)
   expansion: render :inline => '${1:<%= "hello" %>}', :locals => { ${2::name} => '${3:value}'$4 }
   input: [none]
   inputPath: null
@@ -4415,7 +4337,7 @@ children:
   async: false
   customProperties:
     prefix_values: [rit]
-  displayName: render (inline, type) (rit)
+  displayName: render (inline, type)
   expansion: render :inline => '${1:<%= "hello" %>}', :type => ${2::rxml}
   input: [none]
   inputPath: null
@@ -4475,7 +4397,7 @@ children:
   async: false
   customProperties:
     prefix_values: [rp]
-  displayName: render (partial) (rp)
+  displayName: render (partial)
   expansion: render :partial => '${1:item}'
   input: [none]
   inputPath: null
@@ -4490,7 +4412,7 @@ children:
   async: false
   customProperties:
     prefix_values: [rpc]
-  displayName: render (partial, collection) (rpc)
+  displayName: render (partial, collection)
   expansion: render :partial => '${1:item}', :collection => @$1s
   input: [none]
   inputPath: null
@@ -4505,7 +4427,7 @@ children:
   async: false
   customProperties:
     prefix_values: [rpl]
-  displayName: render (partial, locals) (rpl)
+  displayName: render (partial, locals)
   expansion: render :partial => '${1:item}', :locals => { :$1 => @${1}$0 }
   input: [none]
   inputPath: null
@@ -4520,7 +4442,7 @@ children:
   async: false
   customProperties:
     prefix_values: [rpo]
-  displayName: render (partial, object) (rpo)
+  displayName: render (partial, object)
   expansion: render :partial => '${1:item}', :object => @$1
   input: [none]
   inputPath: null
@@ -4535,7 +4457,7 @@ children:
   async: false
   customProperties:
     prefix_values: [rps]
-  displayName: render (partial, status) (rps)
+  displayName: render (partial, status)
   expansion: render :partial => '${1:item}', :status => ${2:500}
   input: [none]
   inputPath: null
@@ -4580,7 +4502,7 @@ children:
   async: false
   customProperties:
     prefix_values: [rtlt]
-  displayName: render (text, layout=>true)
+  displayName: render (text, layout => true)
   expansion: render :text => '${1:text to render}', :layout => '${2:true}'
   input: [none]
   inputPath: null
