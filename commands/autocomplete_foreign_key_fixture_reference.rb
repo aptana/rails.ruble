@@ -1,6 +1,6 @@
 require 'ruble'
 
-command 'Autocomplete Foreign Key Fixture Reference' do |cmd|
+command t(:autocomplete_foreign_key_fixture) do |cmd|
   cmd.scope = "source.yaml, source.ruby.rails, meta.rails.unit_test, meta.rails.functional_test"
   cmd.input = :selection, :line
   cmd.output = :insert_as_snippet

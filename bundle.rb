@@ -1,85 +1,61 @@
 require 'ruble'
 
 bundle do |bundle|
+  bundle.display_name = t(:bundle_name)
   bundle.author = "Many"
-  bundle.copyright = <<END
-Copyright 2010 Aptana Inc. Distributed under the MIT license.
-
-Portions Copyright 2006 syncPEOPLE, LLC, distributed under the terms of the MIT License.
-END
-
-  bundle.display_name = "Ruby on Rails"
-  bundle.description = <<END
-Rails bundle for RadRails, based heavily on Dr. Nic's tmbundle
-(http://github.com/drnic/ruby-on-rails-tmbundle), which in turn was
-based heavily on the original SyncPeople bundle.
-END
-
+  bundle.copyright = "Copyright 2010 Aptana Inc. Distributed under the MIT license.\nPortions Copyright 2006 syncPEOPLE, LLC, distributed under the terms of the MIT License."
+  bundle.description = "Rails bundle for RadRails, based heavily on Dr. Nic's tmbundle (http://github.com/drnic/ruby-on-rails-tmbundle), which in turn was based heavily on the original SyncPeople bundle."
   bundle.repository = "git://github.com/aptana/rails.ruble.git"
   bundle.file_types['source.ruby.rails'] = "*.rb"
 
-  # most commands install into a dedicated rails menu
-  # See also the alternative, HAML-style syntax in menu.rrmenu
-  bundle.menu "Rails" do |rails_menu|
+  bundle.menu t(:toplevel_menu) do |rails_menu|
     # this menu should be shown when any of the following scopes is active:
     rails_menu.scope = [ "source.ruby", "project.rails", 'source.yaml', 'text.haml', 'text.html.ruby' ]
     
-    rails_menu.command "Preview"
-    rails_menu.separator
-    
-    rails_menu.menu "Go To" do |goto_menu|
-      # command/snippet names must be unique within bundle and are case insensitive
-      goto_menu.command "Go to Alternate File"
-      goto_menu.command "Go to File on Current Line"
-
+    rails_menu.command t(:preview)
+    rails_menu.separator    
+    rails_menu.menu t(:go_to) do |goto_menu|
+      goto_menu.command t(:go_to_alternate_file)
+      goto_menu.command t(:go_to_file_on_current_line)
       goto_menu.separator
-      
-      goto_menu.command "Go to Model"
-      goto_menu.command "Go to View"
-      goto_menu.command "Go to Controller"
-      goto_menu.command "Go to Functional Test"
-      goto_menu.command "Go to Helper"
-      goto_menu.command "Go to Javascript"
-      goto_menu.command "Go to Stylesheet"
-      goto_menu.command "Go to Unit Test"
-      goto_menu.command "Go to Fixture"
+      goto_menu.command t(:go_to_model)
+      goto_menu.command t(:go_to_view)
+      goto_menu.command t(:go_to_controller)
+      goto_menu.command t(:go_to_functional_test)
+      goto_menu.command t(:go_to_helper)
+      goto_menu.command t(:go_to_javascript)
+      goto_menu.command t(:go_to_stylesheet)
+      goto_menu.command t(:go_to_unit_test)
+      goto_menu.command t(:go_to_fixture)
     end
-    rails_menu.menu "Run Tests" do |run_tests_menu|
-      run_tests_menu.command "Test All"
-      run_tests_menu.command "Test Functionals"
-      run_tests_menu.command "Test Integration"
-      run_tests_menu.command "Test Plugins"
-      run_tests_menu.command "Test Recent"
-      run_tests_menu.command "Test Uncommitted"
-      run_tests_menu.command "Test Units"
+    rails_menu.menu t(:run_tests) do |run_tests_menu|
+      run_tests_menu.command t(:test_all)
+      run_tests_menu.command t(:test_functionals)
+      run_tests_menu.command t(:test_integration)
+      run_tests_menu.command t(:test_plugins)
+      run_tests_menu.command t(:test_recent)
+      run_tests_menu.command t(:test_uncommitted)
+      run_tests_menu.command t(:test_units)
     end
-    
     rails_menu.separator
-    
-    rails_menu.command "Call Generate Script"
-    rails_menu.menu "Database" do |db_menu|
-      db_menu.command "Migrate to Current"
-      db_menu.command "Migrate to Version..."
-      db_menu.command "Migrate to Previous Version"
-      db_menu.command "Redo Last Migration"
-
+    rails_menu.command t(:call_generate_script)
+    rails_menu.menu t(:database) do |db_menu|
+      db_menu.command t(:migrate_to_current)
+      db_menu.command t(:migrate_to_version)
+      db_menu.command t(:migrate_to_previous_version)
+      db_menu.command t(:redo_last_migration)
       db_menu.separator
-
-      db_menu.command "Load Fixtures (Development DB)"
-      db_menu.command "Load Fixtures (Test DB)"
-
+      db_menu.command t(:load_fixtures_development)
+      db_menu.command t(:load_fixtures_test)
       db_menu.separator
-
-      db_menu.command "Load schema.rb to DB"
-      db_menu.command "Dump DB to schema.rb"
-      db_menu.command "Clone Development DB to Test DB"
+      db_menu.command t(:load_schema)
+      db_menu.command t(:dump_db_to_schema)
+      db_menu.command t(:clone_dev_db_to_test_db)
     end
-
     rails_menu.separator
-
     rails_menu.command "params[...]"
     rails_menu.command "session[...]"
-    rails_menu.menu "Logger" do |logger_menu|
+    rails_menu.menu t(:logger) do |logger_menu|
       logger_menu.command "logger.debug"
       logger_menu.command "logger.info"
       logger_menu.command "logger.warn"
@@ -87,19 +63,13 @@ END
       logger_menu.command "logger.fatal"
       logger_menu.command "RAILS_DEFAULT_LOGGER.debug"
     end
-
     rails_menu.separator
-
-    rails_menu.menu "Models" do |models_menu|
-      models_menu.command "Show DB Schema for Current Class"
-
+    rails_menu.menu t(:models) do |models_menu|
+      models_menu.command t(:show_db_schema_for_class)
       models_menu.separator
-
       models_menu.command "alias_attribute"
-
       models_menu.separator
-
-      models_menu.menu "Callbacks" do |callbacks_menu|
+      models_menu.menu t(:callbacks) do |callbacks_menu|
         callbacks_menu.command "before_validation"
         callbacks_menu.command "before_validation_on_create"
         callbacks_menu.command "before_validation_on_update"
@@ -115,7 +85,7 @@ END
         callbacks_menu.command "before_destroy"
         callbacks_menu.command "after_destroy"
       end
-      models_menu.menu "Associations" do |associations_menu|
+      models_menu.menu t(:associations) do |associations_menu|
         associations_menu.command "belongs_to"
         associations_menu.command "has_and_belongs_to_many"
         associations_menu.command "has_one"
@@ -125,7 +95,7 @@ END
         associations_menu.separator
         associations_menu.command "accepts_nested_attributes_for"
       end
-      models_menu.menu "Scopes" do |scopes_menu|
+      models_menu.menu t(:scopes) do |scopes_menu|
         scopes_menu.command "find(id)"
         scopes_menu.command "find(:all)"
         scopes_menu.command "find(:first)"
@@ -134,7 +104,7 @@ END
         scopes_menu.separator
         scopes_menu.command "scoped_by"
       end
-      models_menu.menu "Finders" do |finders_menu|
+      models_menu.menu t(:finders) do |finders_menu|
         finders_menu.command "find(id)"
         finders_menu.command "find(:all)"
         finders_menu.command "find(:first)"
@@ -143,7 +113,7 @@ END
         finders_menu.separator
         finders_menu.command "scoped_by"
       end
-      models_menu.menu "Validations" do |validations_menu|
+      models_menu.menu t(:validations) do |validations_menu|
         validations_menu.command "validates_acceptance_of"
         validations_menu.command "validates_acceptance_of if"
         validations_menu.command "validates_associated"
@@ -166,9 +136,9 @@ END
         validations_menu.command "validates_uniqueness_of if"
       end
     end
-    rails_menu.menu "Controllers" do |controllers_menu|
-      controllers_menu.command "Create controller class"
-      controllers_menu.command "Create resources controller class"
+    rails_menu.menu t(:controllers) do |controllers_menu|
+      controllers_menu.command t(:create_controller)
+      controllers_menu.command t(:create_resources_controller)
       controllers_menu.command "layout"
       controllers_menu.command "before_filter"
       controllers_menu.command "flash[...]"
@@ -211,20 +181,16 @@ END
         render_menu.command "render (text, status)"
         render_menu.command "render (update)"
       end
-      controllers_menu.menu "REST methods" do |rest_methods_menu|
+      controllers_menu.menu t(:rest_methods) do |rest_methods_menu|
         rest_methods_menu.command "def create - resource"
       end
-
       controllers_menu.separator
-
       controllers_menu.command "verify - render"
       controllers_menu.command "verify - redirect"
     end
-    rails_menu.menu "View Templates" do |view_templates_menu|
-      view_templates_menu.command "Create Partial From Selection"
-      
+    rails_menu.menu t(:view_templates) do |view_templates_menu|
+      view_templates_menu.command t(:create_partial)
       view_templates_menu.separator
-      
       view_templates_menu.command "form_for"
       view_templates_menu.command "form_for with errors"
       view_templates_menu.menu "form_for f.drop-down list" do |for_for_list_menu|
@@ -251,10 +217,8 @@ END
         form_for_helpers_menu.command "form_for submit"
         form_for_helpers_menu.command "form_for fields_for"
       end
-      view_templates_menu.command "fields_for"
-      
-      view_templates_menu.separator
-      
+      view_templates_menu.command "fields_for"      
+      view_templates_menu.separator      
       view_templates_menu.command "form_tag"
       view_templates_menu.command "submit_tag"
       view_templates_menu.command "image_submit_tag"
@@ -270,18 +234,14 @@ END
         link_to_menu.command "link_to (controller, action, id)"
         link_to_menu.command "link_to model"
       end
-      view_templates_menu.command "end (ERB)"
-      
-      view_templates_menu.separator
-      
-      view_templates_menu.command "map(&:sym_proc)"
-      
-      view_templates_menu.separator
-      
+      view_templates_menu.command "end (ERB)"      
+      view_templates_menu.separator      
+      view_templates_menu.command "map(&:sym_proc)"      
+      view_templates_menu.separator      
       view_templates_menu.command "content_for"
-      view_templates_menu.command "for loop in rhtml"
+      view_templates_menu.command t(:for_loop_rhtml)
     end
-    rails_menu.menu "Layouts" do |layouts_menu|
+    rails_menu.menu t(:layouts) do |layouts_menu|
       layouts_menu.command "javascript_include_tag"
       layouts_menu.command "stylesheet_link_tag"
     end
@@ -294,26 +254,25 @@ END
       rjs_menu.command "page.show (*ids)"
       rjs_menu.command "page.toggle (*ids)"
     end
-    rails_menu.menu "Migrations" do |migrations_menu|
-      migrations_menu.menu "Columns" do |columns_menu|
-        columns_menu.command "Add / Remove Column"
-        columns_menu.command "Add / Remove Several Columns"
-        columns_menu.command "Add / Remove Several Columns (marcc)"
-        columns_menu.command "Add / Remove Timestamps"
-        columns_menu.command "Change Column"
-        columns_menu.command "Change Column Default"
-        columns_menu.command "Rename Column"
-        columns_menu.command "Rename Several Columns"
-        columns_menu.command "Rename Several Columns (mncc)"
-        columns_menu.command "Remove / Add Column"
-        columns_menu.command "Remove / Add Timestamps"
+    rails_menu.menu t(:migrations) do |migrations_menu|
+      migrations_menu.menu t(:columns) do |columns_menu|
+        columns_menu.command t(:add_remove_column)
+        columns_menu.command t(:add_remove_several_columns)
+        columns_menu.command t(:add_remove_several_columns_1)
+        columns_menu.command t(:add_remove_timestamps)
+        columns_menu.command t(:change_column)
+        columns_menu.command t(:change_column_default)
+        columns_menu.command t(:rename_column)
+        columns_menu.command t(:rename_several_columns)
+        columns_menu.command t(:rename_several_columns_1)
+        columns_menu.command t(:remove_add_column)
+        columns_menu.command t(:remove_add_timestamps)
       end
-      migrations_menu.menu "Tables" do |tables_menu|
-        tables_menu.command "Create / Drop Table"
-        tables_menu.command "Rename Table"
-        tables_menu.command "Drop / Create Table"
-        tables_menu.command "Change Table"
-    
+      migrations_menu.menu t(:tables) do |tables_menu|
+        tables_menu.command t(:create_drop_table)
+        tables_menu.command t(:rename_table)
+        tables_menu.command t(:drop_create_table)
+        tables_menu.command t(:change_table)    
         # tables_menu.menu "Create columns t. drop-down list" do |create_columns_list_menu|
         #   create_columns_list_menu.command "t.string (tcs)"
         #   create_columns_list_menu.command "t.text (tct)"
@@ -330,43 +289,43 @@ END
         #   create_columns_list_menu.command "t.lock_version (tcl)"
         #   create_columns_list_menu.command "t.references (tcr)"
         # end
-        tables_menu.menu "Create columns helpers" do |create_columns_helpers_menu|
-          create_columns_helpers_menu.command "Table column string"
-          create_columns_helpers_menu.command "Table column text"
-          create_columns_helpers_menu.command "Table column integer"
-          create_columns_helpers_menu.command "Table column float"
-          create_columns_helpers_menu.command "Table column decimal"
-          create_columns_helpers_menu.command "Table column datetime"
-          create_columns_helpers_menu.command "Table column timestamp"
-          create_columns_helpers_menu.command "Table column time"
-          create_columns_helpers_menu.command "Table column date"
-          create_columns_helpers_menu.command "Table column boolean"
-          create_columns_helpers_menu.command "Table column binary"
-          create_columns_helpers_menu.command "Table column timestamps"
-          create_columns_helpers_menu.command "Table column lock_version"
-          create_columns_helpers_menu.command "Table column(s) references"
+        tables_menu.menu t(:create_columns_helpers) do |create_columns_helpers_menu|
+          create_columns_helpers_menu.command t(:table_column_string)
+          create_columns_helpers_menu.command t(:table_column_text)
+          create_columns_helpers_menu.command t(:table_column_integer)
+          create_columns_helpers_menu.command t(:table_column_float)
+          create_columns_helpers_menu.command t(:table_column_decimal)
+          create_columns_helpers_menu.command t(:table_column_datetime)
+          create_columns_helpers_menu.command t(:table_column_timestamp)
+          create_columns_helpers_menu.command t(:table_column_time)
+          create_columns_helpers_menu.command t(:table_column_date)
+          create_columns_helpers_menu.command t(:table_column_boolean)
+          create_columns_helpers_menu.command t(:table_column_binary)
+          create_columns_helpers_menu.command t(:table_column_timestamps)
+          create_columns_helpers_menu.command t(:table_column_lock_version)
+          create_columns_helpers_menu.command t(:table_column_references)
         end
-        tables_menu.command "Create Column in Table"
+        tables_menu.command t(:create_column_in_table)
         # tables_menu.command "Create Several Columns in Table"
-        tables_menu.menu "Change columns t. drop-down list" do |change_columns_list_menu|
+        tables_menu.menu t(:change_columns_drop_down) do |change_columns_list_menu|
           change_columns_list_menu.command "t.change (tch)"
           change_columns_list_menu.command "t.rename (tre)"
         end
-        tables_menu.menu "Change columns t. helpers" do |change_columns_helper_menu|
-          change_columns_helper_menu.command "Table column(s) change"
-          change_columns_helper_menu.command "Table column(s) rename"
+        tables_menu.menu t(:change_columns_helpers) do |change_columns_helper_menu|
+          change_columns_helper_menu.command t(:table_column_change)
+          change_columns_helper_menu.command t(:table_column_rename)
         end
       end
-      migrations_menu.menu "Indices" do |indices_menu|
-        indices_menu.command "Add / Remove Index"
-        indices_menu.command "Add / Remove Named Index"
-        indices_menu.command "Add / Remove Unique Index"
+      migrations_menu.menu t(:indices) do |indices_menu|
+        indices_menu.command t(:add_remove_index)
+        indices_menu.command t(:add_remove_named_index)
+        indices_menu.command t(:add_remove_unique_index)
       end
     end
-    rails_menu.menu "Environment" do |environment_menu|
+    rails_menu.menu t(:environment) do |environment_menu|
       environment_menu.command "config.gem"
     end
-    rails_menu.menu "Routes" do |routes_menu|
+    rails_menu.menu t(:routes) do |routes_menu|
       routes_menu.command "map.named_route"
       routes_menu.command "map.resources"
       routes_menu.command "map.resource"
@@ -378,23 +337,21 @@ END
       active_support_menu.command "mattr_accessor"
       active_support_menu.command "returning do |variable| ... end"
     end
-
     rails_menu.separator
-
-    rails_menu.menu "Fixtures" do |fixtures_menu|
+    rails_menu.menu t(:fixtures) do |fixtures_menu|
       fixtures_menu.command "$LABEL"
       fixtures_menu.command "<%= Fixtures.identify(:symbol) %>"
       fixtures_menu.separator
-      fixtures_menu.command "Autocomplete Foreign Key Fixture Reference"
-      fixtures_menu.command "Autocomplete Foreign Key Fixture Reference (habtm)"
+      fixtures_menu.command t(:autocomplete_foreign_key_fixture)
+      fixtures_menu.command t(:autocomplete_foreign_key_fixture_1)
     end
     rails_menu.command "test do...end"
-    rails_menu.menu "Unit Tests" do |unit_tests_menu|
+    rails_menu.menu t(:unit_tests) do |unit_tests_menu|
       unit_tests_menu.command "assert_difference"
       unit_tests_menu.command "assert_no_difference"
     end
-    rails_menu.menu "Functional Tests" do |functional_tests_menu|
-      functional_tests_menu.command "Create functional test class"
+    rails_menu.menu t(:functional_tests) do |functional_tests_menu|
+      functional_tests_menu.command t(:create_functional_test_class)
       functional_tests_menu.command "def test_should_get_action"
       functional_tests_menu.command "def test_should_post_action"
       functional_tests_menu.separator
@@ -411,22 +368,20 @@ END
       functional_tests_menu.separator
       functional_tests_menu.command "assert(var= assigns(:var))"
     end
-    rails_menu.menu "Ajax Tests" do |ajax_tests_menu|
+    rails_menu.menu t(:ajax_tests) do |ajax_tests_menu|
       ajax_tests_menu.command "xhr post"
       ajax_tests_menu.command "xhr get"
       ajax_tests_menu.command "xhr delete"
       ajax_tests_menu.command "xhr put"
     end
-
     rails_menu.separator
-
-    rails_menu.command "Documentation for Word"
+    rails_menu.command t(:docs_for_word)
     rails_menu.command "find_each"
-    rails_menu.command "List Columns of a Model"
+    rails_menu.command t(:list_columns_of_model)
   end
 end
 
-# Add special ENV vars
+# Set up special variables for some commands for ERB/HAML
 env "text.html.ruby" do |e|
   e['TM_RAILS_TEMPLATE_START_RUBY_EXPR'] = "<%= "
   e['TM_RAILS_TEMPLATE_END_RUBY_EXPR'] = " %>"
@@ -442,10 +397,12 @@ env "text.haml" do |e|
   e['TM_RAILS_TEMPLATE_END_RUBY_BLOCK'] = ""
 end
 
+# Auto-closing pairs
 smart_typing_pairs["text.html.ruby"] = ['%', '%', '"', '"', '(', ')', '{', '}', '[', ']', '<', '>']
 smart_typing_pairs["text.html.ruby meta.tag"] = ['%', '%', '"', '"', '(', ')', '{', '}', '[', ']', '<', '>', "'", "'"]
 smart_typing_pairs["text.html.ruby meta.tag string"] = ['"', '"', '(', ')', '{', '}', '[', ']', '%', '%', '<', '>']
 
+# Misc code for preview...
 module Ruble
   class Project
     # Add a method allowing commands to get root URL of server for project...

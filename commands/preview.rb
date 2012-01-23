@@ -1,6 +1,6 @@
 require 'ruble'
 
-command "Preview" do |cmd|
+command t(:preview) do |cmd|
   cmd.key_binding = "M1+M2+P"
   cmd.scope = "source.ruby.rails, text.html.ruby, text.haml"
   cmd.output = :discard
