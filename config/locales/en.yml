@@ -68,6 +68,7 @@ en:
   drop_create_table: "Drop / Create Table"
   change_table: "Change Table"
   create_columns_helpers: "Create columns helpers"
+  table_column: "Table column"
   table_column_string: "Table column string"
   table_column_text: "Table column text"
   table_column_integer: "Table column integer"
@@ -104,4 +105,5 @@ en:
   list_columns_of_model: "List Columns of a Model"
   html_erb_template: "HTML ERB Template"
   rhtml_template: "RHTML Template"
+  sweeper: 'Create sweeper class'
   
