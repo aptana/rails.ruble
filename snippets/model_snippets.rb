@@ -84,63 +84,63 @@ with_defaults :scope => "source.ruby.rails" do |bundle|
     snippet.expansion = 'has_one :${1:object}, :class_name => "${1}", :foreign_key => "${1}_id"'
   end
 
-  snippet "validates_acceptance_of if (vaoif)" do |snippet|
+  snippet "validates_acceptance_of if" do |snippet|
     snippet.trigger = "vaoif"
     # FIXME We can't handle nested snippets
     # snippet.expansion = "validates_acceptance_of :${1:terms}${2:${3:, :accept => '${4:1}'}${5:, :message => '${6:You must accept the terms of service}'}}, :if => proc { |obj| ${7:obj.condition?} }}"
     snippet.expansion = "validates_acceptance_of :${1:terms}, :accept => '${1}', :message => '${6:You must accept the terms of service}', :if => proc { |{7:obj}| ${7}.${8:condition?} }"
   end
 
-  snippet "validates_acceptance_of (vao)" do |snippet|
+  snippet "validates_acceptance_of" do |snippet|
     snippet.trigger = "vao"
     # FIXME We can't handle nested snippets
     # snippet.expansion = "validates_acceptance_of :${1:terms}${2:${3:, :accept => '${4:1}'}${5:, :message => '${6:You must accept the terms of service}'}}"
     snippet.expansion = "validates_acceptance_of :${1:terms}, :accept => '${1}', :message => '${6:You must accept the terms of service}'"
   end
 
-  snippet "validates_associated (va)" do |snippet|
+  snippet "validates_associated" do |snippet|
     snippet.trigger = "va"
     # FIXME We can't handle nested snippets
     # snippet.expansion = "validates_associated :${1:attribute}${2:, :on => :${3:create}}"
     snippet.expansion = "validates_associated :${1:attribute}, :on => :${3:create}"
   end
 
-  snippet "validates_associated if (vaif)" do |snippet|
+  snippet "validates_associated if" do |snippet|
     snippet.trigger = "vaif"
     # FIXME We can't handle nested snippets
     # snippet.expansion = "validates_associated :${1:attribute}${2:, :on => :${3:create}}, :if => proc { |obj| ${5:obj.condition?} }}"
     snippet.expansion = "validates_associated :${1:attribute}, :on => :${3:create}, :if => proc { |obj| ${5:obj.condition?} }"
   end
 
-  snippet "validates_confirmation_of (vc)" do |snippet|
+  snippet "validates_confirmation_of" do |snippet|
     snippet.trigger = "vc"
     # FIXME We can't handle nested snippets
     # snippet.expansion = "validates_confirmation_of :${1:attribute}${2:, :on => :${3:create}, :message => '${4:should match confirmation}'}"
     snippet.expansion = "validates_confirmation_of :${1:attribute}, :on => :${3:create}, :message => '${4:should match confirmation}'"
   end
 
-  snippet "validates_confirmation_of if (vcif)" do |snippet|
+  snippet "validates_confirmation_of if" do |snippet|
     snippet.trigger = "vcif"
     # FIXME We can't handle nested snippets
     # snippet.expansion = "validates_confirmation_of :${1:attribute}${2:, :on => :${3:create}, :message => '${4:should match confirmation}'}, :if => proc { |obj| ${5:obj.condition?} }}"
     snippet.expansion = "validates_confirmation_of :${1:attribute}, :on => :${3:create}, :message => '${4:should match confirmation}'}, :if => proc { |obj| ${5:obj.condition?} }"
   end
 
-  snippet "validates_exclusion_of (ve)" do |snippet|
+  snippet "validates_exclusion_of" do |snippet|
     snippet.trigger = "ve"
     # FIXME We can't handle nested snippets
     # snippet.expansion = "validates_exclusion_of :${1:attribute}${2:, :in => ${3:%w( ${4:mov avi} )}, :on => :${5:create}, :message => '${6:extension %s is not allowed}'}"
     snippet.expansion = "validates_exclusion_of :${1:attribute}, :in => %w( ${4:mov avi} ), :on => :${5:create}, :message => '${6:extension %s is not allowed}'"
   end
 
-  snippet "validates_format_of if (vfif)" do |snippet|
+  snippet "validates_format_of if" do |snippet|
     snippet.trigger = "vfif"
     # FIXME We can't handle nested snippets or transformations!
     # snippet.expansion = "validates_format_of :${1:attribute}, :with => /${2:^[${3:\w\d}]+\$}/${4:, :on => :${5:create}, :message => '${6:is invalid}'}, :if => proc { |obj| ${7:obj.condition?} }}"
     snippet.expansion = "validates_format_of :${1:attribute}, :with => /${2:^[\w\d]+\$}/, :on => :${5:create}, :message => '${6:is invalid}', :if => proc { |obj| ${7:obj.condition?} }"
   end
 
-  snippet "validates_format_of (vf)" do |snippet|
+  snippet "validates_format_of" do |snippet|
     snippet.trigger = "vf"
     # FIXME We can't handle nested snippets or transformations!
     # snippet.expansion = "validates_format_of :${1:attribute}, :with => /${2:^[${3:\w\d}]+\$}/${4:, :on => :${5:create}, :message => '${6:is invalid}'}"
