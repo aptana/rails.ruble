@@ -29,7 +29,7 @@ class Generator
     known_generator_names = known_generators.map { |gen| gen.name }
     new_generator_names = find_generator_names - known_generator_names
     known_generators + new_generator_names.map do |name|
-      Generator[name, "Arguments for #{name} generator:", ""]
+      Generator[name, t(:args_for_0_generator, :name => name), ""]
     end
   end
 
@@ -59,12 +59,12 @@ class Generator
 
   def self.known_generators
     [
-      Generator["scaffold",   "Name of the model to scaffold:", "User"],
-      Generator["controller", "Name the new controller:",       "admin/user_accounts"],
-      Generator["model",      "Name the new model:",            "User"],
-      Generator["mailer",     "Name the new mailer:",           "Notify"],
-      Generator["migration",  "Name the new migration:",        "CreateUserTable"],
-      Generator["plugin",     "Name the new plugin:",           "ActsAsPlugin"]
+      Generator["scaffold",   t(:name_scaffold_prompt),   "User"],
+      Generator["controller", t(:name_controller_prompt), "admin/user_accounts"],
+      Generator["model",      t(:name_model_prompt),      "User"],
+      Generator["mailer",     t(:name_mailer_prompt),     "Notify"],
+      Generator["migration",  t(:name_migration_prompt),  "CreateUserTable"],
+      Generator["plugin",     t(:name_plugin_prompt),     "ActsAsPlugin"]
     ]
   end
   
