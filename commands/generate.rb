@@ -2,7 +2,7 @@ require 'ruble'
 
 # FIXME: this file is rife with textmate-isms!!!
   
-command "Call Generate Script" do |cmd|
+command t(:call_generate_script) do |cmd|
   cmd.key_binding = 'CONTROL+SHIFT+\\'
   cmd.scope = "source.ruby.rails, source.yaml, project.rails"
   cmd.output = :discard

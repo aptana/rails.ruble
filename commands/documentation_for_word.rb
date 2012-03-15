@@ -1,6 +1,6 @@
 require 'ruble'
 
-command "Documentation for Word" do |cmd|
+command t(:docs_for_word) do |cmd|
   #cmd.key_binding = "M4+H"
   cmd.scope = "source.ruby.rails, text.html.ruby, text.haml"
   cmd.input = :selection, :word

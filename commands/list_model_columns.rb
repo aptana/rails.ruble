@@ -1,6 +1,6 @@
 require 'ruble'
 
-command "List Columns of a Model" do |cmd|
+command t(:list_columns_of_model) do |cmd|
   cmd.key_binding = "M3+SPACE"
   cmd.scope = "source.ruby.rails, text.html.ruby, text.haml"
   cmd.input = :selection, :word

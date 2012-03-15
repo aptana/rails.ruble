@@ -1,6 +1,6 @@
 require 'ruble'
 
-command "Show DB Schema for Current Class" do |cmd|
+command t(:show_db_schema_for_class) do |cmd|
   cmd.key_binding = "CONTROL+SHIFT+COMMAND+S"
   cmd.input = :none
   cmd.output = :show_as_tooltip

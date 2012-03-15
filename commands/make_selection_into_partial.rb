@@ -8,7 +8,7 @@
 require 'ruble'
 require 'ruble/ui'
 
-command "Create Partial From Selection" do |cmd|
+command t(:create_partial) do |cmd|
   cmd.scope = "source.ruby.rails, text.html.ruby, text.haml"
   cmd.output = :replace_selection
   cmd.input = :selection, :line
