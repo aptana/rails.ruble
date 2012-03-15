@@ -12,12 +12,12 @@ command t(:call_generate_script) do |cmd|
     require "rails/generator"
     
     Generator.setup
-    if choice = Ruble.choose("Generate:", Generator.names.map { |name| Inflector.humanize name }, :title => "Rails Generator")
+    if choice = Ruble.choose(t(:generate_prompt), Generator.names.map { |name| Inflector.humanize name }, :title => t(:generate_title))
       arguments = Ruble::UI.request_string(
-        :title => "#{Inflector.humanize Generator.generators[choice].name} Generator", 
+        :title => t(:name_generator, :name => Inflector.humanize(Generator.generators[choice].name)), 
         :default => Generator.generators[choice].default_answer,
         :prompt => Generator.generators[choice].question,
-        :button1 => 'Generate'
+        :button1 => t(:generate_button)
       )
 
       if arguments
@@ -28,26 +28,26 @@ command t(:call_generate_script) do |cmd|
         when 0
           if rails_version < 2
             options = Ruble::UI.request_string(
-             :title => "Scaffold Controller Name", 
-             :prompt => "Name the new controller for the scaffold:",
-             :button1 => 'Continue'
+             :title => t(:scaffold_controller_name), 
+             :prompt => t(:scaffold_controller_prompt),
+             :button1 => t(:continue)
             )
             options = "'#{options}'"
           else
             options = Ruble::UI.request_string(
-             :title => "Scaffold Model Attributes", 
+             :title => t(:scaffold_model_attributes), 
              :default => "username:string",
-             :prompt => "Name the attribute pairs for the model in the format 'name:type':",
-             :button1 => 'Continue'
+             :prompt => t(:scaffold_model_prompt),
+             :button1 => t(:continue)
             )
             options = "#{options}"
           end
         when 1
           options = Ruble::UI.request_string(
-            :title => "Controller Actions", 
+            :title => t(:controller_actions_title), 
             :default => "index new create edit update destroy",
-            :prompt => "List any actions you would like created for the controller:",
-            :button1 => 'Create'
+            :prompt => t(:controller_actions_prompt),
+            :button1 => t(:create)
           )
         end
 
@@ -79,8 +79,8 @@ command t(:call_generate_script) do |cmd|
         files.each { |f| Ruble.open(File.join(proj_dir, f)) }
 
         Ruble::UI.simple_notification(
-          :title => 'Generator Complete',
-          :summary => "Done generating #{Generator.generators[choice].name}",
+          :title => t(:generator_complete),
+          :summary => t(:done_generating_0, :name => Generator.generators[choice].name),
           :log => output
         )
       end

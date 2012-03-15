@@ -13,7 +13,7 @@ command t(:autocomplete_foreign_key_fixture_1) do |cmd|
     foreign_fixtures = load_referenced_fixture_file(ref, context).keys
     candidates = filter_fixtures(foreign_fixtures, filter, true)
     if candidates.empty?
-      puts "No match found for #{filter}"
+      puts t(:no_match_found_for_0, :filter => filter)
       context.exit_show_tool_tip
     end
     selected_fixture = ask_for_fixture_or_exit(candidates, context)
