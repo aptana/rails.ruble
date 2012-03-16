@@ -20,16 +20,16 @@ command t(:create_partial) do |cmd|
     
     # Make sure we're in a view file
     unless current_file.file_type == :view
-      context.exit_show_tool_tip("The \"create partial from selection\" action works within view files only.")
+      context.exit_show_tool_tip t(:create_partial_outside_view, :command_name => t(:create_partial))
     end
     
     # If text is selected, create a partial out of it
     if Ruble.selected_text
       partial_name = Ruble::UI.request_string(
-        :title => "Create a partial from the selected text", 
+        :title => t(:create_partial_from_selection_title),
         :default => "partial",
-        :prompt => "Name of the new partial: (omit the _ and .html.erb)",
-        :button1 => 'Create'
+        :prompt => t(:create_partial_from_selection_prompt),
+        :button1 => t(:create)
       )
     
       if partial_name
@@ -39,10 +39,10 @@ command t(:create_partial) do |cmd|
         # Create the partial file
         if File.exist?(partial)
           unless Ruble::UI.request_confirmation(
-            :button1 => "Overwrite",
-            :button2 => "Cancel",
-            :title => "The partial file already exists.",
-            :prompt => "Do you want to overwrite it?"
+            :button1 => t(:overwrite),
+            :button2 => t(:cancel),
+            :title => t(:partial_already_exists),
+            :prompt => t(:overwrite_it)
           )
             context.exit_discard
           end

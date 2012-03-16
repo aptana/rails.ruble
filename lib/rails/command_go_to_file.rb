@@ -18,7 +18,7 @@ class CommandGoToFile
     choice = args.nil? ? current_file.best_match : args
 
     if choice.nil?
-      "This file is not associated with any other files"
+      t(:no_association)
     elsif rails_path = current_file.rails_path_for(choice.to_sym)    
       if !rails_path.exists?
         rails_path, openatline, openatcol = create_file(rails_path, choice.to_sym)
@@ -31,7 +31,7 @@ class CommandGoToFile
       Ruble.open rails_path, openatline, openatcol
       nil # Don't show a tooltip
     else
-      "#{current_file.basename} does not have a #{choice}"
+      t(:name_does_not_have_choice, :name => current_file.basename, :choice => choice)
     end
   end  
   
@@ -68,7 +68,7 @@ class CommandGoToFile
             nil # Don't show a tooltip
           end
         else
-          return "Don't know where to go when rendering an action from outside a controller"
+          return t(:fail_render_outside_controller)
         end
 
       # Example: redirect_to :action => 'login'
@@ -78,7 +78,7 @@ class CommandGoToFile
         action = $1 if Ruble.current_line =~ /.*:action\s*=>\s*['"](.+?)['"]/
 
         unless current_file.file_type == :controller
-          return "Don't know where to go when redirecting from outside a controller"
+          return t(:fail_redirect_outside_controller)
         end
 
         if controller.nil?
@@ -98,7 +98,7 @@ class CommandGoToFile
           Ruble.open(controller_file, search[0])
           nil # Don't show a tooltip
         else
-          return "Couldn't find the #{action} action inside '#{controller_file.basename}'"
+          return t(:fail_cant_find_action_in_controller, :action => action, :controller => controller_file.basename)
         end
 
       # Example: <script src="/javascripts/controls.js">
@@ -124,7 +124,7 @@ class CommandGoToFile
           Ruble.open File.join(current_file.rails_root, 'public', public_file)
           nil # Don't show a tooltip
         else
-          "No javascript identified"
+          t(:no_javascript_identified)
         end
 
       # Example: <link href="/stylesheets/application.css">
@@ -150,11 +150,11 @@ class CommandGoToFile
           Ruble.open File.join(current_file.rails_root, 'public', public_file)
           nil # Don't show a tooltip
         else
-          return "No stylesheet identified"
+          return t(:no_stylesheet_identified)
         end
 
       else
-        "No 'go to file' directives found on this line."
+        t(:no_go_to_file_found)
         # Do nothing -- beep?
     end    
   end
@@ -168,10 +168,10 @@ class CommandGoToFile
     return nil if rails_path.exists?
     if choice == :view
       filename = Ruble::UI.request_string(
-        :title => "View File Not Found", 
+        :title => t(:view_not_found), 
         :default => rails_path.basename,
-        :prompt => "Enter the name of the new view file:",
-        :button1 => 'Create'
+        :prompt => t(:enter_name_of_view),
+        :button1 => t(:create)
       )
       return nil if !filename
       rails_path = RailsPath.new(File.join(rails_path.dirname, filename))
@@ -180,10 +180,10 @@ class CommandGoToFile
     end
     
     unless Ruble::UI.request_confirmation(
-      :button1 => "Create",
-      :button2 => "Cancel",
-      :title => "Missing #{rails_path.basename}",
-      :prompt => "Create missing #{rails_path.basename}?"
+      :button1 => t(:create),
+      :button2 => t(:cancel),
+      :title => t(:missing_name, :name => rails_path.basename),
+      :prompt => t(:create_missing_name, :name => rails_path.basename)
     )
       return nil
     end

@@ -10,11 +10,11 @@ command t(:list_columns_of_model) do |cmd|
     require 'list_columns'
     
     # begin
-      context.exit_show_tool_tip("Place cursor on class name (or variation) to show its schema") if word.nil? || word.empty?
+      context.exit_show_tool_tip(t(:place_cursor_on_class_name)) if word.nil? || word.empty?
       
       # Check if Rails is installed.
       unless rails_present?
-        message = "You don't have Rails installed in this gemset."
+        message = t(:rails_not_in_gemset)
         
         if File.exists?("#{Ruble.project_directory}/.rvmrc") && 
           if rvm = File.open("#{Ruble.project_directory}/.rvmrc").read
@@ -33,9 +33,9 @@ command t(:list_columns_of_model) do |cmd|
         display_menu(klass_without_undescore)
       else
         options = [
-          @error || "'#{Inflector.camelize(klass)}' is not an Active Record derived class or was not recognised as a class.", 
+          @error || t(:class_is_not_a_model, :class => Inflector.camelize(klass)), 
           LINE,
-          cache.keys.map { |model_name| "Use #{Inflector.camelize(model_name)}..." },
+          cache.keys.map { |model_name| t(:use_0, :model_name => Inflector.camelize(model_name)) },
           LINE,
           RELOAD_MESSAGE
         ].flatten
