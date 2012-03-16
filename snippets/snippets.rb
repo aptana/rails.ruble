@@ -27,7 +27,7 @@ snippet 'content_for' do |s|
 <% end -%>'
 end
 
-snippet 'Create controller class' do |s|
+snippet t(:create_controller) do |s|
   s.trigger = 'cla'
   s.scope = 'source.ruby'
   s.expansion = 'class ${1:Model}Controller < ApplicationController
@@ -42,7 +42,7 @@ snippet 'Create controller class' do |s|
 end'
 end
 
-snippet 'Create functional test class' do |s|
+snippet t(:create_functional_test_class) do |s|
   s.trigger = 'cla'
   s.scope = 'source.ruby'
   s.expansion = 'require File.dirname(__FILE__) + \'/../test_helper\'
@@ -53,7 +53,7 @@ end
 '
 end
 
-snippet 'Create resources controller class' do |s|
+snippet t(:create_resources_controller) do |s|
   s.trigger = 'resources'
   s.scope = 'source.ruby'
   # FIXME We don't support transformations yet
@@ -235,7 +235,7 @@ end
 '
 end
 
-snippet 'Create sweeper class' do |s|
+snippet t(:sweeper) do |s|
   s.trigger = 'sweeper'
   # FIXME We don't support transformations yet
 #  s.expansion = 'class ${1:Model}Sweeper < ActionController::Caching::Sweeper
@@ -366,7 +366,7 @@ snippet 'end (ERB)' do |s|
   s.expansion = '<% end -%>'
 end
 
-snippet 'for loop in rhtml' do |s|
+snippet t(:for_loop_rhtml) do |s|
   s.trigger = 'for'
   s.scope = 'text.html.ruby'
   s.expansion = '<% if !${1:list}.blank? %>

@@ -1,6 +1,6 @@
 require 'ruble'
 
-command 'Autocomplete Foreign Key Fixture Reference (habtm)' do |cmd|
+command t(:autocomplete_foreign_key_fixture_1) do |cmd|
   cmd.scope = "source.yaml"
   cmd.input = :selection, :line
   cmd.output = :insert_as_snippet

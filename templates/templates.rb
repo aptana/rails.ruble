@@ -1,6 +1,6 @@
 require 'ruble'
 
-template "HTML ERB Template" do |t|
+template t(:html_erb_template) do |t|
   t.filetype = "*.html.erb"
   t.invoke do |context|
     ENV['TM_DATE'] = Time.now.strftime("%Y-%m-%d")
@@ -9,7 +9,7 @@ template "HTML ERB Template" do |t|
  end
 end
 
-template "RHTML Template" do |t|
+template t(:rhtml_template) do |t|
   t.filetype = "*.rhtml"
   t.invoke do |context|
     ENV['TM_DATE'] = Time.now.strftime("%Y-%m-%d")
